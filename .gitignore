@@ -1,1 +1,2 @@
-data/
+data/*
+!data/spurious_correlations/
