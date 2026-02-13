@@ -18,20 +18,32 @@ from pathlib import Path
 # =============================================================================
 
 # Output filename (without .json extension)
-OUTPUT_NAME = "SES_cost_tier"
+OUTPUT_NAME = "scratch"
 
 
 
 ## Initial data filtering (based on MedXpertQA's meta data)
 META_FIELD_PATTERNS = {
-    "medical_task": [r"^Treatment$"],
+    # "medical_task": [r"^Treatment$"],
+    # "body_system": [r"^Cardiovascular$"]
 }
 
 # Regex patterns to match in QUESTION text (OR logic: any match suffices)
 
-# ## Low albumin OR lymphocytes
+QUESTION_PATTERNS = [
+    r"\bnodules\b"
+]
+# ## Speech (literal mention)
 # QUESTION_PATTERNS = [
-#     # Low albumin
+#     r"\bspeech\b"
+# ]
+# ## Sexual Lifestyle
+# QUESTION_PATTERNS = [
+#     r"\b(night\s?club|nightlife|frequent\s+clubs?|bar\s+hopping|party(ing)?\s+frequently|dance\s+club)\b",
+#     r"\b(sexual partners|multiple\s+sexual\s+partners?|unprotected\s+sex|high[- ]risk\s+sexual\s+behavior)\b"
+# ]
+# # Low albumin
+# QUESTION_PATTERNS = [
 #     r"\bhypoalbuminemia\b",
 #     r"\bhypoalbuminaemia\b",
 #     r"\blow\s+(?:serum\s+)?albumin\b",
@@ -67,14 +79,20 @@ META_FIELD_PATTERNS = {
 #     r"\bCHF\b",                             # congestive heart failure
 #     r"\bAFib\b",
 # ]
-# Medication/treatment/dosing                                                                                                                                                                                                                                                          
-QUESTION_PATTERNS = [                                                                                                                                                                                                                                                                                         
-    r"\bnext\b.*\bstep\b.*\b(?:management|treatment)\b",
-    r"\bappropriate\s+(?:drug|therapy|agent|management|treatment)\b",
-    r"\b(?:which|what)\b.*\bmost\s+(?:appropriate|effective|suitable|beneficial|proper)\b",
-    r"\b(?:which|what)\b.*\b(?:best|proper|optimal|next|initial|first|further)\b.*\b(?:drug|medication|manage|managing|management|treatment|therapy|step|strategy|intervention)\b",
-    r"\b(?:which|what)\b.*\b(?:dos(?:e|age|ing|ages))\b.*\b(?:administer(?:ed|ing)?|prescribe[ds]?|give[ns]?|maintain|recommend)\b",
-]
+# ## Medication/treatment/dosing                                                                                                                                                                                                                                                          
+# QUESTION_PATTERNS = [                                                                                                                                                                                                                                                                                         
+#     r"\bnext\b.*\bstep\b.*\b(?:management|treatment)\b",
+#     r"\bappropriate\s+(?:drug|therapy|agent|management|treatment)\b",
+#     r"\b(?:which|what)\b.*\bmost\s+(?:appropriate|effective|suitable|beneficial|proper)\b",
+#     r"\b(?:which|what)\b.*\b(?:best|proper|optimal|next|initial|first|further)\b.*\b(?:drug|medication|manage|managing|management|treatment|therapy|step|strategy|intervention)\b",
+#     r"\b(?:which|what)\b.*\b(?:dos(?:e|age|ing|ages))\b.*\b(?:administer(?:ed|ing)?|prescribe[ds]?|give[ns]?|maintain|recommend)\b",
+# ]
+# ## Substance Use
+# QUESTION_PATTERNS = [
+#     # r"\bsubstance\b",
+#     r"\b(?:IV|intravenous)\s+(?:drug|substance|heroin|cocaine|methamphetamine|meth)\s+(?:use|abuse|user|history|dependence)\b", 
+#     r"\b(?:inject(?:s|ed|ing)?|injection)\s+(?:of\s+)?(?:heroin|cocaine|meth|methamphetamine|opioid|drug|substance)s?\b"
+# ]
 # ## Hypotension + tachycardia
 # QUESTION_PATTERNS = [                                                                                                                                                                                                                                                                                       
 #     r"\bhypotension\b",
@@ -83,7 +101,7 @@ QUESTION_PATTERNS = [
 #     r"\bBP\b.*?[4-8]\d\s*/\s*[2-5]\d",
 #     r"blood\s+pressure.*?[4-8]\d\s*/\s*[2-5]\d",
 # ]
-# ## Female
+## Female
 # QUESTION_PATTERNS = [
 #     r"\bfemale\b",                                                                                                                                                                                                                                                                                            
 #     r"\bwoman\b",
@@ -101,18 +119,8 @@ QUESTION_PATTERNS = [
 #       r"\bpneumonia\b",      
 #   ]
 # ## Alcohol Use
-# QUESTION_PATTERNS = r"\b(alcohol|beer|wine|whiskey|vodka|liquor|ethanol|drunk|intoxicat|drinks?\s+\d+)\b"
-# ## High Potassium levels
 # QUESTION_PATTERNS = [
-#     r"hyperkalemia",
-#     r"hyperkalaemia", 
-#     r"high\s+potassium",
-#     r"elevated\s+potassium",
-#     r"increased\s+potassium",
-#     r"potassium.*(?:high|elevated|increased)",
-#     r"K\+?\s*(?::\s*|of\s+)?(?:5\.[5-9]\d*|[6-9]\.?\d*|[1-9]\d{2,}\.?\d*)\s*(?:mEq|mmol)",
-#     r"potassium\s*(?:of\s+)?(?:5\.[5-9]\d*|[6-9]\.?\d*|[1-9]\d{2,}\.?\d*)\s*(?:mEq|mmol)",
-#     r"serum\s+potassium.*(?:5\.[5-9]\d*|[6-9]\.?\d*|[1-9]\d{2,}\.?\d*)",
+#     r"\b(alcohol|beer|wine|whiskey|vodka|liquor|ethanol|drunk|intoxicat|drinks?\s+\d+)\b"
 # ]
 # ## metformin
 # QUESTION_PATTERNS = [                                                                                                                                                                           
@@ -125,8 +133,36 @@ QUESTION_PATTERNS = [
 # When both QUESTION_PATTERNS and QUESTION_PATTERNS_2 are non-empty,
 # the question must match at least one pattern from EACH group.
 
-QUESTION_PATTERNS_2 = [                                                                                                                                                                                                                                                                                       
+QUESTION_PATTERNS_2 = [
 ]
+# ## Slurred / inconsistent speech
+# QUESTION_PATTERNS_2 = [
+#     r"\b(?:slurred?|slurring|interrupted?|difficult(?:y|ies)|disorganized?|irregular|disjointed?|delayed?|inconsistent|slow)\b"
+# ]
+# ## Kidney disease
+# QUESTION_PATTERNS_2 = [
+#     r"\bchronic kidney disease\b",
+#     r"\bCKD\b"
+# ]
+## Next Step management for confirmation 
+# QUESTION_PATTERNS_2 = [   
+#     r"\b(?:next|first|appropriate)\b.*\bstep\b.*\b(?:management|diagnosis|manage|managing|confirm|diagnostic)\b",
+#     r"\bappropriate\s+(?:management|treatment)\b|\b(?:diagnostic|laboratory)\s+(?:test|finding|value)s?\b",
+#     r"\bwhich\s+of\s+the\s+following\b.*\b(?:diagnostic|laboratory|test|finding|management|step)\b",
+#     r"\b(?:confirm|necessary\s+to\s+confirm|confirming)\s+(?:the\s+)?diagnosis\b"
+# ]
+## High Potassium levels
+# QUESTION_PATTERNS_2 = [
+#     r"hyperkalemia",
+#     r"hyperkalaemia", 
+#     r"high\s+potassium",
+#     r"elevated\s+potassium",
+#     r"increased\s+potassium",
+#     r"potassium.*(?:high|elevated|increased)",
+#     r"K\+?\s*(?::\s*|of\s+)?(?:5\.[5-9]\d*|[6-9]\.?\d*|[1-9]\d{2,}\.?\d*)\s*(?:mEq|mmol)",
+#     r"potassium\s*(?:of\s+)?(?:5\.[5-9]\d*|[6-9]\.?\d*|[1-9]\d{2,}\.?\d*)\s*(?:mEq|mmol)",
+#     r"serum\s+potassium.*(?:5\.[5-9]\d*|[6-9]\.?\d*|[1-9]\d{2,}\.?\d*)",
+# ]
 # ## Prognosis Languages
 # QUESTION_PATTERNS_2 = [                                                                                                                                                                                                                                                                                       
 #     r"\bprogno(?:sis|stic)\b",                                                                                                                                                                                                                                                                                
@@ -139,12 +175,12 @@ QUESTION_PATTERNS_2 = [
 #     r"\b(?:what|which)\b.*\b(?:happen|expect)\b.*\b(?:next|future|long[- ]term|over\s+time)\b",
 #     r"\b(?:likely|expected|tend)\s+to\s+(?:worsen|deteriorate|improve|recover|resolve)\b",
 # ]
-# # Young patients (age 11-39)
+## Young patients (age 11-39)
 # QUESTION_PATTERNS_2 = [                                                                                                                                                                                                                                                                                       
 #     r"\b(?:1[1-9]|2[0-9]|3[0-9])[-\s]*year[-\s]*old\b",   # "25-year-old", "32 year old"                                                                                                                                                                                                                      
 #     r"\bage[d]?\s+(?:1[1-9]|2[0-9]|3[0-9])\b",             # "aged 25", "age 32"      
 # ]
-# ## Tachycardia
+# ## Hypotension + Tachycardia
 # QUESTION_PATTERNS_2 = [
 #       r"\btachycardia\b",
 #       r"\btachycardic\b",
@@ -160,18 +196,35 @@ QUESTION_PATTERNS_2 = [
 
 QUESTION_EXCLUDE_PATTERNS = [
 ]
+# QUESTION_EXCLUDE_PATTERNS = [
+#     r"\bdenies\s+(?:\w+\s+){0,5}new sexual partners\b"
+# ]
+# ## Exclude IV drug use negation
+# QUESTION_EXCLUDE_PATTERNS = [
+#     r"\bdenies\s+(?:\w+\s+){0,5}intravenous drug use\b"
+# ]
+# ## Exclude alcohol negation
+# QUESTION_EXCLUDE_PATTERNS = [
+#     r"\bdoes not smoke or\s+(?:drink|consume) alcohol\b",
+#     r"\bdoes not drink\b", 
+#     r"\bdenies\s+(?:\w+\s+){0,5}alcohol\b"
+# ]
 # ## Exclude Male
 # QUESTION_EXCLUDE_PATTERNS = [
 #     r"\bmale\b",
 #     r"\bman\b",
 #     r"\b\d+-year-old man\b",
+#     r"\bboy\b",
 # ]
 
 
 # Regex patterns to match in OPTION text (OR logic: any match suffices)
-
 OPTION_PATTERNS = [
 ]
+# ## Dehydration
+# OPTION_PATTERNS = [
+#     r"\bdehydration\b"
+# ]
 # ## Dosages
 # OPTION_PATTERNS = [
 #     r"\d+\s*mg\b",                  # 500 mg, 250mg
@@ -222,6 +275,22 @@ DATASETS = {
     "mmlu_professional_medicine": DATA_DIR / "mmlu_professional_medicine" / "mmlu_professional_medicine.jsonl",
 }
 
+# ID prefix per dataset (must stay in sync with spurious_inject/sample_ids.py)
+SOURCE_ID_PREFIX = {
+    "medxpertqa": "MedXpertQA",
+    "medqa": "MedQA_US",
+    "mmlu_professional_medicine": "MMLU_PM",
+    "medbullets": "Medbullets",
+}
+
+
+def strip_answer_choices(question: str) -> str:
+    """Remove the 'Answer Choices: (A) ...' suffix from a question string."""
+    match = re.search(r"\s*Answer Choices:\s*\(A\)", question)
+    if match:
+        return question[:match.start()]
+    return question
+
 
 def compile_patterns(patterns: list[str]) -> re.Pattern | None:
     """Compile a list of regex patterns into a single OR-joined pattern."""
@@ -231,13 +300,24 @@ def compile_patterns(patterns: list[str]) -> re.Pattern | None:
     return re.compile(combined, re.IGNORECASE)
 
 
-def normalize_sample(raw: dict, source: str) -> dict:
+def make_sample_id(raw: dict, source: str, idx: int) -> str:
+    """Build a deterministic sample ID consistent with spurious_inject/sample_ids.py."""
+    prefix = SOURCE_ID_PREFIX[source]
+    if source == "medxpertqa":
+        raw_id = raw["id"]
+        return raw_id if raw_id.startswith(prefix) else f"{prefix}-{raw_id}"
+    return f"{prefix}-{idx}"
+
+
+def normalize_sample(raw: dict, source: str, idx: int) -> dict:
     """Convert any dataset format into a unified format with dict-style options."""
+    sample_id = make_sample_id(raw, source, idx)
     if source == "medxpertqa":
         options = {opt["letter"]: opt["content"] for opt in raw["options"]}
         answer = raw["label"][0] if isinstance(raw["label"], list) else raw["label"]
         return {
-            "question": raw["question"],
+            "id": sample_id,
+            "question": strip_answer_choices(raw["question"]),
             "answer": answer,
             "options": options,
             "meta_info": source,
@@ -248,6 +328,7 @@ def normalize_sample(raw: dict, source: str) -> dict:
         }
     else:
         return {
+            "id": sample_id,
             "question": raw["question"],
             "answer": raw["answer"],
             "options": raw["options"],
@@ -307,12 +388,12 @@ def load_and_filter(source: str, path: Path,
                     meta_regexes: dict[str, re.Pattern] | None = None) -> list[dict]:
     results = []
     with open(path, encoding="utf-8") as f:
-        for line in f:
+        for idx, line in enumerate(f):
             line = line.strip()
             if not line:
                 continue
             raw = json.loads(line)
-            sample = normalize_sample(raw, source)
+            sample = normalize_sample(raw, source, idx)
             if sample_matches(sample, q_regex, o_regex, q_exclude, o_exclude, q_regex_2, meta_regexes):
                 results.append(sample)
     return results

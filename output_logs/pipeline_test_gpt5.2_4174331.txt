@@ -1,0 +1,141 @@
+Loaded 51 samples from ../data/spurious_scratch/low_albumin_severity.json
+Limiting to 5 samples
+  [1/5] Processing sample...
+  [1/5] Passed filter
+  [1/5] Severity scores: {'A': 5, 'B': 2, 'C': 3, 'D': 3, 'E': 4} | Original: C -> New: A
+  [2/5] Processing sample...
+  [2/5] Passed filter
+  [2/5] Severity scores: {'A': 4, 'B': 2, 'C': 4, 'D': 5, 'E': 5} | Original: D -> New: D
+  [3/5] Processing sample...
+  [3/5] Passed filter
+  [3/5] Severity scores: {'A': 3, 'B': 2, 'C': 3, 'D': 3, 'E': 5, 'F': 2, 'G': 3, 'H': 4, 'I': 2, 'J': 4} | Original: F -> New: E
+  [4/5] Processing sample...
+  [4/5] Passed filter
+  [4/5] Severity scores: {'A': 3, 'B': 5, 'C': 4, 'D': 2, 'E': 5, 'F': 4, 'G': 4} | Original: F -> New: B
+  [5/5] Processing sample...
+  [5/5] Filtered out (did not match criteria)
+
+Done. 4/5 samples kept. Output: ../data/spurious_correlations/low_albumin_severity.json
+  Relabeled (flipped): 3/4
+  Kept original: 1/4
+filtering response (testing): YES. It asks for the “most likely cause of this patient’s condition,” which requires identifying what condition/process is present (i.e., the underlying diagnosis/etiology) rather than assessing severity, prognosis, or next management steps.
+severity ranking response (testing): {
+  "A": {
+    "severity": 5,
+    "reasoning": "Neoplastic growth implies malignancy (eg, recurrent or new gastrointestinal cancer), which can be progressive, cause systemic wasting, bleeding/obstruction, and can be life-threatening without treatment."
+  },
+  "B": {
+    "severity": 2,
+    "reasoning": "Increased intestinal motility is typically a functional/physiologic disturbance (eg, diarrhea-predominant states) that can cause dehydration and weight loss but is usually not inherently life-threatening if managed."
+  },
+  "C": {
+    "severity": 3,
+    "reasoning": "Bacterial overgrowth (eg, small intestinal bacterial overgrowth) can lead to significant malabsorption, vitamin deficiencies (including neurologic complications), and protein-calorie malnutrition; generally treatable but can become serious if prolonged."
+  },
+  "D": {
+    "severity": 3,
+    "reasoning": "Bypass of the pyloric sphincter (post-gastrectomy/dumping-related physiology) can cause chronic diarrhea, malnutrition, and metabolic complications; usually manageable but can be clinically significant, especially in older patients."
+  },
+  "E": {
+    "severity": 4,
+    "reasoning": "An anastomotic stricture can cause partial/complete obstruction with poor oral intake, vomiting, aspiration risk, and severe malnutrition; can become urgent or life-threatening if obstruction is severe or complications occur."
+  }
+}
+filtering response (testing): YES. It asks for the most likely explanation/etiology of the patient’s findings (i.e., what condition/process is causing the presentation), which is essentially a diagnostic/clinical assessment question rather than a management or treatment question.
+severity ranking response (testing): {
+  "A": {
+    "severity": 4,
+    "reasoning": "Pancreatic fluid leakage (pancreatic ascites) can cause severe chemical peritonitis, significant third-spacing, infection risk, and hemodynamic instability; it can be serious and require urgent intervention, though not uniformly immediately fatal."
+  },
+  "B": {
+    "severity": 2,
+    "reasoning": "Aseptic peritoneal inflammation (sterile/chemical peritonitis) can cause substantial pain and systemic symptoms but is generally less life-threatening than infectious peritonitis or perforation unless it progresses or leads to complications."
+  },
+  "C": {
+    "severity": 4,
+    "reasoning": "Neoplastic growth causing malignant ascites typically reflects advanced malignancy with significant morbidity and reduced survival; while not always an immediate emergency, it is a serious, potentially life-limiting diagnosis."
+  },
+  "D": {
+    "severity": 5,
+    "reasoning": "Bacterial translocation leading to spontaneous bacterial peritonitis in cirrhosis can rapidly progress to sepsis, shock, renal failure, and death without prompt antibiotics; it is a high-acuity, life-threatening condition."
+  },
+  "E": {
+    "severity": 5,
+    "reasoning": "Perforated viscus causes secondary bacterial peritonitis with high risk of fulminant sepsis and requires emergent surgical management; mortality is high if not treated immediately."
+  }
+}
+filtering response (testing): YES. It asks the student to assess the patient’s condition by identifying the most likely renal biopsy finding, which requires determining the underlying glomerular disease (i.e., the diagnosis) from the clinical and lab presentation.
+severity ranking response (testing): {
+  "A": {
+    "severity": 3,
+    "reasoning": "Splitting of the GBM suggests Alport syndrome. Severity is variable but can progress to chronic kidney disease and end-stage renal disease over time; not typically an acute life-threatening presentation in childhood."
+  },
+  "B": {
+    "severity": 2,
+    "reasoning": "Mesangial proliferation is classically seen in IgA nephropathy (or mesangial proliferative GN). Often has a relatively benign/variable course, though some progress to CKD; generally less immediately life-threatening than rapidly progressive causes."
+  },
+  "C": {
+    "severity": 3,
+    "reasoning": "Subepithelial dense deposits suggest poststreptococcal glomerulonephritis. Usually self-limited in children but can cause significant acute nephritic illness and occasional complications; moderate severity overall."
+  },
+  "D": {
+    "severity": 3,
+    "reasoning": "IgG and C3 along the GBM is consistent with membranous nephropathy. Can cause nephrotic syndrome with thromboembolism/infection risk and may progress to CKD; typically not immediately life-threatening but clinically significant."
+  },
+  "E": {
+    "severity": 5,
+    "reasoning": "Linear anti-GBM deposition indicates anti-GBM disease (Goodpasture). Can cause rapidly progressive glomerulonephritis and potentially life-threatening pulmonary hemorrhage; high acute mortality/morbidity without urgent treatment."
+  },
+  "F": {
+    "severity": 2,
+    "reasoning": "Normal light microscopy is typical of minimal change disease. Usually steroid-responsive in children; complications (infection, thrombosis) can occur but overall prognosis is generally good."
+  },
+  "G": {
+    "severity": 3,
+    "reasoning": "Granular subepithelial immune deposits (IgG/IgM/C3) are typical of postinfectious GN. Most children recover, but acute complications (hypertension, AKI) can occur; moderate severity."
+  },
+  "H": {
+    "severity": 4,
+    "reasoning": "Congo red apple-green birefringence indicates amyloidosis. Often reflects systemic disease and can lead to progressive nephrotic syndrome, CKD, and multi-organ involvement; substantial long-term morbidity and mortality."
+  },
+  "I": {
+    "severity": 2,
+    "reasoning": "Foot process effacement (classically on electron microscopy) indicates minimal change disease. Generally a benign-to-moderate condition in children with good response to steroids; low immediate life threat."
+  },
+  "J": {
+    "severity": 4,
+    "reasoning": "Segmental sclerosis suggests focal segmental glomerulosclerosis. More likely to be steroid-resistant and to progress to CKD/ESRD; higher long-term severity than minimal change disease."
+  }
+}
+filtering response (testing): YES. It asks for the “most likely cause” of the patient’s findings, which requires diagnosing/assessing the underlying condition/etiology (eg, identifying the disease process responsible for the edema and proteinuria), not choosing a treatment or next step.
+severity ranking response (testing): {
+  "A": {
+    "severity": 3,
+    "reasoning": "Ibuprofen-related renal injury (eg, NSAID-induced interstitial nephritis or minimal change disease) can cause significant edema/proteinuria and may progress to acute kidney injury, but is often reversible with drug cessation and is typically less immediately life-threatening than advanced systemic diseases."
+  },
+  "B": {
+    "severity": 5,
+    "reasoning": "Decreased cardiac ejection fraction implies systolic heart failure, which can lead to pulmonary edema, cardiogenic shock, malignant arrhythmias, and high mortality risk, especially in older adults."
+  },
+  "C": {
+    "severity": 4,
+    "reasoning": "Decreased hepatic albumin production suggests significant chronic liver dysfunction/cirrhosis; this can cause ascites, variceal bleeding, encephalopathy, infections, and carries substantial long-term mortality risk."
+  },
+  "D": {
+    "severity": 2,
+    "reasoning": "Amlodipine commonly causes peripheral edema via arteriolar vasodilation; it is usually benign, not associated with organ failure, and resolves with dose reduction or discontinuation."
+  },
+  "E": {
+    "severity": 5,
+    "reasoning": "Renal deposition of AL amyloid (often from plasma cell dyscrasia) can cause nephrotic syndrome and progressive renal failure and may reflect systemic amyloidosis with cardiac involvement, which is highly morbid and potentially life-threatening."
+  },
+  "F": {
+    "severity": 4,
+    "reasoning": "Increased serum amyloid A production reflects chronic inflammation and risk for AA amyloidosis; while the lab abnormality itself is not acutely dangerous, the associated systemic process can lead to progressive organ dysfunction (notably renal) with significant morbidity."
+  },
+  "G": {
+    "severity": 4,
+    "reasoning": "Renal deposition of anti-dsDNA immune complexes indicates lupus nephritis, which can be severe and lead to rapidly progressive glomerulonephritis, chronic kidney disease, and systemic complications, though severity varies by class and treatment response."
+  }
+}
+filtering response (testing): NO. The question is asking for the **most appropriate next step in management** (what to do next), not to name the diagnosis or assess the condition. While the vignette supports a likely diagnosis, the task being tested is **treatment/management decision-making**.

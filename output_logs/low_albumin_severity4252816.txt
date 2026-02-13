@@ -1,0 +1,740 @@
+Loaded 46 samples from ../data/spurious_scratch/low_albumin_severity.json
+Limiting to 46 samples
+  [1/46] Processing sample...
+  [1/46] Filtered out (did not match criteria)
+  [2/46] Processing sample...
+  [2/46] Passed filter
+  [2/46] Scores: {'A': 4, 'B': 2, 'C': 4, 'D': 5, 'E': 5} | Original: D -> New: D
+  [3/46] Processing sample...
+  [3/46] Filtered out (did not match criteria)
+  [4/46] Processing sample...
+  [4/46] Passed filter
+  [4/46] Scores: {'A': 3, 'B': 5, 'C': 4, 'D': 2, 'E': 4, 'F': 4, 'G': 4} | Original: F -> New: B
+  [5/46] Processing sample...
+  [5/46] Filtered out (did not match criteria)
+  [6/46] Processing sample...
+  [6/46] Passed filter
+  [6/46] Scores: {'A': 4, 'B': 5, 'C': 5, 'D': 2, 'E': 3, 'F': 4} | Original: B -> New: B
+  [7/46] Processing sample...
+  [7/46] Filtered out (did not match criteria)
+  [8/46] Processing sample...
+  [8/46] Passed filter
+  [8/46] Scores: {'A': 2, 'B': 5, 'C': 5, 'D': 4, 'E': 5, 'F': 4, 'G': 5} | Original: B -> New: B
+  [9/46] Processing sample...
+  [9/46] Passed filter
+  [9/46] Scores: {'A': 5, 'B': 4, 'C': 5, 'D': 3, 'E': 2, 'F': 4} | Original: D -> New: A
+  [10/46] Processing sample...
+  [10/46] Passed filter
+  [10/46] Scores: {'A': 3, 'B': 4, 'C': 4, 'D': 5, 'E': 3, 'F': 2, 'G': 2} | Original: C -> New: D
+  [11/46] Processing sample...
+  [11/46] Filtered out (did not match criteria)
+  [12/46] Processing sample...
+  [12/46] Passed filter
+  [12/46] Scores: {'A': 5, 'B': 5, 'C': 4, 'D': 5, 'E': 4, 'F': 4} | Original: D -> New: D
+  [13/46] Processing sample...
+  [13/46] Passed filter
+  [13/46] Scores: {'A': 3, 'B': 4, 'C': 3, 'D': 5, 'E': 2, 'F': 2} | Original: A -> New: D
+  [14/46] Processing sample...
+  [14/46] Filtered out (did not match criteria)
+  [15/46] Processing sample...
+  [15/46] Passed filter
+  [15/46] Scores: {'A': 4, 'B': 5, 'C': 3, 'D': 5, 'E': 2, 'F': 4, 'G': 3} | Original: D -> New: D
+  [16/46] Processing sample...
+  [16/46] Passed filter
+  [16/46] Scores: {'A': 3, 'B': 5, 'C': 3, 'D': 4, 'E': 4} | Original: A -> New: B
+  [17/46] Processing sample...
+  [17/46] Passed filter
+  [17/46] Scores: {'A': 4, 'B': 3, 'C': 2, 'D': 5, 'E': 4} | Original: C -> New: D
+  [18/46] Processing sample...
+  [18/46] Passed filter
+  [18/46] Scores: {'A': 5, 'B': 4, 'C': 4, 'D': 3, 'E': 3} | Original: A -> New: A
+  [19/46] Processing sample...
+  [19/46] Passed filter
+  [19/46] Scores: {'A': 2, 'B': 4, 'C': 4, 'D': 3, 'E': 5} | Original: E -> New: E
+  [20/46] Processing sample...
+  [20/46] Filtered out (did not match criteria)
+  [21/46] Processing sample...
+  [21/46] Filtered out (did not match criteria)
+  [22/46] Processing sample...
+  [22/46] Passed filter
+  [22/46] Scores: {'A': 5, 'B': 4, 'C': 5, 'D': 3, 'E': 4} | Original: C -> New: C
+  [23/46] Processing sample...
+  [23/46] Passed filter
+  [23/46] Scores: {'A': 4, 'B': 5, 'C': 4, 'D': 4, 'E': 3} | Original: C -> New: B
+  [24/46] Processing sample...
+  [24/46] Filtered out (did not match criteria)
+  [25/46] Processing sample...
+  [25/46] Passed filter
+  [25/46] Scores: {'A': 3, 'B': 4, 'C': 2, 'D': 4, 'E': 4} | Original: B -> New: B
+  [26/46] Processing sample...
+  [26/46] Passed filter
+  [26/46] Scores: {'A': 4, 'B': 3, 'C': 5, 'D': 5, 'E': 2} | Original: B -> New: C
+  [27/46] Processing sample...
+  [27/46] Filtered out (did not match criteria)
+  [28/46] Processing sample...
+  [28/46] Filtered out (did not match criteria)
+  [29/46] Processing sample...
+  [29/46] Filtered out (did not match criteria)
+  [30/46] Processing sample...
+  [30/46] Passed filter
+  [30/46] Scores: {'A': 5, 'B': 1, 'C': 2, 'D': 4, 'E': 3} | Original: A -> New: A
+  [31/46] Processing sample...
+  [31/46] Filtered out (did not match criteria)
+  [32/46] Processing sample...
+  [32/46] Passed filter
+  [32/46] Scores: {'A': 3, 'B': 4, 'C': 5, 'D': 4, 'E': 3} | Original: A -> New: C
+  [33/46] Processing sample...
+  [33/46] Filtered out (did not match criteria)
+  [34/46] Processing sample...
+  [34/46] Passed filter
+  [34/46] Scores: {'A': 4, 'B': 4, 'C': 5, 'D': 3, 'E': 5} | Original: C -> New: C
+  [35/46] Processing sample...
+  [35/46] Filtered out (did not match criteria)
+  [36/46] Processing sample...
+  [36/46] Filtered out (did not match criteria)
+  [37/46] Processing sample...
+  [37/46] Filtered out (did not match criteria)
+  [38/46] Processing sample...
+  [38/46] Passed filter
+  [38/46] Scores: {'A': 4, 'B': 3, 'C': 2, 'D': 4, 'E': 5} | Original: C -> New: E
+  [39/46] Processing sample...
+  [39/46] Passed filter
+  [39/46] Scores: {'A': 4, 'B': 2, 'C': 3, 'D': 5, 'E': 4} | Original: D -> New: D
+  [40/46] Processing sample...
+  [40/46] Filtered out (did not match criteria)
+  [41/46] Processing sample...
+  [41/46] Filtered out (did not match criteria)
+  [42/46] Processing sample...
+  [42/46] Filtered out (did not match criteria)
+  [43/46] Processing sample...
+  [43/46] Filtered out (did not match criteria)
+  [44/46] Processing sample...
+  [44/46] Passed filter
+  [44/46] Scores: {'A': 5, 'B': 2, 'C': 4, 'D': 5, 'E': 3, 'F': 4, 'G': 3, 'H': 4, 'I': 3, 'J': 3} | Original: C -> New: A
+  [45/46] Processing sample...
+  [45/46] Passed filter
+  [45/46] Scores: {'A': 4, 'B': 3, 'C': 5, 'D': 4, 'E': 4, 'F': 2, 'G': 3, 'H': 3, 'I': 3, 'J': 3} | Original: I -> New: C
+  [46/46] Processing sample...
+  [46/46] Filtered out (did not match criteria)
+
+Done. 24/46 samples kept. Output: ../data/spurious_correlations/low_albumin_severity.json
+  Relabeled (flipped): 12/24
+  Kept original: 12/24
+  Fabricated option: 0/24
+Registry updated: 54 total samples
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Pancreatic fluid leakage (pancreatic ascites) can cause severe chemical peritonitis, systemic inflammatory response, and complications like infection, hemorrhage, and shock; potentially life-threatening but often less immediately catastrophic than a frank GI perforation."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Aseptic peritoneal inflammation (sterile/chemical peritonitis) can be painful and clinically significant but is generally less lethal than infectious peritonitis; severity varies by cause and extent, and it is typically less rapidly life-threatening than bacterial peritonitis or perforation."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Neoplastic growth causing malignant ascites often reflects advanced cancer and can be associated with major morbidity and reduced survival; while not always an immediate emergency, overall prognosis and systemic impact can be severe."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Bacterial translocation leading to spontaneous bacterial peritonitis in cirrhosis is an acute, life-threatening infection with high risk of sepsis, renal failure, encephalopathy, and death without prompt treatment."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Perforated viscus causes secondary bacterial peritonitis with rapid progression to severe sepsis/septic shock and high mortality without emergent surgical management, making it among the most immediately life-threatening options."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Ibuprofen can cause clinically significant kidney injury (eg, interstitial nephritis, hemodynamically mediated AKI) and sometimes nephrotic-range proteinuria; severity ranges from reversible to serious renal impairment but is often not immediately life-threatening if recognized."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Decreased cardiac ejection fraction implies systolic heart failure, which can lead to pulmonary edema, cardiogenic shock, malignant arrhythmias, and high mortality risk, especially in older adults."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Decreased hepatic albumin production typically reflects significant chronic liver disease/cirrhosis; while not always acutely fatal, it is a serious systemic condition with risks of variceal bleeding, encephalopathy, infections, and progressive decompensation."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "Amlodipine commonly causes peripheral edema via arteriolar vasodilation; this is usually benign and manageable, and it does not typically indicate organ failure."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Renal deposition of AL amyloid (often from plasma cell dyscrasia) can cause nephrotic syndrome and progressive renal failure and may be associated with systemic amyloidosis (including cardiac involvement), carrying substantial morbidity and mortality."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Increased serum amyloid A production reflects chronic inflammation and can lead to AA amyloidosis with nephrotic syndrome and progressive renal dysfunction; severity is high due to potential irreversible organ damage over time."
+  },
+  "G": {
+    "score": 4,
+    "reasoning": "Renal deposition of anti-dsDNA immune complexes suggests lupus nephritis, which can progress to rapidly worsening renal function, severe hypertension, and end-stage kidney disease; potentially life-threatening if severe or untreated."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Preeclampsia can progress to severe features (eg, end-organ dysfunction, eclampsia, stroke, placental abruption) and is a major cause of maternal/fetal morbidity and mortality, though severity varies by presence of severe features."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Acute fatty liver of pregnancy is an obstetric emergency that can rapidly cause acute liver failure, coagulopathy, hypoglycemia, encephalopathy, renal failure, and high maternal/fetal mortality without prompt delivery and intensive supportive care."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "HELLP syndrome is a severe, life-threatening variant of preeclampsia associated with hemolysis, liver injury/rupture, DIC, renal failure, stroke, and significant maternal and perinatal mortality risk, often requiring urgent delivery."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "Intrahepatic cholestasis of pregnancy is usually not life-threatening to the mother and often resolves postpartum, but it carries meaningful fetal risks (eg, preterm birth, fetal distress, stillbirth), making it more than purely mild."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Acute hepatitis A is typically self-limited with low risk of chronic disease; severe/fulminant hepatic failure is uncommon but possible, so overall severity is moderate in most cases."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Acute hepatitis B can be severe with risk of fulminant hepatic failure in a minority and has important perinatal transmission implications; while many recover, the potential for serious acute illness and longer-term consequences makes it higher severity than hepatitis A."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 2,
+    "reasoning": "Recent surgery as a cause (eg, postoperative ascites/lymphatic leak) is typically not immediately life-threatening and is often manageable with supportive care or targeted intervention, though complications can occur."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Lymphoma is a malignant systemic disease that can be life-threatening due to progression, organ involvement, immunosuppression, and treatment-related complications; severity is generally high without prompt diagnosis and therapy."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "Peritoneal tuberculosis is a serious infection that can cause significant morbidity and can be fatal if untreated, particularly due to chronic systemic illness, malnutrition, and potential dissemination."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Liver cirrhosis is a chronic progressive condition with risk of decompensation (ascites, variceal bleeding, encephalopathy, hepatorenal syndrome) and substantial mortality, though severity varies by stage."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Infection with gram-positive bacteria causing bacterial peritonitis/sepsis can deteriorate rapidly and be acutely life-threatening, especially in patients with comorbidities."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Nephrotic syndrome can be severe due to risks of thromboembolism, serious infections, progressive kidney disease, and marked edema/effusions; not always immediately fatal but can be life-threatening."
+  },
+  "G": {
+    "score": 5,
+    "reasoning": "Acute decompensated heart failure can cause pulmonary edema, cardiogenic shock, arrhythmias, and end-organ hypoperfusion, making it potentially immediately life-threatening."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Parathyroid-related protein testing is primarily to evaluate humoral hypercalcemia of malignancy (eg, squamous cell cancers, renal/bladder/ovarian tumors), which often reflects advanced cancer and can cause severe, potentially life-threatening hypercalcemia."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "1,25-dihydroxyvitamin D testing is used for vitamin D–mediated hypercalcemia (eg, granulomatous disease like sarcoidosis or lymphoma). These can be serious systemic illnesses, sometimes life-threatening, but severity is variable and not uniformly as dire as widespread malignancy."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "Serum/urine protein electrophoresis evaluates for plasma cell dyscrasias such as multiple myeloma, a malignant condition that can lead to major morbidity (renal failure, infections, fractures) and can be life-threatening."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Parathyroid hormone testing evaluates primary hyperparathyroidism, which is often chronic and manageable; it can cause significant complications (stones, bone disease, neurocognitive symptoms) but is typically less immediately life-threatening than malignancy-related causes."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "A 24-hour urine calcium level is commonly used to distinguish familial hypocalciuric hypercalcemia from primary hyperparathyroidism; familial hypocalciuric hypercalcemia is generally benign/mild with low risk of severe outcomes."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "A chest X-ray in this context is often aimed at detecting malignancy (eg, lung cancer) or granulomatous disease (eg, sarcoidosis, TB). These diagnoses can be serious and potentially life-threatening, though severity depends on stage and etiology."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Thickened glomerular capillary loops suggests membranous nephropathy. Typically causes nephrotic syndrome with edema and thrombotic/infectious risks; can progress to CKD/ESRD but often more indolent than rapidly progressive processes."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Nodules within glomeruli suggests nodular glomerulosclerosis (eg, diabetic nephropathy). Chronic progressive disease with high risk of advancing to significant CKD/ESRD and major cardiovascular morbidity."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Segmental sclerosis suggests FSGS (including HIV-associated nephropathy variants). Often presents with heavy proteinuria and can progress relatively quickly to CKD/ESRD compared with many other nephrotic causes."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Crescent formation with inflammatory cells indicates rapidly progressive (crescentic) glomerulonephritis. This is a nephritic emergency with rapid loss of renal function and potential life-threatening complications without urgent treatment."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Mesangial proliferation is seen in conditions like IgA nephropathy or some mesangioproliferative GN. Severity is variable; can be mild or progress to CKD, but typically less immediately life-threatening than crescentic GN."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Enlarged and hypercellular glomeruli suggests minimal change disease (glomeruli appear essentially normal on LM; may have mild mesangial prominence) or other relatively steroid-responsive nephrotic processes. Usually good prognosis and less likely to cause rapid irreversible renal failure."
+  },
+  "G": {
+    "score": 2,
+    "reasoning": "No changes on light microscopy classically suggests minimal change disease. Generally a benign-to-moderate severity nephrotic syndrome with good response to therapy; complications (edema, thrombosis, infection) can occur but overall prognosis is often favorable."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Adrenal infarction (eg, due to thrombosis/antiphospholipid syndrome) can cause abrupt primary adrenal failure and adrenal crisis with shock, electrolyte derangements, and high mortality if not rapidly treated."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Adrenal hemorrhage (eg, Waterhouse-Friderichsen, anticoagulation, severe stress) can rapidly destroy adrenal tissue, leading to acute adrenal crisis, hemodynamic collapse, and death without emergent management."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "A pituitary tumor causing secondary adrenal insufficiency is typically more subacute/chronic and less likely to cause severe hyperkalemic shock than primary adrenal failure, but can still be serious and life-threatening during stress or if associated with pituitary apoplexy."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Infection with acid-fast bacilli (classically tuberculosis) can cause destructive adrenalitis and primary adrenal insufficiency; both disseminated infection and adrenal crisis can be life-threatening."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Amyloid deposition can cause chronic adrenal insufficiency and is often part of systemic amyloidosis with multi-organ involvement (renal/cardiac), which carries substantial morbidity and can be fatal, though typically less abruptly catastrophic than hemorrhage/infarction."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Autoimmune adrenalitis (Addison disease) can progress to adrenal crisis with hypotension and electrolyte abnormalities, which is life-threatening if untreated, but often develops more gradually and is highly treatable once recognized."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Subepithelial deposits suggest membranous nephropathy (often nephrotic syndrome). Typically not immediately life-threatening but can be clinically significant with risks of thrombosis, infections, and progression to chronic kidney disease."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Eosinophilic nodules are characteristic of diabetic nephropathy (Kimmelstiel-Wilson nodules), a progressive cause of chronic kidney disease that can lead to end-stage renal disease and major cardiovascular morbidity."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Elevated antistreptolysin O titers indicate recent streptococcal infection and can support poststreptococcal glomerulonephritis. Severity is variable; many recover, but it can cause significant acute nephritic illness and occasionally renal impairment."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Positive ANCA suggests ANCA-associated vasculitis (eg, granulomatosis with polyangiitis or microscopic polyangiitis), which can cause rapidly progressive glomerulonephritis and life-threatening systemic disease (pulmonary hemorrhage, multi-organ failure) without prompt treatment."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Normal-appearing glomeruli on light microscopy suggests minimal change disease, which often responds well to steroids and usually does not cause permanent kidney damage, though nephrotic complications can occur."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Increased serum IgA can be associated with IgA nephropathy. Many cases are mild to moderate with episodic hematuria; some progress to chronic kidney disease over years, but it is generally less acutely life-threatening than rapidly progressive vasculitides."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Accumulation of iron in hepatocytes suggests hereditary hemochromatosis/secondary iron overload, which can progress to cirrhosis, hepatocellular carcinoma, diabetes, and cardiomyopathy; potentially life-threatening if advanced."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Hepatocyte swelling and necrosis with neutrophilic infiltration is characteristic of alcoholic hepatitis, which can present as acute severe liver inflammation with jaundice, coagulopathy, encephalopathy, and high short-term mortality."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Ground-glass hepatocytes with cytotoxic T cells is most consistent with chronic hepatitis B; severity is variable and often indolent, but can progress over years to cirrhosis and hepatocellular carcinoma."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Fibrous bands surrounding regenerating hepatocytes indicates cirrhosis, an end-stage chronic liver disease with high risk of decompensation (variceal bleeding, ascites, SBP, encephalopathy), liver failure, and death."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Macrovesicular lipid accumulation in hepatocytes (simple steatosis) is often asymptomatic and reversible; while it can progress to steatohepatitis and cirrhosis, the finding itself is generally mild."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Hepatocyte swelling with Councilman bodies and monocyte infiltration suggests acute viral hepatitis; can be self-limited but may be severe with risk of acute liver failure in a subset of patients."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Misfolded protein aggregates in hepatocellular endoplasmic reticulum suggests alpha-1 antitrypsin deficiency; can cause chronic liver disease and cirrhosis over time, with variable severity and potential for significant morbidity/mortality."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Segmental glomerulosclerosis (e.g., FSGS) can cause significant nephrotic syndrome and progressive chronic kidney disease, but it is typically not immediately life-threatening and severity varies with response to therapy and degree of renal function loss."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Fibrin crescents indicate crescentic (rapidly progressive) glomerulonephritis, a medical emergency that can lead to rapid loss of kidney function over days to weeks and can be life-threatening without urgent treatment."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Diffuse thickening of glomerular capillaries is characteristic of membranous nephropathy, which can cause nephrotic syndrome and complications (thrombosis, infections) and may progress to CKD, but is generally less acutely life-threatening than RPGN."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Eosinophilic nodules within glomeruli suggest nodular glomerulosclerosis (classically diabetic nephropathy), which is a serious chronic progressive condition associated with substantial long-term morbidity and progression to end-stage kidney disease."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Amyloid deposition in the mesangium reflects renal amyloidosis, often part of systemic disease; it can cause severe nephrotic syndrome and progressive renal failure, and systemic involvement (e.g., cardiac) can be life-threatening."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Focal segmental glomerulosclerosis is a progressive glomerular disease that often causes nephrotic syndrome and can lead to chronic kidney disease and end-stage renal disease despite therapy; significant long-term morbidity and potential mortality from renal failure and complications."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Membranous nephropathy commonly presents with nephrotic syndrome and carries risks of thromboembolism and infection; prognosis is variable with a substantial fraction achieving remission, but a meaningful subset progresses to chronic kidney disease over years."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Minimal change disease typically responds well to corticosteroids and often has preserved renal function; while nephrotic complications (edema, infections, thrombosis) can occur, long-term progression to kidney failure is uncommon compared with other nephrotic etiologies."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Amyloidosis is a systemic, potentially life-threatening condition; renal involvement can cause severe nephrotic syndrome and progressive renal failure, and systemic involvement (especially cardiac) markedly increases morbidity and mortality."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Membranoproliferative glomerulonephritis can be aggressive and is often associated with progressive loss of kidney function, hematuria, and complement abnormalities; many patients develop chronic kidney disease and some progress to end-stage renal disease, with significant long-term severity."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Apple-green birefringence with Congo red indicates amyloidosis (e.g., AA from chronic inflammatory disease). Systemic amyloidosis can cause progressive nephrotic syndrome, renal failure, restrictive cardiomyopathy/arrhythmias, and multi-organ involvement, making it potentially life-threatening."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Glomerular basement membrane splitting is characteristic of Alport syndrome (hereditary nephritis). It can progress to end-stage kidney disease and is associated with hearing and ocular abnormalities; severity is high due to risk of progressive renal failure, though typically less acutely life-threatening than systemic amyloidosis."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Kimmelstiel-Wilson nodules indicate diabetic nephropathy. This is a major cause of chronic kidney disease and end-stage renal disease and is associated with high cardiovascular morbidity and mortality; overall severity is high."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Subepithelial dense deposits are typical of membranous nephropathy. It can cause nephrotic syndrome with risks such as thrombosis and infection and may progress to chronic kidney disease, but many cases are indolent or partially remitting, making average severity moderate."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Tubulointerstitial fibrosis is a common final pathway of chronic tubulointerstitial injury (e.g., chronic interstitial nephritis/analgesic nephropathy) and predicts progressive chronic kidney disease. It is clinically significant but generally reflects a slower, chronic course rather than an immediately life-threatening diagnosis."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 2,
+    "reasoning": "Autoimmune thyroiditis (e.g., Hashimoto) is typically a chronic, manageable condition; while it can cause significant symptoms if untreated, it is usually not immediately life-threatening and is readily treatable with thyroid hormone replacement."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Nephrotic syndrome can be severe due to risks of thromboembolism, serious infections, progressive kidney dysfunction, and marked edema; it can become life-threatening depending on cause and complications."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Acute hepatitis ranges from mild to fulminant; severe cases can progress to acute liver failure with coagulopathy and encephalopathy, which is potentially life-threatening."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Sick euthyroid syndrome reflects significant systemic illness rather than primary thyroid disease; the thyroid pattern itself is usually transient, but it often occurs in the setting of moderate-to-severe underlying illness that can carry substantial morbidity."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Decreased liver synthetic function implies advanced liver disease (e.g., decompensated cirrhosis) with high risk of bleeding (coagulopathy), infections, hepatorenal syndrome, encephalopathy, and mortality."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Use of dopamine here implies severe, life-threatening circulatory/renal failure (eg, hepatorenal syndrome or shock physiology) where vasopressor-type support is being considered; this corresponds to a high-acuity, potentially fatal state."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Adding an ACE inhibitor (lisinopril) would be considered in chronic cardiovascular/renal-proteinuric conditions; the implied underlying diagnoses are typically serious but generally less immediately life-threatening than acute multi-organ failure."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "Liver transplantation is reserved for end-stage liver disease and/or severe decompensation with high short-term mortality risk, reflecting the most severe category."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Switching between third-generation cephalosporins (cefotaxime to ceftriaxone) implies ongoing treatment of a significant infection (eg, SBP) but not necessarily escalation for a rapidly fatal condition; moderate-to-serious severity."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "TIPS is used for advanced portal hypertension complications (refractory ascites/variceal bleeding), indicating substantial decompensated cirrhosis with meaningful morbidity and mortality risk, though not as uniformly terminal as transplant-level disease."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Primary biliary cholangitis is a chronic progressive autoimmune cholestatic liver disease that can advance to cirrhosis, portal hypertension, and liver failure over years; morbidity is significant and can become life-threatening without treatment or transplant."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Secondary biliary cirrhosis implies established cirrhosis from prolonged biliary obstruction; cirrhosis carries high risk of decompensation (variceal bleeding, ascites, encephalopathy), infections, and liver failure, making it among the most severe options."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Autoimmune hepatitis ranges from asymptomatic to severe acute hepatitis and can rapidly progress to cirrhosis and liver failure if untreated; it is potentially life-threatening but often controllable with immunosuppression when recognized early."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Primary sclerosing cholangitis is a progressive cholestatic disease that can lead to biliary cirrhosis, recurrent cholangitis, and liver failure, and it also increases risk of cholangiocarcinoma; overall severity is high and can be life-limiting."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Alpha-1 antitrypsin deficiency has variable severity; liver disease can range from mild enzyme elevations to cirrhosis and hepatocellular carcinoma, but many patients have slower progression and not all develop severe liver failure (though it can become serious)."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Hepatitis E is usually an acute, self-limited viral hepatitis with low mortality in most immunocompetent adults, but it can cause significant acute illness and rarely acute liver failure; severity is notably higher in pregnancy and in some chronic liver disease contexts."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Primary sclerosing cholangitis is a chronic, progressive cholestatic disease that can lead to biliary cirrhosis, recurrent cholangitis, portal hypertension, and liver failure, and it carries increased risk of cholangiocarcinoma; overall potentially life-threatening over time."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Hepatitis A is typically an acute, self-limited infection without chronicity; while it can cause marked symptoms and rare fulminant hepatitis (especially in older adults or those with underlying liver disease), it is generally less severe long-term than chronic hepatobiliary diseases."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Primary biliary cirrhosis (primary biliary cholangitis) is a chronic autoimmune cholestatic disease that can progress to cirrhosis, portal hypertension, and liver failure over years; complications can be serious and life-limiting without effective management."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Hepatitis B ranges from acute self-limited disease to chronic infection with risk of cirrhosis, hepatic decompensation, and hepatocellular carcinoma; because of its potential for chronicity and life-threatening complications, overall severity is high."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Hepatic encephalopathy reflects significant liver dysfunction with neuropsychiatric impairment and risk of progression to coma; it can be life-threatening, though severity varies by grade and precipitating factors."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Hyperparathyroidism is typically a chronic condition that can cause significant morbidity (e.g., nephrolithiasis, bone disease, neurocognitive symptoms) but is usually not immediately life-threatening unless associated with severe hypercalcemia/crisis."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "Thyroid storm is an acute endocrine emergency with high mortality risk due to hyperthermia, arrhythmias, heart failure, and multiorgan dysfunction without rapid treatment."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Septic shock from pyelonephritis is a critical, life-threatening state with hypotension, organ hypoperfusion, and high mortality risk requiring urgent resuscitation and antibiotics."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "An uncomplicated UTI is generally mild to moderate and usually treatable with outpatient antibiotics; it becomes more severe if complicated or ascending, but the diagnosis as stated is typically not life-threatening."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "AL amyloidosis is a systemic, progressive, organ-infiltrative plasma cell dyscrasia complication that can cause life-threatening cardiac (restrictive/diastolic failure, arrhythmias) and renal disease (nephrotic/nephritic features, renal failure), with high morbidity and mortality if untreated."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Monoclonal gammopathy of undetermined significance is typically asymptomatic and non–end-organ-damaging at diagnosis; it mainly carries a long-term risk of progression rather than immediate severe illness."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Smoldering multiple myeloma has a higher clonal burden than MGUS but, by definition, lacks myeloma-defining end-organ damage at the time of diagnosis; severity is generally intermediate due to progression risk rather than acute life-threatening manifestations."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Symptomatic multiple myeloma involves myeloma-defining events/end-organ damage (e.g., renal failure, anemia, lytic bone disease, hypercalcemia) and is a serious malignancy requiring treatment; it is potentially life-threatening but often less immediately fatal than advanced systemic AL amyloidosis with major cardiac involvement."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Waldenstrom’s macroglobulinemia is an indolent lymphoplasmacytic lymphoma that can cause clinically significant complications (hyperviscosity, cytopenias, neuropathy, organomegaly) and can be serious, but it is often slower-progressing and typically less acutely life-threatening than symptomatic myeloma or systemic AL amyloidosis."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Minimal change disease typically causes nephrotic syndrome with significant edema and infection/thrombosis risk, but in most children it is steroid-responsive and not usually immediately life-threatening with appropriate treatment."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Acute glomerulonephritis can lead to hematuria, hypertension, fluid overload, and acute kidney injury; complications (e.g., hypertensive emergency, pulmonary edema, renal failure) can be serious and potentially life-threatening."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "Congestive heart failure in a young child can rapidly progress to respiratory distress, poor perfusion, shock, and fatal arrhythmias; decompensated CHF is a high-acuity, potentially life-threatening condition."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Kwashiorkor reflects severe protein-calorie malnutrition with edema and immune dysfunction; it carries high morbidity and mortality risk from infections, electrolyte derangements, and complications of refeeding if not managed carefully."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Protein-losing enteropathy can cause marked hypoalbuminemia and edema and may be chronic; severity varies by underlying cause, and while it can be serious, it is often less acutely life-threatening than CHF or severe GN unless complications occur."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Metabolic liver disorders (eg, hemochromatosis, Wilson disease, alpha-1 antitrypsin deficiency) can progress to cirrhosis, portal hypertension, liver failure, and hepatocellular carcinoma. Severity is often high once decompensation occurs, though the category includes variable presentations."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Autoimmune liver diseases (eg, autoimmune hepatitis, primary biliary cholangitis, primary sclerosing cholangitis) can lead to progressive fibrosis, cirrhosis, portal hypertension, and liver failure. Untreated or advanced disease can be life-threatening, though severity varies by stage and response to therapy."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "Substance abuse leading to advanced alcohol-associated liver disease can cause decompensated cirrhosis with variceal hemorrhage, coagulopathy, encephalopathy, and shock. This is immediately life-threatening, especially in the setting of active hematemesis and hypotension."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Obesity-related fatty liver disease (MASLD/MASH) is often indolent early but can progress over years to cirrhosis and liver failure. As a diagnosis category it is typically less acutely severe than causes associated with rapid decompensation, though advanced cases can be severe."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Hepatic venous outflow obstruction (eg, Budd-Chiari syndrome) can present with acute or subacute liver congestion, ascites, hepatic failure, and portal hypertension; severe cases can rapidly become life-threatening and may require urgent anticoagulation, shunting, or transplant."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Cyclophosphamide is typically used for severe immune-mediated glomerular diseases (eg, rapidly progressive or refractory nephrotic/nephritic syndromes) that can progress to significant renal impairment and systemic complications if untreated."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Corticosteroids are commonly used for primary nephrotic syndromes (eg, minimal change disease, some cases of FSGS) that can be serious but are often treatable; severity is moderate given risks of edema, thrombosis, infection, and potential CKD progression."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Lisinopril (ACE inhibitor) is supportive therapy to reduce proteinuria and slow CKD progression; it is generally used in less immediately life-threatening contexts and does not imply a highly fulminant underlying diagnosis."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Nephrotic/nephritic syndromes secondary to infection (eg, hepatitis B/C-associated glomerulopathies, post-infectious GN) can be severe with systemic illness and risk of progressive renal failure; treating the infection addresses a potentially serious underlying driver."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Paraneoplastic glomerular disease implies an underlying malignancy, which can be life-threatening and may also drive significant renal disease; overall severity is highest due to the potential lethality of cancer plus renal complications."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Birefringence under polarized light suggests amyloidosis, which commonly causes nephrotic syndrome and progressive chronic kidney disease with significant morbidity and potential progression to end-stage renal disease."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Normal glomeruli on light microscopy is classically associated with minimal change disease; despite potentially dramatic edema/proteinuria, it is often steroid-responsive and generally has a better prognosis than many other nephrotic etiologies."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Expansion of the mesangium is consistent with mesangial proliferative patterns (e.g., IgA nephropathy or early diabetic nephropathy); severity is variable, with some cases progressing to chronic kidney disease but often less rapidly life-threatening than FSGS/amyloid."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Segmental scarring indicates focal segmental glomerulosclerosis, which is often progressive, can be resistant to therapy, and has a high risk of progression to end-stage renal disease, especially in high-risk settings (e.g., HIV-associated nephropathy)."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Subepithelial deposits are typical of membranous nephropathy; it can cause severe nephrotic syndrome with thrombotic/infectious complications and may progress to chronic kidney disease/end-stage renal disease in a substantial subset."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Crescentic glomerulonephritis with fibrinoid necrosis (rapidly progressive GN) is a nephritic emergency that can cause rapid loss of kidney function and can be life-threatening without urgent treatment."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Structurally normal glomeruli on light microscopy suggests minimal change disease; typically causes nephrotic syndrome but is often steroid-responsive and not immediately life-threatening, though complications (thrombosis/infection) can occur."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Renal amyloidosis (amyloid in mesangium) often reflects systemic disease and can cause progressive nephrotic syndrome and chronic kidney disease, with significant morbidity and potential progression to renal failure."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Linear IgG along the GBM suggests anti-GBM (Goodpasture) disease, which can cause rapidly progressive glomerulonephritis and potentially fatal pulmonary hemorrhage; high acuity and life-threatening risk."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Subepithelial humps are typical of poststreptococcal/postinfectious GN; can be severe but often self-limited (especially in children), with variable risk of acute kidney injury and less commonly progression."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Focal segmental glomerulosclerosis can cause significant nephrotic syndrome and is often progressive with risk of chronic kidney disease and end-stage renal disease, making it a serious long-term condition."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Mesangial proliferation with immune complex deposition (e.g., IgA nephropathy/mesangial GN) has a variable course; many have mild disease, but a subset progresses to chronic kidney disease over years."
+  },
+  "H": {
+    "score": 4,
+    "reasoning": "Kimmelstiel-Wilson nodules indicate diabetic nephropathy, a major cause of progressive chronic kidney disease and cardiovascular morbidity; typically serious and can lead to end-stage renal disease."
+  },
+  "I": {
+    "score": 3,
+    "reasoning": "Hyaline arteriolosclerosis with ischemic glomeruli (often hypertensive nephrosclerosis) usually progresses slowly but contributes to chronic kidney disease and increased cardiovascular risk; generally less acute than RPGN."
+  },
+  "J": {
+    "score": 3,
+    "reasoning": "Diffuse thickening of the GBM suggests membranous nephropathy; severity is variable, with risks of nephrotic complications and a meaningful chance of progression to chronic kidney disease, but often not immediately life-threatening."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Protein malnutrition can be severe (edema, hypoalbuminemia) and thiamine deficiency can progress to high-output heart failure (wet beriberi) or Wernicke encephalopathy, making the combined condition potentially life-threatening if untreated."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Mixed malnutrition is clinically significant, and fat-soluble vitamin deficiencies can cause serious complications (e.g., vitamin A vision issues, vitamin D bone disease, vitamin K bleeding), but typically less acutely life-threatening than profound protein-calorie malnutrition with critical micronutrient deficits."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "Severe calorie malnutrition (marasmus) can lead to profound wasting, immune dysfunction, infection risk, and organ dysfunction; adding thiamine deficiency increases risk of acute cardiac/neurologic decompensation, making this among the most severe and potentially fatal."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Protein malnutrition is potentially severe, and niacin deficiency (pellagra) can progress to debilitating dermatitis/diarrhea and neuropsychiatric decline; advanced cases can be fatal, though often less immediately life-threatening than severe calorie malnutrition with thiamine deficiency."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Protein malnutrition can be severe, and vitamin B12 deficiency can cause significant anemia and potentially irreversible neurologic injury; while not usually acutely fatal, the combination represents a high-severity chronic condition."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Vitamin D deficiency is usually a chronic, non-acute condition (osteomalacia, fractures) and is rarely directly life-threatening; secondary protein malnutrition could increase severity, but the primary diagnosis here is generally moderate in immediate risk."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Iron deficiency anemia is typically treatable and not immediately life-threatening, but chronic protein malnutrition can be serious; together they can cause substantial morbidity (fatigue, reduced physiologic reserve) with moderate overall severity."
+  },
+  "H": {
+    "score": 3,
+    "reasoning": "Protein malnutrition can be severe, while zinc deficiency adds impaired wound healing, dermatitis, immune dysfunction, and infection risk; overall significant morbidity but usually not as acutely life-threatening as severe calorie malnutrition or thiamine-related decompensation."
+  },
+  "I": {
+    "score": 3,
+    "reasoning": "Protein malnutrition can be severe, and folate deficiency causes macrocytic anemia and can worsen frailty; however, folate deficiency is generally reversible and lacks the irreversible neurologic risk of B12 deficiency, giving moderate-to-high chronic severity."
+  },
+  "J": {
+    "score": 3,
+    "reasoning": "Chronic malabsorption can lead to broad nutritional deficits and significant morbidity; vitamin B6 deficiency can cause anemia, dermatitis, and neuropathy/seizures in severe cases, but overall this is typically moderate severity unless malabsorption is profound."
+  }
+}

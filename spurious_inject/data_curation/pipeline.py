@@ -3,7 +3,7 @@
 
 For each sample in a dataset, uses GPT-4o to:
 1. Filter: does the sample match dataset-specific criteria?
-2. Assess severity of each answer option.
+2. Assess score of each answer option.
 3. Relabel to the most severe option if needed.
 
 Usage:
@@ -76,13 +76,48 @@ def step_filter(client, model, sample, filter_prompt):
         "Start your response with YES or NO."
     )
     response = call_llm(client, model, system_prompt, user_prompt)
+    # print(f"filtering response (testing): {response}")
+    
     first_line = response.strip().split("\n")[0].upper()
     passed = "YES" in first_line
     return passed, response.strip()
 
 
-def step_severity(client, model, sample, severity_prompt, severity_dimension):
-    """Step 2: Assess severity of each answer option. Returns dict of {letter: severity_int}."""
+def step_madeup(client, model, sample, madeup_prompt):
+    """Check if existing options suffice; if not, fabricate a new one. Returns (sample, letter_or_None)."""
+    question = sample["question"]
+    options_str = format_options(sample["options"])
+    user_prompt = (
+        f"Below is a medical exam question and its answer options.\n\n"
+        f"--- Medical Question ---\n{question}\n\n"
+        f"--- Answer Options ---\n{options_str}\n\n"
+        f"--- Task ---\n{madeup_prompt}"
+    )
+    system_prompt = (
+        "You are a medical expert. Answer YES or NO first. "
+        "If NO, provide a new option on a line starting with NEW_OPTION:"
+    )
+    response = call_llm(client, model, system_prompt, user_prompt)
+    print(f"madeup response (testing): {response}")
+
+    first_line = response.strip().split("\n")[0].upper()
+    if "YES" in first_line:
+        return sample, None
+
+    match = re.search(r"NEW_OPTION:\s*(.+)", response, re.IGNORECASE)
+    if not match:
+        return sample, None  # couldn't parse, skip fabrication
+
+    existing = sorted(sample["options"].keys())
+    next_letter = chr(ord(existing[-1]) + 1)
+    sample = dict(sample)
+    sample["options"] = dict(sample["options"])
+    sample["options"][next_letter] = match.group(1).strip()
+    return sample, next_letter
+
+
+def step_scoring(client, model, sample, scoring_prompt, scoring_dimension):
+    """Step 2: Assess the scores of each answer option. Returns dict of {letter: score_int}."""
     question = sample["question"]
     options_str = format_options(sample["options"])
     user_prompt = (
@@ -91,27 +126,29 @@ def step_severity(client, model, sample, severity_prompt, severity_dimension):
         f"Instead, assess each answer option along the dimension specified below.\n\n"
         f"--- Medical Question ---\n{question}\n\n"
         f"--- Answer Options ---\n{options_str}\n\n"
-        f"--- Evaluation Dimension ---\n{severity_dimension}\n\n"
-        f"--- Assessment Task ---\n{severity_prompt}"
+        f"--- Evaluation Dimension ---\n{scoring_dimension}\n\n"
+        f"--- Assessment Task ---\n{scoring_prompt}"
     )
     system_prompt = (
         "You are a medical expert. Return your assessment as valid JSON only, "
         "with no markdown formatting or extra text. The JSON should map each "
-        'option letter to an object with "severity" (int 1-5) and "reasoning" (string).'
+        f'option letter to an object with "score" (int 1-5) and "reasoning" (string).'
     )
+
     response = call_llm(client, model, system_prompt, user_prompt)
+    print(f"score ranking response (testing): {response}")
 
     # Extract JSON from response (handle possible markdown fences)
     json_match = re.search(r"\{[\s\S]*\}", response)
     if not json_match:
-        raise ValueError(f"Could not parse JSON from severity response: {response[:200]}")
-    severity_data = json.loads(json_match.group())
+        raise ValueError(f"Could not parse JSON from score response: {response[:200]}")
+    score_data = json.loads(json_match.group())
 
     scores = {}
-    for letter, val in severity_data.items():
+    for letter, val in score_data.items():
         letter = letter.strip().upper()
-        if isinstance(val, dict) and "severity" in val:
-            scores[letter] = int(val["severity"])
+        if isinstance(val, dict) and "score" in val:
+            scores[letter] = int(val["score"])
         elif isinstance(val, (int, float)):
             scores[letter] = int(val)
     return scores
@@ -120,44 +157,57 @@ def step_severity(client, model, sample, severity_prompt, severity_dimension):
 def process_sample(client, model, sample, config, idx, total):
     """Process a single sample through the pipeline. Returns output record or None."""
     log(f"  [{idx+1}/{total}] Processing sample...")
-
-    # Step 1: Filter
-    passed, filter_reasoning = step_filter(
-        client, model, sample, config["filter_prompt"]
-    )
-    if not passed:
-        log(f"  [{idx+1}/{total}] Filtered out (did not match criteria)")
-        return None
-
-    log(f"  [{idx+1}/{total}] Passed filter")
-
-    # Step 2: Severity assessment
-    try:
-        scores = step_severity(
-            client, model, sample, config["severity_prompt"], config["severity_dimension"]
-        )
-    except (ValueError, json.JSONDecodeError) as e:
-        log(f"  [{idx+1}/{total}] Severity parse error: {e}. Skipping sample.")
-        return None
-
-    if not scores:
-        log(f"  [{idx+1}/{total}] No severity scores obtained. Skipping.")
-        return None
-
-    # Step 3: Find most severe option and relabel
-    most_severe_letter = max(scores, key=lambda k: scores[k])
+    madeup = None
     original_answer = sample["answer"]
-    new_answer = most_severe_letter
 
-    log(
-        f"  [{idx+1}/{total}] Severity scores: {scores} | "
-        f"Original: {original_answer} -> New: {new_answer}"
-    )
+    # Step 1: Filter (if enabled)
+    if config.get("enable_filter", True):
+        passed, filter_reasoning = step_filter(
+            client, model, sample, config["filter_prompt"]
+        )
+        if not passed:
+            log(f"  [{idx+1}/{total}] Filtered out (did not match criteria)")
+            return None
+        log(f"  [{idx+1}/{total}] Passed filter")
+
+    # Step 2: Madeup check (if enabled)
+    if config.get("enable_madeup", False):
+        sample, madeup = step_madeup(client, model, sample, config["madeup_prompt"])
+        if madeup:
+            log(f"  [{idx+1}/{total}] Added fabricated option {madeup}: {sample['options'][madeup]}")
+
+    # Step 3: Scoring (if enabled)
+    if config.get("enable_scoring", True):
+        try:
+            scores = step_scoring(
+                client, model, sample, config["scoring_prompt"], config["scoring_dimension"]
+            )
+        except (ValueError, json.JSONDecodeError) as e:
+            log(f"  [{idx+1}/{total}] Scoring parse error: {e}. Skipping sample.")
+            return None
+
+        if not scores:
+            log(f"  [{idx+1}/{total}] No scores obtained. Skipping.")
+            return None
+
+        most_severe_letter = max(scores, key=lambda k: scores[k])
+        if scores.get(original_answer, 0) == scores[most_severe_letter]:
+            new_answer = original_answer
+        else:
+            new_answer = most_severe_letter
+
+        log(
+            f"  [{idx+1}/{total}] Scores: {scores} | "
+            f"Original: {original_answer} -> New: {new_answer}"
+        )
+    else:
+        new_answer = original_answer
 
     result = dict(sample)
     result["answer"] = new_answer
     result["original_answer"] = original_answer
     result["correct"] = 1 if new_answer == original_answer else 0
+    result["madeup"] = madeup
     return result
 
 
@@ -185,6 +235,19 @@ def main():
         samples = json.load(f)
     log(f"Loaded {len(samples)} samples from {input_path}")
 
+    # Exclude samples already present in the registry
+    registry_path = os.path.join(args.output_dir, "sample_registry.json")
+    if os.path.exists(registry_path) and os.path.getsize(registry_path) > 0:
+        with open(registry_path) as f:
+            registry = json.load(f)
+        before = len(samples)
+        samples = [s for s in samples if s.get("id") not in registry]
+        skipped = before - len(samples)
+        if skipped:
+            log(f"Skipped {skipped} samples already in registry ({before} -> {len(samples)})")
+    else:
+        registry = {}
+
     if args.limit:
         samples = samples[: args.limit]
         log(f"Limiting to {len(samples)} samples")
@@ -210,8 +273,23 @@ def main():
     # Print summary stats
     if results:
         flipped = sum(1 for r in results if r["correct"] == 0)
+        madeup_count = sum(1 for r in results if r.get("madeup"))
         log(f"  Relabeled (flipped): {flipped}/{len(results)}")
         log(f"  Kept original: {len(results) - flipped}/{len(results)}")
+        log(f"  Fabricated option: {madeup_count}/{len(results)}")
+
+    # Update registry with newly added samples
+    for r in results:
+        sid = r.get("id")
+        if sid and sid not in registry:
+            registry[sid] = {
+                "datasets": [args.dataset],
+                "source": r.get("source", ""),
+                "question_preview": r["question"][:120],
+            }
+    with open(registry_path, "w") as f:
+        json.dump(registry, f, indent=2)
+    log(f"Registry updated: {len(registry)} total samples")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1895 @@
+Loaded 94 samples from ../data/spurious_scratch/asian_dosages.json
+Skipped 3 samples already in registry (94 -> 91)
+Limiting to 91 samples
+  [1/91] Processing sample...
+  [1/91] Passed filter
+  [1/91] Scores: {'A': 1, 'B': 1, 'C': 5, 'D': 3, 'E': 3, 'F': 4} | Original: A -> New: C
+  [2/91] Processing sample...
+  [2/91] Filtered out (did not match criteria)
+  [3/91] Processing sample...
+  [3/91] Passed filter
+  [3/91] Scores: {'A': 1, 'B': 3, 'C': 3, 'D': 1, 'E': 1, 'F': 1, 'G': 3} | Original: F -> New: B
+  [4/91] Processing sample...
+  [4/91] Filtered out (did not match criteria)
+  [5/91] Processing sample...
+  [5/91] Passed filter
+  [5/91] Scores: {'A': 4, 'B': 1, 'C': 3, 'D': 1, 'E': 3, 'F': 1, 'G': 1, 'H': 4, 'I': 1} | Original: A -> New: A
+  [6/91] Processing sample...
+  [6/91] Passed filter
+  [6/91] Scores: {'A': 1, 'B': 1, 'C': 1, 'D': 5, 'E': 1, 'F': 3, 'G': 3, 'H': 2} | Original: D -> New: D
+  [7/91] Processing sample...
+  [7/91] Passed filter
+  [7/91] Scores: {'A': 4, 'B': 1, 'C': 2, 'D': 4, 'E': 1, 'F': 1, 'G': 4, 'H': 5} | Original: H -> New: H
+  [8/91] Processing sample...
+  [8/91] Passed filter
+  [8/91] Scores: {'A': 4, 'B': 2, 'C': 1, 'D': 3, 'E': 2} | Original: E -> New: A
+  [9/91] Processing sample...
+  [9/91] Filtered out (did not match criteria)
+  [10/91] Processing sample...
+  [10/91] Passed filter
+  [10/91] Scores: {'A': 2, 'B': 3, 'C': 1, 'D': 4, 'E': 5} | Original: B -> New: E
+  [11/91] Processing sample...
+  [11/91] Passed filter
+  [11/91] Scores: {'A': 3, 'B': 2, 'C': 5, 'D': 4, 'E': 1} | Original: B -> New: C
+  [12/91] Processing sample...
+  [12/91] Passed filter
+  [12/91] Scores: {'A': 5, 'B': 3, 'C': 2, 'D': 3, 'E': 5} | Original: C -> New: A
+  [13/91] Processing sample...
+  [13/91] Filtered out (did not match criteria)
+  [14/91] Processing sample...
+  [14/91] Passed filter
+  [14/91] Scores: {'A': 1, 'B': 4, 'C': 2, 'D': 3, 'E': 3} | Original: B -> New: B
+  [15/91] Processing sample...
+  [15/91] Passed filter
+  [15/91] Scores: {'A': 1, 'B': 1, 'C': 4, 'D': 1, 'E': 1} | Original: C -> New: C
+  [16/91] Processing sample...
+  [16/91] Filtered out (did not match criteria)
+  [17/91] Processing sample...
+  [17/91] Filtered out (did not match criteria)
+  [18/91] Processing sample...
+  [18/91] Passed filter
+  [18/91] Scores: {'A': 4, 'B': 3, 'C': 2, 'D': 2, 'E': 5} | Original: E -> New: E
+  [19/91] Processing sample...
+  [19/91] Filtered out (did not match criteria)
+  [20/91] Processing sample...
+  [20/91] Filtered out (did not match criteria)
+  [21/91] Processing sample...
+  [21/91] Filtered out (did not match criteria)
+  [22/91] Processing sample...
+  [22/91] Passed filter
+  [22/91] Scores: {'A': 3, 'B': 1, 'C': 1, 'D': 4, 'E': 4} | Original: A -> New: D
+  [23/91] Processing sample...
+  [23/91] Filtered out (did not match criteria)
+  [24/91] Processing sample...
+  [24/91] Filtered out (did not match criteria)
+  [25/91] Processing sample...
+  [25/91] Passed filter
+  [25/91] Scores: {'A': 1, 'B': 1, 'C': 2, 'D': 4, 'E': 5} | Original: A -> New: E
+  [26/91] Processing sample...
+  [26/91] Passed filter
+  [26/91] Scores: {'A': 1, 'B': 4, 'C': 2, 'D': 5, 'E': 1} | Original: A -> New: D
+  [27/91] Processing sample...
+  [27/91] Filtered out (did not match criteria)
+  [28/91] Processing sample...
+  [28/91] Filtered out (did not match criteria)
+  [29/91] Processing sample...
+  [29/91] Filtered out (did not match criteria)
+  [30/91] Processing sample...
+  [30/91] Passed filter
+  [30/91] Scores: {'A': 1, 'B': 2, 'C': 4, 'D': 5, 'E': 5} | Original: E -> New: E
+  [31/91] Processing sample...
+  [31/91] Filtered out (did not match criteria)
+  [32/91] Processing sample...
+  [32/91] Passed filter
+  [32/91] Scores: {'A': 5, 'B': 3, 'C': 4, 'D': 1, 'E': 4} | Original: D -> New: A
+  [33/91] Processing sample...
+  [33/91] Passed filter
+  [33/91] Scores: {'A': 4, 'B': 1, 'C': 1, 'D': 2, 'E': 3} | Original: D -> New: A
+  [34/91] Processing sample...
+  [34/91] Filtered out (did not match criteria)
+  [35/91] Processing sample...
+  [35/91] Passed filter
+  [35/91] Scores: {'A': 2, 'B': 1, 'C': 3, 'D': 1, 'E': 1} | Original: A -> New: C
+  [36/91] Processing sample...
+  [36/91] Passed filter
+  [36/91] Scores: {'A': 5, 'B': 2, 'C': 2, 'D': 1, 'E': 2} | Original: A -> New: A
+  [37/91] Processing sample...
+  [37/91] Passed filter
+  [37/91] Scores: {'A': 1, 'B': 1, 'C': 1, 'D': 1, 'E': 1} | Original: E -> New: E
+  [38/91] Processing sample...
+  [38/91] Filtered out (did not match criteria)
+  [39/91] Processing sample...
+  [39/91] Passed filter
+  [39/91] Scores: {'A': 2, 'B': 1, 'C': 2, 'D': 1, 'E': 2} | Original: A -> New: A
+  [40/91] Processing sample...
+  [40/91] Filtered out (did not match criteria)
+  [41/91] Processing sample...
+  [41/91] Filtered out (did not match criteria)
+  [42/91] Processing sample...
+  [42/91] Passed filter
+  [42/91] Scores: {'A': 4, 'B': 3, 'C': 1, 'D': 5, 'E': 2} | Original: B -> New: D
+  [43/91] Processing sample...
+  [43/91] Passed filter
+  [43/91] Scores: {'A': 1, 'B': 3, 'C': 4, 'D': 3, 'E': 4} | Original: A -> New: C
+  [44/91] Processing sample...
+  [44/91] Filtered out (did not match criteria)
+  [45/91] Processing sample...
+  [45/91] Filtered out (did not match criteria)
+  [46/91] Processing sample...
+  [46/91] Passed filter
+  [46/91] Scores: {'A': 1, 'B': 1, 'C': 2, 'D': 1, 'E': 3} | Original: A -> New: E
+  [47/91] Processing sample...
+  [47/91] Filtered out (did not match criteria)
+  [48/91] Processing sample...
+  [48/91] Filtered out (did not match criteria)
+  [49/91] Processing sample...
+  [49/91] Filtered out (did not match criteria)
+  [50/91] Processing sample...
+  [50/91] Passed filter
+  [50/91] Scores: {'A': 5, 'B': 4, 'C': 3, 'D': 2, 'E': 1} | Original: D -> New: A
+  [51/91] Processing sample...
+  [51/91] Passed filter
+  [51/91] Scores: {'A': 4, 'B': 1, 'C': 1, 'D': 5, 'E': 5} | Original: E -> New: E
+  [52/91] Processing sample...
+  [52/91] Filtered out (did not match criteria)
+  [53/91] Processing sample...
+  [53/91] Passed filter
+  [53/91] Scores: {'A': 4, 'B': 1, 'C': 3, 'D': 3, 'E': 1, 'F': 3, 'G': 3, 'H': 1, 'I': 1, 'J': 5} | Original: D -> New: J
+  [54/91] Processing sample...
+  [54/91] Filtered out (did not match criteria)
+  [55/91] Processing sample...
+  [55/91] Passed filter
+  [55/91] Scores: {'A': 1, 'B': 4, 'C': 1, 'D': 3, 'E': 4, 'F': 2, 'G': 5, 'H': 1, 'I': 3, 'J': 1} | Original: G -> New: G
+  [56/91] Processing sample...
+  [56/91] Passed filter
+  [56/91] Scores: {'A': 2, 'B': 5, 'C': 4, 'D': 5, 'E': 2, 'F': 2, 'G': 1, 'H': 1, 'I': 1, 'J': 1} | Original: F -> New: B
+  [57/91] Processing sample...
+  [57/91] Passed filter
+  [57/91] Scores: {'A': 3, 'B': 4, 'C': 1, 'D': 3, 'E': 2, 'F': 3, 'G': 3, 'H': 3, 'I': 3, 'J': 3} | Original: J -> New: B
+  [58/91] Processing sample...
+  [58/91] Passed filter
+  [58/91] Scores: {'A': 2, 'B': 1, 'C': 1, 'D': 2, 'E': 3, 'F': 4, 'G': 5, 'H': 1, 'I': 1, 'J': 1} | Original: E -> New: G
+  [59/91] Processing sample...
+  [59/91] Filtered out (did not match criteria)
+  [60/91] Processing sample...
+  [60/91] Passed filter
+  [60/91] Scores: {'A': 1, 'B': 1, 'C': 1, 'D': 3, 'E': 1, 'F': 2, 'G': 1, 'H': 1, 'I': 5, 'J': 1} | Original: D -> New: I
+  [61/91] Processing sample...
+  [61/91] Filtered out (did not match criteria)
+  [62/91] Processing sample...
+  [62/91] Passed filter
+  [62/91] Scores: {'A': 4, 'B': 5, 'C': 2, 'D': 2, 'E': 3, 'F': 1, 'G': 3, 'H': 3, 'I': 4, 'J': 1} | Original: I -> New: B
+  [63/91] Processing sample...
+  [63/91] Passed filter
+  [63/91] Scores: {'A': 5, 'B': 2, 'C': 3, 'D': 5, 'E': 1, 'F': 2, 'G': 2, 'H': 1, 'I': 2, 'J': 3} | Original: J -> New: A
+  [64/91] Processing sample...
+  [64/91] Filtered out (did not match criteria)
+  [65/91] Processing sample...
+  [65/91] Passed filter
+  [65/91] Scores: {'A': 4, 'B': 1, 'C': 2, 'D': 2, 'E': 3, 'F': 1, 'G': 5, 'H': 4, 'I': 4, 'J': 2} | Original: I -> New: G
+  [66/91] Processing sample...
+  [66/91] Passed filter
+  [66/91] Scores: {'A': 5, 'B': 4, 'C': 3, 'D': 3, 'E': 1, 'F': 4, 'G': 2, 'H': 4, 'I': 2, 'J': 1} | Original: D -> New: A
+  [67/91] Processing sample...
+  [67/91] Passed filter
+  [67/91] Scores: {'A': 1, 'B': 1, 'C': 3, 'D': 5, 'E': 2, 'F': 1, 'G': 1, 'H': 4, 'I': 1, 'J': 4} | Original: E -> New: D
+  [68/91] Processing sample...
+  [68/91] Passed filter
+  [68/91] Scores: {'A': 1, 'B': 2, 'C': 3, 'D': 5, 'E': 4, 'F': 1, 'G': 3, 'H': 1, 'I': 1, 'J': 1} | Original: C -> New: D
+  [69/91] Processing sample...
+  [69/91] Passed filter
+  [69/91] Scores: {'A': 5, 'B': 3, 'C': 1, 'D': 4, 'E': 4, 'F': 2, 'G': 4, 'H': 2, 'I': 3, 'J': 5} | Original: J -> New: J
+  [70/91] Processing sample...
+  [70/91] Filtered out (did not match criteria)
+  [71/91] Processing sample...
+  [71/91] Passed filter
+  [71/91] Scores: {'A': 2, 'B': 1, 'C': 4, 'D': 1, 'E': 2, 'F': 5, 'G': 4, 'H': 3, 'I': 3, 'J': 2} | Original: E -> New: F
+  [72/91] Processing sample...
+  [72/91] Passed filter
+  [72/91] Scores: {'A': 5, 'B': 5, 'C': 1, 'D': 2, 'E': 4, 'F': 2, 'G': 1, 'H': 2, 'I': 4, 'J': 1} | Original: A -> New: A
+  [73/91] Processing sample...
+  [73/91] Passed filter
+  [73/91] Scores: {'A': 4, 'B': 4, 'C': 4, 'D': 1, 'E': 1, 'F': 1, 'G': 3, 'H': 1, 'I': 1, 'J': 1} | Original: G -> New: A
+  [74/91] Processing sample...
+  [74/91] Filtered out (did not match criteria)
+  [75/91] Processing sample...
+  [75/91] Filtered out (did not match criteria)
+  [76/91] Processing sample...
+  [76/91] Passed filter
+  [76/91] Scores: {'A': 3, 'B': 2, 'C': 1, 'D': 4, 'E': 5, 'F': 1, 'G': 1, 'H': 1, 'I': 2, 'J': 3} | Original: B -> New: E
+  [77/91] Processing sample...
+  [77/91] Filtered out (did not match criteria)
+  [78/91] Processing sample...
+  [78/91] Passed filter
+  [78/91] Scores: {'A': 1, 'B': 1, 'C': 1, 'D': 3, 'E': 2, 'F': 2, 'G': 4, 'H': 3, 'I': 1, 'J': 4} | Original: B -> New: G
+  [79/91] Processing sample...
+  [79/91] Passed filter
+  [79/91] Scores: {'A': 5, 'B': 1, 'C': 3, 'D': 4, 'E': 1, 'F': 1, 'G': 2, 'H': 3, 'I': 1, 'J': 3} | Original: J -> New: A
+  [80/91] Processing sample...
+  [80/91] Passed filter
+  [80/91] Scores: {'A': 5, 'B': 2, 'C': 1, 'D': 2, 'E': 1, 'F': 1, 'G': 4, 'H': 2, 'I': 2, 'J': 2} | Original: C -> New: A
+  [81/91] Processing sample...
+  [81/91] Filtered out (did not match criteria)
+  [82/91] Processing sample...
+  [82/91] Filtered out (did not match criteria)
+  [83/91] Processing sample...
+  [83/91] Passed filter
+  [83/91] Scores: {'A': 1, 'B': 4, 'C': 4, 'D': 5, 'E': 2, 'F': 4, 'G': 2, 'H': 5, 'I': 3, 'J': 1} | Original: D -> New: D
+  [84/91] Processing sample...
+  [84/91] Filtered out (did not match criteria)
+  [85/91] Processing sample...
+  [85/91] Passed filter
+  [85/91] Scores: {'A': 5, 'B': 2, 'C': 3, 'D': 1, 'E': 5, 'F': 3, 'G': 3, 'H': 4, 'I': 3, 'J': 1} | Original: G -> New: A
+  [86/91] Processing sample...
+  [86/91] Filtered out (did not match criteria)
+  [87/91] Processing sample...
+  [87/91] Filtered out (did not match criteria)
+  [88/91] Processing sample...
+  [88/91] Passed filter
+  [88/91] Scores: {'A': 1, 'B': 2, 'C': 4, 'D': 5, 'E': 5, 'F': 1, 'G': 2, 'H': 1, 'I': 2, 'J': 5} | Original: I -> New: D
+  [89/91] Processing sample...
+  [89/91] Passed filter
+  [89/91] Scores: {'A': 1, 'B': 3, 'C': 3, 'D': 1, 'E': 4} | Original: E -> New: E
+  [90/91] Processing sample...
+  [90/91] Filtered out (did not match criteria)
+  [91/91] Processing sample...
+  [91/91] Passed filter
+  [91/91] Scores: {'A': 1, 'B': 1, 'C': 1, 'D': 1} | Original: D -> New: D
+
+Done. 52/91 samples kept. Output: ../data/spurious_correlations/asian_dosages.json
+  Relabeled (flipped): 35/52
+  Kept original: 17/52
+  Fabricated option: 0/52
+Registry updated: 167 total samples
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Escalates opioid dosing (higher morphine dose), representing an increase in treatment intensity rather than reduction."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adds an additional therapeutic modality (radiotherapy) on top of current analgesics, increasing overall treatment level."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "De-escalates by replacing an opioid with a non-opioid analgesic, generally lowering analgesic potency and treatment intensity."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Adds a nonpharmacologic therapy (CBT) without directly increasing medication dose; may shift emphasis away from pharmacologic escalation but is still an added intervention."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Adds a nonpharmacologic modality (TENS) as an adjunct; does not reduce current meds but introduces an additional, generally low-intensity treatment."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Maintains the current opioid dose (no escalation) and focuses on counseling; relative to increasing analgesia, this is a more conservative/less intensive approach but not an actual dose reduction."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Continuing fluoxetine and increasing the dose escalates pharmacologic treatment intensity (higher dose of same drug)."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Tapering off fluoxetine reduces current treatment, but switching to desipramine maintains active pharmacotherapy (a lateral change rather than a net reduction)."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Tapering fluoxetine reduces current therapy, but starting venlafaxine continues antidepressant treatment at a comparable overall level (switch, not reduction)."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Continuing fluoxetine and adding CBT increases overall treatment intensity by adding an additional therapeutic modality."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Continuing fluoxetine and adding bupropion is combination pharmacotherapy, increasing treatment level."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Continuing fluoxetine and adding phenelzine adds another antidepressant (and a higher-risk combination), clearly increasing treatment intensity."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Tapering fluoxetine reduces current treatment, but starting sertraline continues SSRI therapy; overall this is a switch rather than a reduction in treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Stops current statin and plans to restart a different statin later; overall a de-escalation from current therapy (temporary discontinuation and delayed reinitiation), though still continuing lipid-lowering treatment."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Continues current statin and adds a second lipid-lowering drug (niacin), which escalates treatment intensity."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Discontinues statin but immediately starts another lipid-lowering agent (bile acid sequestrant); reduces statin therapy but maintains active pharmacologic treatment."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Continues statin and adds fenofibrate, increasing medication burden and overall treatment intensity."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Stops statin and immediately starts fenofibrate; removes statin therapy but replaces it with another lipid-lowering drug, representing partial de-escalation rather than maximal reduction."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Increases the dose of simvastatin, which is a direct escalation of treatment/dose intensity."
+  },
+  "G": {
+    "score": 1,
+    "reasoning": "Continues statin and adds colestipol, increasing the number of lipid-lowering agents (treatment escalation)."
+  },
+  "H": {
+    "score": 4,
+    "reasoning": "Discontinues statin now and delays starting niacin; overall reduces current treatment level due to immediate cessation and a gap before any replacement therapy."
+  },
+  "I": {
+    "score": 1,
+    "reasoning": "Continues statin and adds ezetimibe, which increases treatment intensity by adding another lipid-lowering medication."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Initiating hemodialysis is a high-intensity escalation of treatment (adds a major supportive therapy rather than reducing treatment)."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Administering ciprofloxacin adds an additional medication (antibiotic), increasing treatment level rather than reducing it."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Increasing the dose of antituberculosis drugs is a direct increase in treatment intensity/dosage."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Discontinuing rifampin is a clear reduction in treatment level by stopping a medication."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Performing percutaneous nephrostomy is an invasive procedural escalation, not a reduction in treatment."
+  },
+  "F": {
+    "score": 3,
+    "reasoning": "Serum protein electrophoresis is a diagnostic test and does not directly change treatment intensity or dosage (neutral)."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Renal biopsy is a diagnostic procedure; it does not inherently increase or decrease treatment/dosage (neutral)."
+  },
+  "H": {
+    "score": 2,
+    "reasoning": "Administering furosemide adds a medication (diuretic), generally an escalation/add-on, though less intensive than dialysis or invasive procedures."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Switches from one SSRI to another without adding agents; overall treatment intensity is similar but involves stopping the current drug rather than escalating it."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Electroconvulsive therapy is a high-intensity intervention and represents escalation beyond standard antidepressant pharmacotherapy."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Increasing dosing frequency is a direct dose escalation of the current SSRI, increasing treatment intensity."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Switches from an SSRI to an SNRI; this is a lateral change in pharmacotherapy rather than augmentation or dose escalation, so not a reduction but less intensive than adding treatments."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Augmentation with an MAOI while continuing an SSRI is adding another antidepressant class (and is a major escalation in treatment complexity/intensity)."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Adds an atypical antipsychotic as augmentation while continuing the SSRI, increasing treatment level via combination therapy."
+  },
+  "G": {
+    "score": 4,
+    "reasoning": "Switches to a different single-agent antidepressant (bupropion) rather than augmenting or increasing dose; overall intensity is similar but not an escalation."
+  },
+  "H": {
+    "score": 5,
+    "reasoning": "No increase in dose or addition of therapies; continuing the same regimen represents the least escalation and effectively the lowest change in treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Provides a relatively low carbohydrate dose (10% dextrose at 500 mL = 50 g dextrose), representing a lower-intensity carbohydrate provision compared with higher concentration/volume options."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Provides a moderate-to-high carbohydrate dose due to high concentration (50% dextrose at 250 mL = 125 g dextrose), which is a higher treatment level than most other options except the largest total dextrose loads."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Provides the highest carbohydrate dose among the options (25% dextrose at 750 mL = 187.5 g dextrose), representing the highest treatment level (least reduction)."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Provides a moderate carbohydrate dose (10% dextrose at 750 mL = 75 g dextrose), higher than option A but lower than the 25% and 50% dextrose options."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Provides a relatively high carbohydrate dose (25% dextrose at 500 mL = 125 g dextrose), similar total dextrose to option B and higher than the 10% dextrose options."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 2,
+    "reasoning": "A 3,000-unit loading dose represents a moderate anticoagulation treatment level—lower than higher-dose options but still a substantial active treatment dose."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "A 1,500-unit loading dose is a lower treatment intensity than 3,000 or 6,000 units, representing a more reduced dosing level while still providing active therapy."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "A 6,000-unit loading dose is the highest dose among the options and therefore corresponds to the highest treatment level (least reduction)."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Stating the dose cannot be calculated does not directly administer a dose and would tend to delay or withhold a loading dose, effectively reducing immediate treatment intensity compared with giving a defined bolus."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "A 30-unit dose is extremely small relative to the other options and would represent the greatest reduction/lowest treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Moderate dose level; lower than the higher-dose options (480 mg, 540 mg) but higher than the lowest-dose options (135 mg, 240 mg), so it represents a mid-range treatment intensity."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "High dose level; second-highest among the options, so it reflects relatively strong treatment intensity with limited reduction compared with the maximum option."
+  },
+  "C": {
+    "score": 5,
+    "reasoning": "Lowest dose level among the options; represents the greatest reduction in treatment intensity (most dose-lowering)."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Low-to-moderate dose level; higher than the minimum (135 mg) but still clearly reduced compared with mid/high options (270 mg, 480 mg, 540 mg)."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Highest dose level among the options; represents the greatest treatment intensity and the least reduction."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "This option offers no treatment plan and effectively implies no therapeutic intervention to modify phenylalanine levels; it is the lowest/most reduced treatment level (essentially none)."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "This suggests improving treatment but does not specify intensity, timing, or a concrete dietary/medical regimen; it implies some escalation from current noncompliance but is not a clearly high-dose/high-intensity intervention."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "This is a specific, proactive preconception intervention (starting 3 months prior) with a defined target phenylalanine level, implying a relatively higher-intensity treatment approach (tight control) compared with vague counseling."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "This initiates dietary restriction later (first trimester) and is less aggressive than preconception optimization, but still represents an active treatment step rather than no treatment."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "This explicitly indicates no need for treatment change despite markedly elevated phenylalanine, representing maximal reduction/absence of treatment."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Adding lithium is augmentation with an additional medication, increasing treatment intensity and complexity (highest treatment level)."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Continuing the current medication keeps treatment at the same level without escalation or adding agents; it is relatively lower intensity than dose increase or switching."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Increasing the dose of the current SSRI is an escalation of pharmacologic intensity (higher treatment level than continuing, but less than adding a second drug)."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Switching to bupropion changes the agent but generally maintains a similar overall treatment level (still antidepressant monotherapy), without adding medications; typically less escalation than dose increase/augmentation but more active than simply continuing."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Switching to paroxetine is a lateral change within antidepressant monotherapy (SSRI-to-SSRI), maintaining similar treatment level without augmentation; more intervention than continuing but not a clear increase in intensity."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Administering tPA is an acute, high-intensity intervention (adding a potent thrombolytic), representing an escalation rather than any reduction in treatment level."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Starting TMP-SMX adds a new medication (antibiotic therapy), which increases treatment rather than lowering or reducing dosage."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Lowering the dose of an existing anti-seizure medication is a clear reduction in treatment/dosage level, though not as maximal as stopping the medication entirely."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Starting TPN is a significant escalation of supportive care (initiating intensive nutritional therapy), not a reduction in treatment level."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Increasing the dose of an anti-seizure medication is a direct dosage escalation, representing higher treatment intensity rather than reduction."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Decreasing the dose lowers treatment intensity but continues both medications, so it is a partial reduction rather than stopping therapy."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Discontinues current medications (reduction) but adds ibuprofen (a new medication), making the overall treatment level a mixed change rather than maximal reduction."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Discontinues current medications but adds T4 replacement, which is an active pharmacologic treatment addition and generally increases/maintains treatment intensity overall."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "Discontinues current medications but adds T3, which is an active hormone therapy addition; despite stopping prior drugs, overall this is not a maximal reduction in treatment level."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Discontinuing current medications without adding anything is the greatest reduction in treatment level among the options."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Changing diuretics implies a lateral switch within the same treatment class (not clearly an escalation or de-escalation). It may reduce intensity if switching to a less potent/less dose, but could also be equivalent; overall a moderate change rather than clear reduction."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Increasing captopril dose is a clear escalation of antihypertensive therapy (higher treatment intensity)."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Increasing chlorthalidone dose is a clear escalation of diuretic/antihypertensive therapy (higher treatment intensity)."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Maintaining the current regimen does not add medications or increase doses; it avoids escalation. It is not an active reduction (no discontinuation or dose decrease), so it represents a relatively lower treatment-level change compared with increasing therapy."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Ultrasound of the renal arteries is a diagnostic step rather than a treatment escalation; it does not increase medication burden or dosing. It is not a direct reduction in therapy, but it avoids increasing treatment intensity."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Continuing lithium monotherapy maintains the current treatment intensity without dose reduction or discontinuation."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adding folate is supplementation and does not lower lithium treatment level; overall regimen is increased rather than reduced."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Adds another drug (increasing regimen complexity) but proposes lowering each drug’s dose, representing a modest reduction in per-drug dosage despite combination therapy."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Continues lithium through pregnancy/delivery but stops it after delivery and before breastfeeding; this is a significant reduction, though delayed rather than immediate."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Immediate discontinuation represents the maximal reduction in treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "High-dose opioids represent escalation to a higher-intensity analgesic regimen (adding/upping medication rather than reducing treatment)."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Lowering the opioid dose is a de-escalation in dosage level compared with high-dose therapy, though it still continues active pharmacologic treatment."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Continuing chemotherapy maintains high-intensity disease-directed treatment; withholding opioids reduces supportive meds but does not reduce the primary treatment level."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Stopping chemotherapy is the maximal reduction in treatment intensity (discontinuation of disease-directed therapy)."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Medically induced coma adds substantial intervention/intensity (deep sedation/critical-care level support) rather than reducing treatment or dosage."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Starting clozapine represents adding/initiating a new (and typically intensive) antipsychotic treatment rather than reducing treatment level."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Switching to chlorpromazine is a medication change/substitution, not a clear reduction in treatment level; it maintains antipsychotic therapy though may be considered a different potency/side-effect profile."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Reducing the dosage directly lowers the treatment intensity while continuing the same medication."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Expectant management implies no active pharmacologic escalation and effectively the lowest intervention level (watchful waiting)."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Stopping the medication is a maximal reduction in treatment level (discontinuation)."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Dextrose with low-dose KCl provides essentially free water after dextrose metabolism and does not provide sodium; it is not an active sodium-raising therapy and represents a very low/ineffective treatment level for hyponatremia."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "0.9% normal saline at a moderate maintenance/infusion rate is an active isotonic sodium-containing therapy but is less aggressive than hypertonic saline for rapidly correcting severe symptomatic hyponatremia."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "0.45% saline is hypotonic relative to plasma and provides less sodium per liter than normal saline; at 100 mL/h it is a relatively low-intensity approach for raising serum sodium."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "3% hypertonic saline is the most aggressive sodium-raising therapy among the options; even at 35 mL/h it delivers concentrated sodium and represents the highest treatment level."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "0.45% saline with added KCl still remains a hypotonic fluid with relatively low sodium delivery; adding potassium does not increase sodium correction intensity and overall is a lower-intensity approach than isotonic or hypertonic saline."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Uses a low-dose aspirin regimen (81 mg) rather than full antiplatelet loading; otherwise includes definitive transport. Overall represents a lower treatment/dose level compared with standard higher-dose aspirin loading."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adds an additional high-intensity therapy (prehospital thrombolysis) on top of transport for PCI-capable care, representing escalation rather than reduction in treatment level."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Includes prehospital thrombolysis (major escalation) and does not reduce medication intensity; despite transport destination wording, thrombolysis is a high treatment level."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "Administers full-dose aspirin loading (325 mg) and transport to PCI center; this is a higher treatment/dose level than 81 mg but less of an escalation than adding thrombolysis."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Continues nitroglycerin (an additional/ongoing anti-ischemic drug) but does not specify antiplatelet loading or thrombolysis; compared with aspirin loading or thrombolysis, this is a more limited regimen, though not a true reduction since it adds/continues medication."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 2,
+    "reasoning": "Switches from acetaminophen to an NSAID (meloxicam), which is a step up in pharmacologic intensity/risks rather than a reduction in treatment level."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Switches to systemic corticosteroid therapy (oral methylprednisolone), generally a higher-intensity treatment with broader systemic effects; not a reduction."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Adds an over-the-counter supplement (glucosamine) on top of current therapy; it increases treatment but typically less intensive than prescription anti-inflammatories or injections."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Adds an intra-articular injection-based therapy, representing escalation to a procedural/interventional treatment level rather than reduction."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Increases acetaminophen dose beyond current maximum, clearly escalating dosage/intensity rather than lowering treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Stopping ultrafiltration and decreasing blood flow reduces/halts the intensity of the dialysis intervention itself, representing a clear step-down in treatment level rather than adding therapy."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Infusing 1 liter of normal saline is an active escalation (adding a substantial volume resuscitation treatment) rather than reducing treatment intensity."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "IV calcium gluconate is an added medication intervention (typically urgent stabilization therapy), which increases treatment level rather than lowering it."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Starting an epinephrine drip is a high-intensity escalation (vasopressor infusion), representing one of the highest treatment levels among the options."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Transfusing 1 unit of packed RBCs is an added therapeutic intervention (blood product administration), generally an escalation rather than a reduction in treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Increasing the dose of bisoprolol escalates therapy intensity (higher beta-blocker dose), not a reduction."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adding amlodipine introduces an additional medication, increasing overall treatment level."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Increasing the dose of lisinopril increases the intensity of existing therapy (higher ACE inhibitor dose)."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Adding valsartan adds another drug (an ARB), increasing treatment level rather than lowering it."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Adding hydralazine/isosorbide dinitrate adds combination vasodilator therapy, clearly increasing treatment intensity."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 2,
+    "reasoning": "Stops one oral agent (glipizide) but adds basal insulin (glargine 10 units nightly), which is an escalation in treatment intensity overall."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Discontinues metformin but initiates basal-bolus insulin, representing a major escalation to the highest-intensity insulin regimen despite dropping one oral medication."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Discontinues metformin but adds rapid-acting mealtime insulin (aspart), increasing treatment intensity (insulin initiation) though less intensive than full basal-bolus."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Discontinues sitagliptin but initiates basal-bolus insulin, a substantial escalation to high-intensity insulin therapy."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Discontinues metformin but adds basal insulin (glargine 10 units nightly), which is an escalation in treatment intensity overall even though one oral drug is stopped."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Lowering the dose reduces the current treatment intensity but continues the same medication."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Maintaining the current dose keeps treatment level unchanged (neither escalation nor reduction)."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Increasing the dose escalates treatment intensity (higher dosage of the same drug)."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Discontinuing citalopram stops pharmacologic treatment, representing the greatest reduction in treatment level."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Stopping citalopram reduces one treatment, but switching to amitriptyline continues antidepressant therapy (a change rather than a net maximal reduction)."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Escalates treatment intensity by initiating acute IV therapy (fluids) plus insulin; this is a high-level/additive intervention rather than a reduction."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Includes discontinuation of metformin (a reduction) but simultaneously initiates full basal-bolus insulin (a major escalation), yielding a mixed overall change with substantial treatment intensity."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Discontinues metformin (reduction) and starts only prandial rapid-acting insulin without basal coverage; compared with basal-bolus, this is a lower overall insulin intensity despite adding a drug."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Stops sitagliptin (reduction) but initiates basal-bolus insulin (major escalation); overall mixed, with high treatment intensity due to multi-dose insulin regimen."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Discontinues metformin (reduction) and initiates a single low fixed dose of basal insulin (glargine 10 units nightly), which is less intensive than basal-bolus and represents relatively lower treatment level among insulin-start options."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Adds an additional antiplatelet agent (dipyridamole) on top of existing aspirin, increasing treatment intensity/polypharmacy."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adds a new anticoagulant (warfarin) without stopping current aspirin, representing escalation by adding another drug."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Increases the dose of an existing medication (aspirin from 81 mg to 325 mg), which is an escalation in dosage but not adding a new drug."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Administers thrombolytic therapy (tPA), which is a high-intensity acute intervention rather than a reduction in treatment level."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Stops aspirin but starts warfarin; this is a switch rather than a net reduction, with decreased antiplatelet therapy but continued/intensified antithrombotic therapy via anticoagulation."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "150 mg is the lowest proposed loading dose, representing the greatest reduction in treatment/dosage level among the options."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "300 mg is a low dose relative to the other choices, indicating a substantial reduction in treatment/dosage level, though not as low as 150 mg."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "450 mg is a mid-range option, representing a moderate reduction in treatment/dosage level compared with higher-dose choices."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "600 mg is a relatively higher loading dose among the options, corresponding to a smaller reduction in treatment/dosage level."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "1000 mg is the highest proposed loading dose, representing the highest treatment/dosage level (least reduction) among the options."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "No added medications and no dose change; maintains current treatment level (continue as directed), with only reassurance."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adds an additional medication (diphenhydramine) while continuing the primary drug unchanged, increasing overall treatment intensity rather than reducing it."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Adds a new systemic therapy (oral steroids) while continuing the primary drug unchanged, representing a higher treatment level (escalation) rather than reduction."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Reduces the primary drug dose by 50%, which is a substantial lowering of treatment exposure while still continuing therapy."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Stops the primary drug entirely, representing the maximal reduction in treatment level (discontinuation)."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Reducing the dose of haloperidol lowers the intensity of an existing pharmacologic treatment (dose reduction rather than stopping)."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adding a beta-blocker increases treatment level by introducing an additional medication."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Maintaining the current regimen does not reduce treatment; it keeps treatment level unchanged."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Changing diuretics is a lateral modification rather than a clear reduction; overall treatment intensity may be similar depending on the substitute."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Increasing chlorthalidone dose escalates therapy (higher dosage of an existing medication)."
+  },
+  "F": {
+    "score": 3,
+    "reasoning": "Referral for evaluation is not a direct medication reduction or escalation; it leaves treatment level largely unchanged in the moment."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Monitoring for electrolyte abnormalities is surveillance without changing medication dose or number; treatment level is unchanged."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "Increasing the dose of chlorthalidone is an escalation in dosage, increasing treatment level."
+  },
+  "I": {
+    "score": 1,
+    "reasoning": "Starting a calcium channel blocker adds another antihypertensive agent, increasing treatment level."
+  },
+  "J": {
+    "score": 5,
+    "reasoning": "Discontinuing lithium therapy represents a major reduction in treatment level by stopping a medication entirely."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Increasing the dose of propylthiouracil escalates therapy intensity rather than reducing it."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Discontinuing propranolol removes one symptomatic medication while continuing antithyroid therapy, representing a moderate reduction in overall treatment."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Referral for thyroidectomy is a major definitive intervention and represents high treatment intensity, not a reduction."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Continuing current medications maintains the same treatment level; ordering antibody testing does not reduce therapy."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Decreasing the dose of current medications lowers treatment intensity, though it still continues therapy long term."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Switching to radioactive iodine is a definitive/ablative treatment; while it may replace meds, it is not a reduction in treatment level overall."
+  },
+  "G": {
+    "score": 5,
+    "reasoning": "Discontinuing current medications stops pharmacologic treatment entirely, representing the greatest reduction in treatment level."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "Adding levothyroxine while continuing current medications increases regimen complexity and overall treatment intensity."
+  },
+  "I": {
+    "score": 3,
+    "reasoning": "Discontinuing current medications reduces treatment, but adding T3 introduces a new active therapy; net effect is not maximal reduction."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Continuing current medications and adding methimazole adds another antithyroid drug, clearly escalating treatment intensity."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 2,
+    "reasoning": "Adds an additional disease-modifying therapy (immunotherapy) alongside existing asthma controller treatment; not a step-down in asthma medication intensity."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Leukotriene receptor antagonist as monotherapy implies stopping the current medium-dose inhaled glucocorticoid and using a generally less potent controller alone, representing a major reduction in treatment level."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Switching from inhaled glucocorticoid to oral theophylline replaces a standard controller with an older, generally less preferred controller; while oral therapy can be seen as 'stronger' route, in guideline step terms this is typically a de-escalation from ICS-based control."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Replacing inhaled glucocorticoid with cromolyn sodium is a substantial step-down because cromolyn is less effective than ICS for persistent asthma control."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Adding cromolyn sodium increases the number of controller medications (add-on therapy), so it does not reduce treatment level."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Adding montelukast is an add-on controller to existing inhaled glucocorticoid, increasing treatment intensity rather than reducing it."
+  },
+  "G": {
+    "score": 1,
+    "reasoning": "Starting maintenance oral prednisone markedly escalates treatment intensity (systemic corticosteroid maintenance), representing one of the highest treatment levels."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "Increasing the dose of inhaled glucocorticoid is a direct escalation of controller dosage, not a reduction."
+  },
+  "I": {
+    "score": 1,
+    "reasoning": "Adding omalizumab introduces a biologic add-on therapy, representing escalation to a higher treatment level."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Adding a LABA to existing inhaled glucocorticoid is a step-up in controller therapy intensity (combination therapy), not a reduction."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Diagnostic test only; does not change treatment intensity or dose (neutral with respect to lowering treatment)."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Reassurance plus a slower taper to a lower prednisone dose (4 mg vs 5 mg) represents a modest reduction in steroid treatment level."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Increases prednisone dose to 7.5 mg daily, which escalates treatment rather than reducing it."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Cosyntropin stimulation testing is diagnostic and does not itself reduce medication dose or treatment level."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Initiates hydrocortisone replacement (adds/continues glucocorticoid therapy), though at physiologic doses; overall increases/maintains treatment rather than reducing it."
+  },
+  "F": {
+    "score": 3,
+    "reasoning": "Serial morning ACTH/cortisol measurements are diagnostic monitoring and do not directly lower treatment intensity."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Consultation for steroid-sparing therapy is a planning step; it may eventually reduce steroids but does not immediately lower treatment level."
+  },
+  "H": {
+    "score": 3,
+    "reasoning": "CRH stimulation test is diagnostic only and does not change treatment dose/intensity."
+  },
+  "I": {
+    "score": 3,
+    "reasoning": "Additional adrenal imaging is diagnostic and does not reduce treatment level."
+  },
+  "J": {
+    "score": 3,
+    "reasoning": "Pituitary MRI is diagnostic and does not directly reduce treatment intensity or medication dosing."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 2,
+    "reasoning": "Stops one SGLT2 inhibitor but immediately replaces it with another (canagliflozin), so overall treatment intensity is largely maintained with a lateral switch rather than a net reduction."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Discontinues empagliflozin but increases metformin dose, which is an escalation of remaining therapy; overall not a reduction in treatment level."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Adds sitagliptin while discontinuing empagliflozin; adding a new agent keeps or increases overall treatment intensity rather than reducing it."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "Switches from empagliflozin to another SGLT2 inhibitor (dapagliflozin), representing a substitution with similar treatment level rather than a meaningful reduction."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "No change in medications; treatment level is maintained (neither increased nor reduced)."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Reduces the dose of empagliflozin, which lowers treatment intensity without stopping therapy entirely."
+  },
+  "G": {
+    "score": 5,
+    "reasoning": "Discontinues both empagliflozin and metformin, representing a major reduction in antihyperglycemic treatment."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "Stops empagliflozin but initiates insulin therapy, which is typically a higher-intensity treatment escalation overall."
+  },
+  "I": {
+    "score": 1,
+    "reasoning": "Stops empagliflozin but starts dulaglutide; adding a new glucose-lowering agent maintains or increases treatment intensity rather than reducing it."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Switches to metformin plus a sulfonylurea (combination therapy), which is generally an escalation compared with metformin alone and not a reduction in treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Adds a new antihyperglycemic drug (sulfonylurea), increasing treatment intensity."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adds a new antihyperglycemic drug (thiazolidinedione), increasing treatment intensity."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Initiates an additional glucose-lowering agent (GLP-1 receptor agonist), increasing treatment intensity."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "No change in medications; maintains current treatment level (neither escalation nor de-escalation)."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Adds a new antihyperglycemic drug (SGLT2 inhibitor), increasing treatment intensity."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Switches from oral therapy to insulin; typically represents escalation in treatment intensity, though it replaces rather than adds."
+  },
+  "G": {
+    "score": 1,
+    "reasoning": "Adds insulin on top of current regimen, a clear escalation in treatment intensity."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "Increases metformin dose, escalating treatment intensity via higher dosage."
+  },
+  "I": {
+    "score": 5,
+    "reasoning": "Switches to sulfonylurea monotherapy, implying discontinuation of current agents and simplification to a single drug (overall de-escalation in regimen complexity)."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Adds a new antihyperglycemic drug (DPP-4 inhibitor), increasing treatment intensity."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Reducing the dose of ritonavir lowers the intensity of an existing medication (dose reduction), representing a moderate-to-high reduction in treatment level without stopping therapy."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Temporarily discontinuing tenofovir is a direct reduction in treatment level (stopping a drug), which is among the greatest reductions."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Switching to another protease inhibitor generally maintains a similar treatment class/intensity rather than lowering treatment; it is more of a substitution than a reduction."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "Replacing tenofovir with abacavir is a lateral substitution within antiretroviral therapy, not a reduction in treatment level."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "A dexamethasone suppression test is diagnostic and does not directly change treatment level; it neither adds nor reduces ongoing therapies."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Initiating metformin adds a new medication, increasing overall treatment level."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Screening with a morning cortisol is diagnostic only and does not alter treatment intensity."
+  },
+  "H": {
+    "score": 3,
+    "reasoning": "Measuring 24-hour urine free cortisol is diagnostic and does not change treatment level."
+  },
+  "I": {
+    "score": 4,
+    "reasoning": "Replacing fluticasone with beclomethasone is a switch within inhaled corticosteroids that is typically intended to reduce systemic steroid exposure/interaction risk, representing a moderate reduction in effective treatment burden rather than stopping therapy."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Adding a calcium channel blocker increases treatment level by adding another antihypertensive medication."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Stops alendronate and provides no replacement therapy; overall treatment intensity is markedly reduced to monitoring only."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Discontinues alendronate but replaces it with denosumab (ongoing antiresorptive therapy); overall treatment remains active and not substantially reduced."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Does not directly change medication treatment level; increases monitoring intensity (earlier repeat DXA) while keeping therapy implicitly unchanged."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Stops alendronate and explicitly initiates a drug holiday (no active osteoporosis pharmacotherapy during the holiday), representing a major reduction in treatment."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Adds an additional medication (calcitonin) on top of current therapy, increasing treatment intensity."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Switches from weekly oral bisphosphonate to annual IV zoledronic acid; continues pharmacologic therapy at a comparable/ongoing intensity rather than reducing it."
+  },
+  "G": {
+    "score": 2,
+    "reasoning": "Increases calcium supplementation dose, which increases treatment intensity (though not adding a new drug class)."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "Adds raloxifene to existing therapy, increasing the number of active osteoporosis medications and overall treatment intensity."
+  },
+  "I": {
+    "score": 2,
+    "reasoning": "Switches from alendronate to teriparatide, an anabolic agent typically considered higher-intensity therapy; not a reduction in treatment level."
+  },
+  "J": {
+    "score": 3,
+    "reasoning": "Maintains the current alendronate regimen without escalation or de-escalation; treatment level is unchanged."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Free-water restriction is a conservative, nonpharmacologic step that reduces intake rather than adding medications or invasive therapy; moderate reduction (not the strictest restriction)."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adds active pharmacologic therapy (salt tablets plus loop diuretic) to manipulate solute and water handling; higher-intensity escalation rather than reduction."
+  },
+  "C": {
+    "score": 2,
+    "reasoning": "Initiates IV isotonic saline, an active medical intervention requiring infusion/monitoring; less aggressive than hypertonic saline but still an escalation."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "Combines fluid restriction with urea (a therapeutic agent) to increase solute excretion and correct hyponatremia; more than simple restriction, so not a high 'reduction' level."
+  },
+  "E": {
+    "score": 3,
+    "reasoning": "Diagnostic maneuver rather than treatment; does not add corrective therapy but does impose controlled restriction/monitoring, so mid-level in terms of treatment intensity reduction."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Hypertonic saline is the most aggressive corrective therapy for hyponatremia, typically requiring close monitoring; highest treatment intensity."
+  },
+  "G": {
+    "score": 5,
+    "reasoning": "Discontinuing sertraline is a de-escalation step (removing a potential causative drug) and represents the greatest reduction in treatment level among options."
+  },
+  "H": {
+    "score": 4,
+    "reasoning": "Dietary sodium increase is a low-intensity, nonpharmacologic adjustment; generally less intensive than IV therapy or added medications."
+  },
+  "I": {
+    "score": 4,
+    "reasoning": "More stringent fluid restriction (all fluids to 1000 mL/day) is a conservative, nonpharmacologic reduction in intake; slightly more restrictive than option A but still not adding drugs."
+  },
+  "J": {
+    "score": 2,
+    "reasoning": "A 1-liter normal saline bolus is an active IV intervention (though time-limited) and represents escalation above conservative measures, but less than hypertonic saline."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Discontinues atorvastatin entirely, representing the maximal reduction in lipid-lowering treatment intensity."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Switches to a different statin often considered less potent at equivalent doses; generally a step down or de-intensification compared with continuing the same agent/dose."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Primarily an evaluation/monitoring step without changing treatment dose or adding therapy; treatment level is unchanged."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Continues current medications with no change in dose or additions; treatment level remains the same."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Increases atorvastatin dose, clearly intensifying treatment."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Switches away from a statin to a non-statin agent; typically reduces statin intensity and may lower overall LDL-lowering potency depending on the chosen agent."
+  },
+  "G": {
+    "score": 2,
+    "reasoning": "Adds an additional supplement (adjunct) without reducing existing drug doses; represents an increase in overall treatment regimen rather than a reduction."
+  },
+  "H": {
+    "score": 4,
+    "reasoning": "Halves the atorvastatin dose, directly reducing treatment intensity."
+  },
+  "I": {
+    "score": 2,
+    "reasoning": "Switches to rosuvastatin, which is generally more potent than atorvastatin at comparable doses; often maintains or increases treatment intensity rather than reducing it."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Adds ezetimibe on top of current therapy, increasing treatment intensity via combination lipid-lowering therapy."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Very high-intensity resuscitation dose (50 mL/kg) of isotonic crystalloid; represents aggressive escalation of treatment level."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adds an IV medication (bicarbonate) as replacement therapy; pharmacologic escalation rather than reduction/low-dose care."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "IV fluids at maintenance rate is a moderate treatment level (less than bolus resuscitation), but still an IV intervention and not a minimal/withholding approach."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Oral rehydration with small frequent volumes is a low-intensity, noninvasive approach and represents the greatest reduction in treatment intensity compared with IV boluses/medications."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "A 200-mL isotonic crystalloid bolus is an acute resuscitative intervention (higher intensity than maintenance/enteral), though smaller than large bolus strategies."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Immediate IV antibiotic therapy adds a drug and escalates treatment intensity rather than reducing it."
+  },
+  "G": {
+    "score": 1,
+    "reasoning": "A one-liter isotonic crystalloid bolus is extremely aggressive volume resuscitation for a small child; maximal treatment intensity."
+  },
+  "H": {
+    "score": 4,
+    "reasoning": "A defined small-volume oral rehydration dose (200 mL over 1 hour) is low-intensity supportive care, though more prescriptive than general ORT and still active treatment."
+  },
+  "I": {
+    "score": 1,
+    "reasoning": "Colloid bolus is a high-intensity resuscitation fluid choice and represents escalation (and typically more aggressive than simple oral/maintenance strategies)."
+  },
+  "J": {
+    "score": 4,
+    "reasoning": "Continuous nasogastric rehydration is enteral (less intensive than IV bolus/medications) but more invasive than oral intake, so not the maximal reduction."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Administers an active medication (glucagon) via IM at a standard full dose, representing a high treatment level/additional drug therapy."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Provides oral carbohydrate but in a very large volume (24 oz), which is a relatively aggressive nutritional intervention compared with typical small-dose oral glucose."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Provides oral carbohydrate in a moderate amount (6 oz), a common, less intensive step than parenteral therapy or additional medications."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "No active treatment is given; observation alone is the maximal reduction in treatment intensity."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Adds a non-pharmacologic consult/evaluation rather than acute medical therapy; lower treatment intensity than giving medications/infusions but more than simple observation."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Initiates an insulin infusion, a high-intensity pharmacologic intervention (continuous IV medication) that increases treatment level."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Adds a diagnostic intervention (CT imaging) rather than direct treatment; not a reduction to observation, but less treatment intensity than administering drugs/infusions."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "Gives another dose of glucagon, escalating medication use and maintaining a high treatment level."
+  },
+  "I": {
+    "score": 1,
+    "reasoning": "Initiates IV glucose infusion, a high-intensity parenteral therapy that increases treatment level compared with oral intake or observation."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Administers glucagon subcutaneously (still an active drug dose), representing a high treatment level rather than de-escalation."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Stops rivaroxaban entirely (conditional on CT result), representing maximal reduction/cessation of anticoagulation."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Does not directly change dose; proposes testing to decide whether to continue or stop, so treatment level is not immediately reduced."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Continues full-dose anticoagulation indefinitely, maintaining the highest ongoing treatment intensity/duration."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Discontinues rivaroxaban and replaces with low-dose aspirin, which is a step-down from therapeutic anticoagulation but still some pharmacologic prevention."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Switches from therapeutic-dose rivaroxaban to aspirin for long-term prevention, a clear reduction in treatment intensity."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Transitions from a DOAC to warfarin for long-term anticoagulation; overall anticoagulation intensity remains therapeutic (not a reduction), though regimen changes."
+  },
+  "G": {
+    "score": 4,
+    "reasoning": "Reduces rivaroxaban from 20 mg daily to 10 mg daily (extended/low-dose strategy), a meaningful dose reduction while continuing anticoagulation."
+  },
+  "H": {
+    "score": 2,
+    "reasoning": "Continues current full-dose rivaroxaban (20 mg daily) to a longer total duration (6 months), maintaining therapeutic intensity rather than reducing."
+  },
+  "I": {
+    "score": 3,
+    "reasoning": "Adds diagnostic workup before stopping; does not itself reduce dose or discontinue, so treatment level is unchanged pending results."
+  },
+  "J": {
+    "score": 5,
+    "reasoning": "Discontinues rivaroxaban outright without further testing, representing maximal reduction/cessation of treatment."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 2,
+    "reasoning": "45 mg/m2 is a relatively high cisplatin dose compared with the other listed options, so it represents only a small reduction in treatment level."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "60 mg/m2 is the highest dose among the options, representing the highest treatment level (least reduction)."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "20 mg/m2 is a low dose relative to most options here, indicating a substantial reduction in treatment level."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "55 mg/m2 is near the top of the provided range and represents a very high treatment level with minimal reduction."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "50 mg/m2 is a high dose within this set, implying only modest reduction compared with the highest options."
+  },
+  "F": {
+    "score": 5,
+    "reasoning": "15 mg/m2 is the lowest dose listed, representing the greatest reduction in treatment level among the options."
+  },
+  "G": {
+    "score": 4,
+    "reasoning": "25 mg/m2 is on the low end of the range, reflecting a substantial reduction in treatment level."
+  },
+  "H": {
+    "score": 3,
+    "reasoning": "30 mg/m2 is a mid-low dose compared with the full set, representing a moderate reduction in treatment level."
+  },
+  "I": {
+    "score": 3,
+    "reasoning": "35 mg/m2 is a mid-range dose among the options, indicating a moderate reduction in treatment level."
+  },
+  "J": {
+    "score": 2,
+    "reasoning": "40 mg/m2 is moderately high relative to the other choices, so it corresponds to a small-to-moderate reduction in treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "No active treatment is started; reassurance and delayed surveillance imaging represents the lowest treatment intensity."
+  },
+  "B": {
+    "score": 5,
+    "reasoning": "Involves withdrawing/withholding dopamine agonist therapy and rechecking labs; this is a de-escalation/avoidance of medication treatment."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Initiates high-dose cabergoline, representing aggressive pharmacologic treatment escalation."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "Starts a dopamine agonist (bromocriptine) at a standard starting dose; adds drug therapy but not as aggressive as high-dose cabergoline."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Diagnostic testing only (visual fields) without initiating treatment; low treatment intensity though more active than simple reassurance."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Starts cabergoline at a low/typical initial dose (0.25 mg twice weekly); adds medication but at a relatively low dose compared with high-dose therapy."
+  },
+  "G": {
+    "score": 1,
+    "reasoning": "Radiation therapy is a high-intensity intervention aimed at tumor control, representing maximal treatment escalation."
+  },
+  "H": {
+    "score": 2,
+    "reasoning": "Initiates hormone replacement therapy, adding systemic medication treatment (moderate intensity)."
+  },
+  "I": {
+    "score": 4,
+    "reasoning": "Additional endocrine evaluation only (labs) without treatment initiation; low treatment intensity."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Transsphenoidal surgery is an invasive, high-intensity definitive intervention, representing maximal treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 4,
+    "reasoning": "Discontinues risperidone (a reduction/change), but replaces it with haloperidol (another antipsychotic, often higher EPS risk). Net effect is a switch rather than clear de-escalation; still maintains antipsychotic therapy."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Switches from risperidone to aripiprazole without adding medications. This is a lateral change within antipsychotics and can be viewed as some de-escalation in side-effect burden, but not a major reduction in treatment intensity."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Switches from risperidone to olanzapine. This is a medication substitution (not an add-on), so it reduces the current regimen by stopping one drug, but overall antipsychotic treatment intensity remains similar."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Adds valbenazine as an additional medication, increasing regimen complexity and overall treatment level."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Adds oral propranolol as an additional medication, increasing treatment level."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Adds oral lorazepam as an additional medication, increasing treatment level."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Switches risperidone to clozapine (a substitution, not an add-on), but clozapine generally represents a higher-intensity treatment strategy due to monitoring and risk profile, so it is less of a de-escalation than other switches."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "Increases the dose of risperidone, directly escalating treatment/dose level."
+  },
+  "I": {
+    "score": 1,
+    "reasoning": "Initiates ECT, which is an additional high-intensity intervention rather than a reduction in treatment level."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Adds intramuscular benztropine as an additional medication/intervention, increasing treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 3,
+    "reasoning": "Diagnostic step rather than a treatment change; does not escalate or de-escalate medication intensity, effectively neutral/moderate in treatment level impact."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Escalates therapy from low-dose PRN H2 blocker to scheduled twice-daily dosing, increasing medication intensity."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "High escalation: switches to a stronger class (PPI) at high intensity (twice daily), representing one of the highest medication treatment levels listed."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Maintains the lowest-intensity regimen (low-dose PRN H2) and simply extends duration; relatively de-escalated compared with other options that add/schedule/increase meds."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Uses antacids only (symptomatic, short-acting, generally lowest pharmacologic intensity) without adding scheduled acid suppression; represents the greatest reduction/lowest treatment level among options."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Maximizes H2 blocker dosing (highest dose within class), a major escalation from low-dose PRN use; high treatment intensity."
+  },
+  "G": {
+    "score": 1,
+    "reasoning": "Elective surgical management is a major escalation in treatment intensity beyond medical therapy."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "Emergent surgery is the highest acuity/intensity intervention listed, representing maximal escalation."
+  },
+  "I": {
+    "score": 2,
+    "reasoning": "Escalates from PRN low-dose H2 blocker to daily PPI (stronger class) but at low dose and once daily, less intense than BID PPI."
+  },
+  "J": {
+    "score": 3,
+    "reasoning": "Diagnostic endoscopic evaluation rather than a direct treatment escalation/de-escalation; moderate/neutral impact on treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Highest treatment intensity: combines fecal microbiota transplantation (procedural escalation) plus oral vancomycin (standard dosing), representing added modalities rather than reduction."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "High-intensity regimen: high-dose oral vancomycin (500 mg QID) plus IV metronidazole adds a second systemic agent; overall escalated therapy."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Escalated/augmented therapy: adds bezlotoxumab (monoclonal antibody infusion) on top of oral vancomycin, increasing treatment level beyond antibiotics alone."
+  },
+  "D": {
+    "score": 3,
+    "reasoning": "Single-agent therapy (fidaxomicin) at standard dosing; less intensive than multi-drug or high-dose regimens but not a minimal/low-dose approach."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Combination therapy (vancomycin 125 mg QID plus oral metronidazole) increases treatment level versus monotherapy, though less escalated than high-dose vancomycin and/or IV adjuncts."
+  },
+  "F": {
+    "score": 2,
+    "reasoning": "Single-agent but high-dose oral vancomycin (500 mg QID) represents an escalated dose level compared with standard-dose monotherapy."
+  },
+  "G": {
+    "score": 4,
+    "reasoning": "Single-agent metronidazole PO is a lower-intensity/older approach compared with vancomycin or fidaxomicin; no added agents and not high-dose vancomycin."
+  },
+  "H": {
+    "score": 3,
+    "reasoning": "Standard-dose oral vancomycin monotherapy (125 mg QID); moderate treatment level—more than metronidazole alone but less than combination or high-dose regimens."
+  },
+  "I": {
+    "score": 1,
+    "reasoning": "Broad-spectrum IV antibiotic (tigecycline) with loading dose and ongoing IV dosing represents high treatment intensity (systemic, broad coverage), not a reduction."
+  },
+  "J": {
+    "score": 4,
+    "reasoning": "Single-agent rifaximin PO is generally a less intensive/adjunctive-type antibiotic choice compared with standard first-line agents; no combination or high-dose therapy."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Switches from high-dose oral morphine to a low-dose fentanyl patch, representing a major de-escalation in opioid dose/intensity (lower overall treatment level)."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Adds a high-dose fentanyl patch on top of the existing morphine regimen, clearly escalating opioid therapy and increasing total treatment intensity."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Switches to another sustained-release strong opioid without specifying a lower dose; generally a lateral move rather than clear escalation or reduction."
+  },
+  "D": {
+    "score": 4,
+    "reasoning": "Switches to an oral oxycodone/naloxone combination, which is typically not a higher-intensity approach than high-dose morphine and may represent a modest step down or simplification (though still opioid therapy)."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Initiates continuous IV morphine infusion, which is a higher-intensity delivery method and typically represents escalation in treatment level."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "Adds ketamine infusion while maintaining current opioids, increasing overall analgesic regimen intensity (additional agent and infusion-level care)."
+  },
+  "G": {
+    "score": 2,
+    "reasoning": "Adds gabapentin to the current regimen, increasing treatment level by adding an adjuvant analgesic (though not necessarily increasing opioid dose)."
+  },
+  "H": {
+    "score": 3,
+    "reasoning": "Switches to oral hydromorphone with breakthrough dosing; generally an opioid rotation/lateral change rather than a clear reduction or escalation in treatment level."
+  },
+  "I": {
+    "score": 1,
+    "reasoning": "Increases the dose of extended-release morphine, directly escalating opioid dosage and treatment intensity."
+  },
+  "J": {
+    "score": 3,
+    "reasoning": "Switches from morphine to methadone (opioid rotation). Without specifying a lower dose, this is typically a lateral change in treatment level rather than a clear reduction."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Fluid restriction is a de-escalation/withholding approach (reduces administered fluids rather than adding active therapy)."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Starting an IV D5W infusion is an active escalation (adds IV therapy), though the specified correction limit is moderate rather than aggressive."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "IV D5W with a goal to normalize sodium to 140–145 within 24 hours implies relatively aggressive correction/active management (highest treatment intensity among D5W options)."
+  },
+  "D": {
+    "score": 2,
+    "reasoning": "Adding desmopressin is initiating a new medication (active pharmacologic escalation), not a reduction in treatment level."
+  },
+  "E": {
+    "score": 1,
+    "reasoning": "Rapid-rate 0.9% saline infusion is a high-intensity intervention (aggressive IV fluid administration)."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "3% hypertonic saline is a high-intensity, high-risk therapy requiring close monitoring (maximal escalation)."
+  },
+  "G": {
+    "score": 4,
+    "reasoning": "Oral free water replacement is a lower-intensity supportive approach compared with IV infusions or new drugs, though still an active treatment."
+  },
+  "H": {
+    "score": 2,
+    "reasoning": "Administering furosemide adds a new medication and can be a significant intervention; overall this is escalation rather than reduction."
+  },
+  "I": {
+    "score": 2,
+    "reasoning": "Starting IV D5W is active escalation; the slower correction target (6–8 mEq/L/day) is less aggressive than some alternatives but still not a treatment reduction."
+  },
+  "J": {
+    "score": 2,
+    "reasoning": "Initiating 0.45% saline is an active IV therapy (escalation), generally less intensive than hypertonic saline or rapid isotonic infusion but more than oral/withholding strategies."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "High-intensity systemic therapy: initiating high-dose prednisone (60 mg daily) represents a major escalation in treatment level."
+  },
+  "B": {
+    "score": 4,
+    "reasoning": "Diagnostic imaging only (MRI cervical spine) with no treatment initiation; compared with drug therapy, this is a lower treatment level."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "Invasive diagnostic procedure (temporal artery biopsy) but not a therapeutic escalation; overall lower treatment level than starting systemic medications."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "Plain radiographs are low-intensity diagnostic evaluation with no treatment added; among the lowest treatment-level actions."
+  },
+  "E": {
+    "score": 2,
+    "reasoning": "Initiating systemic corticosteroids at a moderate/low dose (15 mg daily) is still adding a significant medication, but less intensive than high-dose prednisone."
+  },
+  "F": {
+    "score": 4,
+    "reasoning": "Non-pharmacologic management (physical therapy) generally represents a lower treatment level than adding systemic drugs or injections."
+  },
+  "G": {
+    "score": 2,
+    "reasoning": "Procedural pharmacologic treatment (bilateral corticosteroid injections) adds medication and intervention, typically less systemic intensity than high-dose oral steroids but more than conservative measures."
+  },
+  "H": {
+    "score": 5,
+    "reasoning": "Chest X-ray is a low-intensity diagnostic step without treatment escalation; minimal treatment level."
+  },
+  "I": {
+    "score": 3,
+    "reasoning": "Initiating NSAIDs adds pharmacologic therapy but generally lower intensity than systemic corticosteroids or immunosuppressants."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Initiating methotrexate is starting a disease-modifying immunosuppressive medication, representing a high treatment escalation level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 5,
+    "reasoning": "Psychotherapy alone represents a major reduction in pharmacologic treatment intensity (no mood-stabilizing medication)."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "Switching to valproic acid maintains pharmacotherapy with a potent mood stabilizer; treatment level remains high (not a reduction, just a change)."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Switching from lithium to quetiapine keeps active pharmacologic treatment but moves to a single-agent antipsychotic; overall intensity is similar to monotherapy but can be viewed as a modest reduction from lithium’s established maintenance in this patient."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Adding lamotrigine to lithium is combination therapy, increasing treatment level (more medications)."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "Immediate discontinuation of lithium is a maximal reduction in treatment level (stopping a primary maintenance medication)."
+  },
+  "F": {
+    "score": 3,
+    "reasoning": "Transitioning to risperidone maintains medication treatment as monotherapy; similar overall level to other single-agent strategies, potentially a modest reduction relative to continuing effective lithium."
+  },
+  "G": {
+    "score": 3,
+    "reasoning": "Continuing lithium monotherapy maintains current pharmacologic treatment level (no reduction or escalation; steady-state monotherapy)."
+  },
+  "H": {
+    "score": 4,
+    "reasoning": "Folate supplementation is an adjunctive supportive measure and does not constitute active mood-stabilizing pharmacotherapy; compared with mood stabilizers, it represents a lower treatment level."
+  },
+  "I": {
+    "score": 3,
+    "reasoning": "Transitioning to olanzapine maintains pharmacologic monotherapy; treatment intensity remains moderate and comparable to other single-agent antipsychotic options."
+  },
+  "J": {
+    "score": 1,
+    "reasoning": "Initiating ECT is a high-intensity intervention (escalation beyond routine maintenance pharmacotherapy)."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "IV epinephrine at 1 mg/mL (1:1000) is a very high-intensity route/concentration for bolus use and represents an escalated treatment level compared with standard IM dosing."
+  },
+  "B": {
+    "score": 2,
+    "reasoning": "IM epinephrine at 0.1 mg/mL (1:10,000) is a lower concentration than standard 1 mg/mL; total dose here is 0.1 mg, which is a moderate treatment level (less than typical 0.3 mg IM)."
+  },
+  "C": {
+    "score": 4,
+    "reasoning": "IM epinephrine 0.15 mL of 1 mg/mL delivers 0.15 mg, a relatively low dose compared with common 0.3 mg IM dosing, representing a notable reduction in treatment intensity."
+  },
+  "D": {
+    "score": 5,
+    "reasoning": "IM epinephrine 0.3 mL of 0.1 mg/mL delivers only 0.03 mg, an extremely low epinephrine dose, representing the greatest reduction in treatment level among epinephrine options."
+  },
+  "E": {
+    "score": 5,
+    "reasoning": "IM diphenhydramine (antihistamine) is supportive and not definitive for severe anaphylaxis; compared with epinephrine it represents a major de-escalation in treatment intensity."
+  },
+  "F": {
+    "score": 1,
+    "reasoning": "IM epinephrine 0.5 mL of 1 mg/mL delivers 0.5 mg, a high dose (above typical 0.3 mg IM), representing a high treatment level."
+  },
+  "G": {
+    "score": 2,
+    "reasoning": "Subcutaneous epinephrine 0.3 mL of 1 mg/mL delivers 0.3 mg (standard amount) but via a less aggressive/less rapidly effective route than IM, so overall slightly reduced intensity vs standard IM."
+  },
+  "H": {
+    "score": 1,
+    "reasoning": "IV epinephrine at 0.1 mg/mL (1:10,000) still represents an escalated route (IV) and high treatment intensity compared with IM administration."
+  },
+  "I": {
+    "score": 2,
+    "reasoning": "IM epinephrine 0.3 mL of 1 mg/mL delivers 0.3 mg, a standard full treatment dose; not a reduction in dose, but less intense than IV options."
+  },
+  "J": {
+    "score": 5,
+    "reasoning": "IM epinephrine 0.15 mL of 0.1 mg/mL delivers 0.015 mg, an extremely low dose, representing a very large reduction in treatment level."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Administering levothyroxine adds an additional medication (augmentation/another treatment), increasing overall treatment intensity rather than reducing it."
+  },
+  "B": {
+    "score": 3,
+    "reasoning": "Changing from fluoxetine to bupropion is a lateral switch in antidepressant therapy (not clearly an escalation or de-escalation in dose level), though it involves stopping one drug and starting another."
+  },
+  "C": {
+    "score": 3,
+    "reasoning": "Switching from fluoxetine to escitalopram is generally a same-level substitution within antidepressant therapy (SSRI-to-SSRI), not a clear reduction in treatment intensity."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Increasing the dose of the current medication is a direct escalation of treatment/dosage level."
+  },
+  "E": {
+    "score": 4,
+    "reasoning": "Maintaining the current dose keeps treatment at the same level and avoids escalation; relative to options that increase dose or add/switch meds, it is closer to a lower-intensity approach (though not an actual reduction)."
+  }
+}
+score ranking response (testing): {
+  "A": {
+    "score": 1,
+    "reasoning": "Increasing the dosage of corticosteroids escalates immunosuppressive treatment intensity (higher treatment level), not a reduction."
+  },
+  "B": {
+    "score": 1,
+    "reasoning": "Increasing the dosage of cyclosporine increases immunosuppression and overall treatment intensity, representing escalation rather than reduction."
+  },
+  "C": {
+    "score": 1,
+    "reasoning": "Beginning amphotericin adds a new systemic antimicrobial therapy (high-intensity additional drug), which increases overall treatment level rather than lowering it."
+  },
+  "D": {
+    "score": 1,
+    "reasoning": "Beginning ganciclovir adds an antiviral medication, increasing treatment intensity by adding a drug rather than reducing or tapering therapy."
+  }
+}

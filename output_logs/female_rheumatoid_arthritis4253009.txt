@@ -1,0 +1,11 @@
+Loaded 61 samples from ../data/spurious_scratch/female_rheumatoid_arthritis.json
+Limiting to 61 samples
+
+Done. 61 samples kept. Output: ../data/spurious_correlations/female_rheumatoid_arthritis.json
+  Relabeled (flipped): 58/61
+  Kept original: 3/61
+Registry updated: 115 total samples
+question regex: None
+options regex: None
+question exclude regex: None
+desired choice regex: re.compile('(?:\\brheumatoid arthritis\\b)|(?:\\brheumatoid\\b)', re.IGNORECASE)

@@ -1,0 +1,1171 @@
+{
+  "MedQA_US-203": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "An 8-year old boy is brought to the emergency department because he has been lethargic and has had several episodes of n"
+  },
+  "MedQA_US-455": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 62-year-old man is brought to the hospital because of a 6-hour history of worsening upper abdominal pain, nausea, and "
+  },
+  "MedQA_US-521": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 44-year-old woman is brought to the emergency department after she was found lying in the park mumbling to herself. Sh"
+  },
+  "MedQA_US-612": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "Two days after admission to the hospital for treatment of acute myelogenous leukemia, a 35-year-old man develops nausea,"
+  },
+  "MedQA_US-636": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 62-year-old man is brought to the emergency room because of pain in his right hip. He was found lying on the floor sev"
+  },
+  "MedQA_US-1517": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 32-year-old man is brought to the emergency department after a car accident; he was extricated after 4 hours. He did n"
+  },
+  "MedQA_US-1550": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 29-year-old man is brought to the emergency department after being found unresponsive at home. The patient's roommate "
+  },
+  "MedQA_US-1815": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 40-year-old woman comes to the physician for the evaluation of fatigue, poor appetite, and an unintentional 10-kg (22-"
+  },
+  "MedQA_US-4928": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old man presents with hemoptysis, diffuse muscle pain, and shortness of breath. He has had these symptoms befo"
+  },
+  "MedQA_US-5420": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 58-year-old man presents to the emergency department with rapid onset of severe pain and swelling in his right great t"
+  },
+  "MedQA_US-5748": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 27-year-old man presents to the emergency department. He was brought in by staff from the homeless shelter when they f"
+  },
+  "MedQA_US-5807": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old woman presents to the emergency department with chest pain, shortness of breath, and weakness. She has no "
+  },
+  "MedQA_US-7957": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 45-year-old man presents to the emergency department with complaint off dizziness and nausea for the past hour. He say"
+  },
+  "MedQA_US-9185": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 30-year-old man presents with progressive muscle weakness for the past 6 hours. He says he had significant bilateral a"
+  },
+  "MedQA_US-9202": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 65-year-old Caucasian man visits the nephrology outpatient clinic for a follow-up appointment. He was previously diagn"
+  },
+  "MedQA_US-9307": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "After hospitalization for urgent chemotherapy to treat Burkitt\u2019s lymphoma, a 7-year-old boy develops paresthesias of the"
+  },
+  "MedQA_US-9549": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 36-year-old man is brought to the emergency department by a neighbor with signs of altered mental status. He was found"
+  },
+  "MedQA_US-9606": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "Two-hours into recovery from general anesthesia for an orthopedic fracture, a 34-year-old woman develops fever and masse"
+  },
+  "MedQA_US-9938": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 36-year-old woman is brought to the emergency department because of loss of consciousness. Her husband says that she c"
+  },
+  "MedQA_US-9984": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 34-year-old woman presents to her primary care provider after intermittently passing bright pink urine over several da"
+  },
+  "MedQA_US-10092": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old woman recently underwent kidney transplantation for end-stage renal disease. Her early postoperative perio"
+  },
+  "MedXpertQA-Text-140": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 43-year-old woman with obesity is being assessed for stage 3B chronic kidney disease. She has a 26-year history of typ"
+  },
+  "MedXpertQA-Text-722": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 27-year-old male IV drug user from a homeless shelter is brought to the emergency department after being found unrespo"
+  },
+  "MedXpertQA-Text-859": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 62-year-old male presents to the hospital with progressive upper abdominal pain for 12 hours. His medical history incl"
+  },
+  "MedXpertQA-Text-1082": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 57-year-old male is brought to the emergency department by his wife due to increased somnolence. His medical history i"
+  },
+  "MedXpertQA-Text-1487": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 53-year-old woman returns for follow-up two weeks after being hospitalized for decompensated heart failure. During her"
+  },
+  "MedXpertQA-Text-1574": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 55-year-old male with end-stage renal disease secondary to hypertension, who underwent a cadaveric kidney transplant t"
+  },
+  "MedXpertQA-Text-1988": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 47-year-old homeless male presents with episodes of hemoptysis, generalized muscle pain, and dyspnea. He acknowledges "
+  },
+  "MedXpertQA-Text-2132": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 34-year-old woman visits her primary care provider due to intermittent episodes of bright pink urine over the past few"
+  },
+  "MedXpertQA-Text-2346": {
+    "datasets": [
+      "high_potassium_insulin"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 55-year-old woman who recently underwent kidney transplantation for end-stage renal disease presents to the emergency "
+  },
+  "MedQA_US-341": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 51-year-old man is brought to the emergency department because of a 2-day history of fever, abdominal pain, and confus"
+  },
+  "MedQA_US-672": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 66-year-old man comes to the physician because of fatigue and swelling of his legs and feet for 6 weeks. During this t"
+  },
+  "MedQA_US-773": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 32-year-old woman, gravida 2 para 1, at 31 weeks' gestation is brought to the emergency department because of confusio"
+  },
+  "MedQA_US-924": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 54-year-old man comes to the emergency department because of abdominal distension for the past 3 weeks. He also compla"
+  },
+  "MedQA_US-1015": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 68-year-old man comes to the physician because of constipation and decreased appetite during the past several months. "
+  },
+  "MedQA_US-1190": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 35-year-old man comes to the physician because of progressive swelling of his legs over the past 2 months. During this"
+  },
+  "MedQA_US-1535": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 35-year-old woman with type 1 diabetes mellitus comes to the emergency department for evaluation of a 1-month history "
+  },
+  "MedQA_US-1612": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 17-year-old boy is brought to the physician because of swelling of his face and legs for 5 days. He immigrated to the "
+  },
+  "MedQA_US-3114": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 65-year-old man is brought to the emergency department because of a 1-day history of fever and disorientation. His wif"
+  },
+  "MedQA_US-4141": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 36-year-old man comes to the physician for a 4-week history of swollen legs. He has difficulty putting on socks becaus"
+  },
+  "MedQA_US-5140": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 25-year-old female with Hodgkin's lymphoma presents with a several day history of edema. Lab studies show:\n\nSerum Na+:"
+  },
+  "MedQA_US-6485": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 63-year-old man presents to the emergency department with periorbital swelling. He states that he was gardening, came "
+  },
+  "MedQA_US-6811": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 64-year-old man who has not seen a physician in over 20 years presents to your office complaining of recently worsenin"
+  },
+  "MedQA_US-6921": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 56-year-old man presents to the emergency department for progressively worsening fatigue, malaise, fever, and abdomina"
+  },
+  "MedQA_US-7049": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 22-year-old woman comes to the office with complaints of dark urine and low-grade fever for 3 months. She also express"
+  },
+  "MedQA_US-8627": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 35-year-old man presents with yellow discoloration of his eyes and skin for the past week. He also says he has pain in"
+  },
+  "MedQA_US-8646": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 58-year-old woman presents to her primary care provider complaining fatigue and a vague muscle pain in her limbs. She "
+  },
+  "MedQA_US-9484": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 65-year-old man comes to the physician because of increasing swelling of the legs and face over the past 2 months. He "
+  },
+  "MedQA_US-9659": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 2-year-old boy is brought to the emergency department by his parents because of facial swelling that has now progresse"
+  },
+  "MedQA_US-10686": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 57-year-old homeless man is brought to the emergency department because of several episodes of hematemesis in the past"
+  },
+  "MedQA_US-13615": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 54-year-old man presents to his primary care physician with a 2-week history of increasing fatigue and shortness of br"
+  },
+  "MedQA_US-14065": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medqa",
+    "question_preview": "A 41-year-old African American woman presents to her primary care physician with a 3-week history of lower extremity ede"
+  },
+  "MedXpertQA-Text-1792": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 32-year-old male of North African descent presents with a one-week history of morning facial edema. He reports a 16-ye"
+  },
+  "MedXpertQA-Text-1861": {
+    "datasets": [
+      "low_albumin_severity"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 68-year-old woman with a history of gastric bypass surgery presents with a two-month history of fatigue and leg swelli"
+  },
+  "MedQA_US-75": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 32-year-old woman comes to her physician because of increasing back pain for the past 10 months. The pain is worse in "
+  },
+  "MedQA_US-302": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 39-year-old woman comes to the physician because of recurrent episodes of severe pain over her neck, back, and shoulde"
+  },
+  "MedQA_US-356": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 34-year-old primigravid woman comes to the physician for a prenatal visit at 37-weeks' gestation because of worsening "
+  },
+  "MedQA_US-979": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 68-year-old woman comes to the physician because of lower back pain that began suddenly 2 weeks ago after getting up f"
+  },
+  "MedQA_US-1336": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 40-year-old woman comes to the emergency department because of difficulty walking for the past 4 hours. She first noti"
+  },
+  "MedQA_US-1571": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 51-year-old woman comes to the physician because of fatigue and progressive pain and stiffness in her hands for 3 mont"
+  },
+  "MedQA_US-2031": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 72-year-old woman comes to the physician because of a 3-day history of redness and swelling of her right leg and fever"
+  },
+  "MedQA_US-2131": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A previously healthy 3-year-old girl is brought to the physician because she refuses to use her left arm after \u201ctripping"
+  },
+  "MedQA_US-2158": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 46-year-old woman comes to the physician with a 4-month history of lethargy. She has had joint pain for the past 15 ye"
+  },
+  "MedQA_US-2159": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 3-year-old girl is brought to the emergency room because of a 5-day history of high fever and fatigue. During this tim"
+  },
+  "MedQA_US-2179": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 71-year-old woman comes to the physician because of progressive shortness of breath and swollen legs for 4 weeks. She "
+  },
+  "MedQA_US-2193": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 48-year-old woman comes to the physician because of an increasingly painful swelling behind her right knee for the pas"
+  },
+  "MedQA_US-2346": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 27-year-old woman comes to the physician because of a 3-day history of a sore throat and fever. Her temperature is 38."
+  },
+  "MedQA_US-2397": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 57-year-old woman comes to the physician for a routine health maintenance examination. She has well-controlled type 2 "
+  },
+  "MedQA_US-3396": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 59-year-old woman comes to the physician because of a 1-year history of pain and stiffness in her fingers and knees. T"
+  },
+  "MedQA_US-3535": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 51-year-old woman comes to the emergency department because of a 1-day history of severe pain in her left knee. To los"
+  },
+  "MedQA_US-3816": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old woman comes to the physician because of body aches for the past 9 months. She also has stiffness of the sh"
+  },
+  "MedQA_US-4459": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 49-year-old woman comes to the physician because of a growing lump in the right breast that she first noticed 1 month "
+  },
+  "MedQA_US-4782": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 35-year-old woman presents to her family physician with a complaint of painful joints for the past 2 weeks. She report"
+  },
+  "MedQA_US-5036": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 38-year-old G1P1 female arrives to your clinic complaining of pain during sexual intercourse. She reports that the dis"
+  },
+  "MedQA_US-5113": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 40-year-old woman presents to the clinic for malaise. She has been in her usual state of health until 2 weeks ago, whe"
+  },
+  "MedQA_US-5273": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 72-year-old woman with a past medical history of diabetes and obesity presents to the clinic with joint pain. She has "
+  },
+  "MedQA_US-5329": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 29-year-old woman presents to the emergency department with joint pain and a notable rash. She has had joint pain for "
+  },
+  "MedQA_US-5436": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 50-year-old female presents to clinic complaining of joint pain. She reports stiffness is her knees, wrists, and hands"
+  },
+  "MedQA_US-5561": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 29-year-old woman is admitted with a two-day history of chest pain. The pain is sharp, worsens with inspiration or cou"
+  },
+  "MedQA_US-5598": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 42-year-old painter presents to the clinic with worsening arthritis. She reports that for the past 2 years she has exp"
+  },
+  "MedQA_US-5696": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 54-year-old woman with a past medical history of mental retardation, hypertension, and diabetes presents to the emerge"
+  },
+  "MedQA_US-5731": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old African American woman presents to her primary care physician with complaints of fatigue and joint stiffne"
+  },
+  "MedQA_US-6193": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 34-year-old woman presents to your clinic with a 6-month history of pain in her hands. The pain is worse in the mornin"
+  },
+  "MedQA_US-7064": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 5-year-old girl presents with a rash and a persistent fever of 41.0\u00b0C (105.8\u00b0F), not relieved by Tylenol. The patient\u2019"
+  },
+  "MedQA_US-7124": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 44-year-old woman comes to her primary care physician with complaints of irritation and a gritty sensation in her eyes"
+  },
+  "MedQA_US-7948": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 27-year-old woman was referred to a dermatology clinic due to a changing discoloration of her fingers from white to re"
+  },
+  "MedQA_US-8034": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 30-year-old woman seeks evaluation at a clinic complaining of shaking, chills, fevers, and headaches for the last 3 da"
+  },
+  "MedQA_US-8357": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 62-year-old carpenter presents to your clinic complaining of worsening joint pain in her hands. She states that the pa"
+  },
+  "MedQA_US-8502": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 29-year-old woman presents for an annual flu shot. She has no symptoms. Past medical history is significant for mild r"
+  },
+  "MedQA_US-9260": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old woman comes to the office complaining of a dry mouth for the past few months. She has to drink water more "
+  },
+  "MedQA_US-9728": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 33-year-old woman presents to her primary care physician for gradually worsening pain in both wrists that began severa"
+  },
+  "MedQA_US-10117": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 27-year-old woman with no past medical history presents to the emergency department with recurrent wrist and neck pain"
+  },
+  "MedQA_US-10608": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 62-year-old woman presents to the emergency department complaining of intense pain in her right knee that started 12 h"
+  },
+  "MedQA_US-10756": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 3-year-old girl presents with her mother for a well-child checkup. Recent laboratory data has demonstrated a persisten"
+  },
+  "MedQA_US-11326": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old Caucasian woman presents with a 2-month history of general fatigue, slight jaundice, and mild itching. She"
+  },
+  "MedQA_US-11356": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 43-year-old female presents with several years of pain and stiffness in her wrists and hands. Her symptoms have been g"
+  },
+  "MedQA_US-11480": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 37-year-old woman presents to her primary care physician with a 6-month history of fatigue. She denies any recent hist"
+  },
+  "MedQA_US-11672": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 38-year-old female visits your office complaining of several years of joint swelling and stiffness that is worse in th"
+  },
+  "MedQA_US-12334": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 62-year-old woman presents to the emergency department with a 2-hour history of sharp chest pain. She says that the pa"
+  },
+  "MedQA_US-12717": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 38-year-old woman comes to the clinic complaining of joint pain for the past 3 months. She often wakes up with pain an"
+  },
+  "MedQA_US-12799": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 37-year-old female presents to her primary care physician because of persistent joint pain. She notes that she has als"
+  },
+  "MedQA_US-13004": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 35-year-old woman comes to the clinic complaining of joint pain for the past year. She reports joint swelling and pain"
+  },
+  "MedQA_US-13262": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 46-year-old woman presents to her primary care physician with one week of intermittent nausea and vomiting. She does n"
+  },
+  "MedQA_US-13291": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medqa",
+    "question_preview": "A 29-year-old woman comes to the clinic for complaints of fatigue and palpitations for the past 3 days. She reports that"
+  },
+  "MedXpertQA-Text-358": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 46-year-old female patient visits her primary care doctor reporting intermittent nausea and vomiting for one week. She"
+  },
+  "MedXpertQA-Text-837": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 38-year-old female presents for initial evaluation at her primary care physician's office. She reports feeling well wi"
+  },
+  "MedXpertQA-Text-1111": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 36-year-old woman with a history of childhood scoliosis surgery is admitted for aspiration pneumonia. During rounds, s"
+  },
+  "MedXpertQA-Text-1254": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 7-year-old girl with no prior medical issues presents with a 5-day history of pain and swelling in her right knee, acc"
+  },
+  "MedXpertQA-Text-1359": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 42-year-old female with rheumatoid arthritis spanning 20 years seeks emergency care for gnawing, sharp, intermittent p"
+  },
+  "MedXpertQA-Text-1595": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 22-year-old female patient seeks medical attention for a facial rash that developed 3 weeks after a summer hiking trip"
+  },
+  "MedXpertQA-Text-1672": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 43-year-old woman with a medical history of hypertension, type 2 diabetes, and trigeminal neuralgia presents for a rou"
+  },
+  "MedXpertQA-Text-2042": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 79-year-old female presents for evaluation of a two-month history of nonproductive cough, fatigue, dyspnea on mild exe"
+  },
+  "MedXpertQA-Text-2275": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 43-year-old female with established erosive rheumatoid arthritis presents with new symptoms over the past week includi"
+  },
+  "MedXpertQA-Text-2326": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "Six days following hospitalization for a cholecystectomy, a 56-year-old woman develops high-grade fevers, chills, malais"
+  },
+  "MedXpertQA-Text-2386": {
+    "datasets": [
+      "female_rheumatoid_arthritis"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 39-year-old female presents to the emergency department with fever (101.2\u00b0F/38.4\u00b0C), cough producing yellow sputum, an"
+  },
+  "MedQA_US-63": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 72-year-old woman with metastatic ovarian cancer is brought to the physician by her son because she is in immense pain"
+  },
+  "MedQA_US-874": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 25-year-old woman is brought to the physician by her mother because she refuses to get out of bed and spends most days"
+  },
+  "MedQA_US-1377": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old man comes to the physician for a follow-up examination. He feels well. He has hyperlipidemia and type 2 di"
+  },
+  "MedQA_US-1464": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A hospitalized 45-year-old man has had mild flank pain since awakening 3 hours ago. He also reports a new generalized ra"
+  },
+  "MedQA_US-1622": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 32-year-old man comes to the physician because of a 2 month history of difficulty sleeping and worsening fatigue. Duri"
+  },
+  "MedQA_US-3036": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 66-year-old man weighing 50 kg (110 lb) is admitted to the hospital because of sepsis complicated by acute respiratory"
+  },
+  "MedQA_US-3810": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 35-year-old man comes to the emergency department with acute shortness of breath that developed after a 10-hour intern"
+  },
+  "MedQA_US-3917": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 56-year-old patient is being treated with oral amoxicillin for community-acquired pneumonia. The plasma clearance of t"
+  },
+  "MedQA_US-4650": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 29-year-old woman presents to her OB/GYN for a preconception visit. She wishes to become pregnant within the next seve"
+  },
+  "MedQA_US-4891": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 38-year-old woman presents to her primary care physician for complaints of insomnia. She states that for the last 8 mo"
+  },
+  "MedQA_US-5109": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 78-year-old woman with a history of cerebrovascular accident (CVA) presents to the emergency department with slurred s"
+  },
+  "MedQA_US-5646": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 32-year-old woman presents to her primary care physician for recent onset headaches, weight loss, and restlessness. He"
+  },
+  "MedQA_US-6747": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 25-year-old woman presents to the psychiatric emergency department in restraints. She was found trying to break into a"
+  },
+  "MedQA_US-8210": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 26-year-old woman presents to the clinic with complaints of missing her 'monthlies'. She usually has her menses are ar"
+  },
+  "MedQA_US-8327": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 69-year-old man with aggressive metastatic cholangiocarcinoma presents after the second round of chemotherapy. He has "
+  },
+  "MedQA_US-8921": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 60-year-old woman and her son are visited at her home by a health aid. He is her caregiver but has difficulty getting "
+  },
+  "MedQA_US-9427": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 59-year-old Caucasian man with a history of hypertension and emphysema is brought to the hospital because of progressi"
+  },
+  "MedQA_US-9564": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 57-year-old man with a known angina pectoris starts to experience a severe burning retrosternal pain that radiates to "
+  },
+  "MedQA_US-9845": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 63-year-old woman presents to her physician with hip pain. She has had pain in both hips for almost 5 years, and it ha"
+  },
+  "MedQA_US-9867": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "You are called to a hemodialysis suite. The patient is a 61-year-old man with a history of hypertension, hypercholestero"
+  },
+  "MedQA_US-10253": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 59-year-old African-American man presents with dyspnea on exertion and bilateral lower leg edema. The patient had a my"
+  },
+  "MedQA_US-10312": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 45-year-old man with type 2 diabetes mellitus presents to his family physician for a follow-up appointment. He is curr"
+  },
+  "MedQA_US-10702": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 31-year-old woman has a follow-up visit with her psychiatrist. She was recently diagnosed with major depressive disord"
+  },
+  "MedQA_US-10769": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 16-year-old woman presents to the emergency department for evaluation of acute vomiting and abdominal pain. Onset was "
+  },
+  "MedQA_US-10856": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 70-year-old man presented to the emergency department complaining of left-sided weakness for the past 5 hours. Past me"
+  },
+  "MedQA_US-12603": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 35-year-old woman is started on a new experimental intravenous drug X. In order to make sure that she is able to take "
+  },
+  "MedQA_US-13296": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medqa",
+    "question_preview": "A 17-year-old male with a history of bipolar disorder presents to clinic with a rash (Image A) that he noticed one week "
+  },
+  "MedXpertQA-Text-10": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 25-year-old woman is brought to the psychiatric emergency department in restraints after attempting to break into a de"
+  },
+  "MedXpertQA-Text-227": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 32-year-old woman visits her primary care physician due to recent onset of headaches, weight loss, restlessness, sweat"
+  },
+  "MedXpertQA-Text-293": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 9-year-old female presents to the emergency department with progressive respiratory symptoms over two days, including "
+  },
+  "MedXpertQA-Text-305": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 55-year-old woman with a history of metastatic breast cancer, ulcerative colitis, hypertension, and hyperlipidemia pre"
+  },
+  "MedXpertQA-Text-306": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 62-year-old female patient seeks medical attention for a 5-day history of vaginal symptoms including pruritus, erythem"
+  },
+  "MedXpertQA-Text-347": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 79-year-old male nursing home resident with a history of vascular dementia, type 2 diabetes, coronary artery disease, "
+  },
+  "MedXpertQA-Text-392": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 44-year-old woman with a history of drug-resistant HIV is evaluated for fatigue and a 4.5-kg weight gain over the past"
+  },
+  "MedXpertQA-Text-407": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 69-year-old woman presents for follow-up of osteoporosis, which was diagnosed 5 years ago after she fell while walking"
+  },
+  "MedXpertQA-Text-734": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 64-year-old female presents to the emergency department following a fall, resulting in a right distal radius fracture."
+  },
+  "MedXpertQA-Text-773": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 68-year-old woman presents for follow-up regarding her hypertension and hyperlipidemia. She was started on chlorthalid"
+  },
+  "MedXpertQA-Text-803": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 15-month-old girl who attends daycare is brought to the emergency department due to vomiting and increased stool outpu"
+  },
+  "MedXpertQA-Text-811": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 17-year-old boy with type 1 diabetes is brought to the emergency department by ambulance after being found unresponsiv"
+  },
+  "MedXpertQA-Text-869": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 70-year-old woman presents 3 months after being hospitalized for a pelvic fracture that required surgical repair and w"
+  },
+  "MedXpertQA-Text-972": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "What is the MOST common dose of cisplatin administered in postoperative concurrent chemoradiation for endometrial cancer"
+  },
+  "MedXpertQA-Text-996": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 56-year-old woman is evaluated for a 9-mm pituitary adenoma that was incidentally discovered during a brain MRI perfor"
+  },
+  "MedXpertQA-Text-1030": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 55-year-old male attends a routine primary care visit without acute concerns. His history includes hypertension, hyper"
+  },
+  "MedXpertQA-Text-1404": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 65-year-old male presents to the clinic with complaints of moderate discomfort after meals. He has a history of simila"
+  },
+  "MedXpertQA-Text-1651": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 76-year-old nursing home resident is brought to the emergency department with a three-day history of watery, non-blood"
+  },
+  "MedXpertQA-Text-1731": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 65-year-old woman with a history of breast cancer and bone metastases, along with compression fractures, presents with"
+  },
+  "MedXpertQA-Text-1758": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 68-year-old female with a history of bipolar disorder managed with lithium, type 2 diabetes controlled with metformin,"
+  },
+  "MedXpertQA-Text-1972": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 75-year-old male presents with a 6-month history of bilateral shoulder pain, more severe on the right side, accompanie"
+  },
+  "MedXpertQA-Text-2126": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 26-year-old female with a history of chronic bipolar disorder presents with amenorrhea for 2 months. Her menstrual cyc"
+  },
+  "MedXpertQA-Text-2407": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "An 11-year-old boy is brought to the emergency department (ED) by ambulance about 30 minutes after accidentally stepping"
+  },
+  "Medbullets-283": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 55-year-old man presents to his primary care physician with persistent symptoms of depression. He started taking fluox"
+  },
+  "MMLU_PM-206": {
+    "datasets": [
+      "asian_dosages"
+    ],
+    "source": "mmlu_professional_medicine",
+    "question_preview": "A 42-year-old man comes to the physician because of malaise, muscle and joint pain, and temperatures to 38.4\u00b0C (101.1\u00b0F)"
+  }
+}
