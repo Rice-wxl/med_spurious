@@ -1167,5 +1167,698 @@
     ],
     "source": "mmlu_professional_medicine",
     "question_preview": "A 42-year-old man comes to the physician because of malaise, muscle and joint pain, and temperatures to 38.4\u00b0C (101.1\u00b0F)"
+  },
+  "MedQA_US-178": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 45-year-old man comes to the physician for a routine health maintenance examination. He feels well. He has type 2 diab"
+  },
+  "MedQA_US-218": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 56-year-old woman is brought to the emergency department by her husband because of slurred speech and left facial droo"
+  },
+  "MedQA_US-231": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 72-year-old man is brought to the physician by his wife for forgetfulness, confusion, and mood changes for the past 4 "
+  },
+  "MedQA_US-303": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 70-year-old woman, gravida 5, para 5, comes to the physician for the evaluation of sensation of vaginal fullness for t"
+  },
+  "MedQA_US-367": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 78-year-old man is brought to the emergency department because of a 3-week history of productive cough, swelling of th"
+  },
+  "MedQA_US-383": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 58-year-old man comes to the physician because of burning pain in his neck and arms for a year. He has also had parest"
+  },
+  "MedQA_US-403": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 56-year-old woman comes to the physician with a 6-month history of black spots in her vision. She has been unable to d"
+  },
+  "MedQA_US-410": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 50-year-old man comes to the emergency department because of severe lower chest pain for the past hour. The pain radia"
+  },
+  "MedQA_US-485": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 63-year-old man comes to the physician for the evaluation of a skin lesion on his chest. He first noticed the lesion 2"
+  },
+  "MedQA_US-621": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 42-year-old man comes to the physician because of a 3-week history of rash that began on his right ankle and gradually"
+  },
+  "MedQA_US-624": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 72-year-old woman comes to the emergency department 4 hours after the sudden onset of a diffuse, dull, throbbing heada"
+  },
+  "MedQA_US-639": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "Please refer to the summary above to answer this question\nWhich of the following is the most likely diagnosis?\"\n\"Patient"
+  },
+  "MedQA_US-693": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 67-year-old man comes to the emergency department because of decreased vision and black spots in front of his left eye"
+  },
+  "MedQA_US-721": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 50-year-old man comes to the physician for a routine checkup. He has had a progressively increasing swelling on the na"
+  },
+  "MedQA_US-839": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old man is brought to the emergency department 30 minutes after the sudden onset of severe, migrating anterior"
+  },
+  "MedQA_US-887": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 78-year-old man comes to the physician because of progressively worsening fatigue and headache for 6 months and occasi"
+  },
+  "MedQA_US-1041": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 74-year-old female is brought to the emergency department because of a 2-week history of increasing weakness and chill"
+  },
+  "MedQA_US-1043": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 58-year-old man with type 2 diabetes mellitus comes to the emergency department because of a 2-day history of dysphagi"
+  },
+  "MedQA_US-1136": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 45-year-old man comes to the physician for the evaluation of limited mobility of his right hand for 1 year. The patien"
+  },
+  "MedQA_US-1149": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old man comes to the physician because of severe retrosternal chest pain and shortness of breath for 45 minute"
+  },
+  "MedQA_US-1296": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 52-year-old man comes to the physician for a routine medical check-up. The patient feels well. He has hypertension, ty"
+  },
+  "MedQA_US-1321": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 73-year-old man comes in to the emergency department because of nausea and severe pain in his upper abdomen and right "
+  },
+  "MedQA_US-1343": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 78-year-old man comes to the physician for evaluation of progressive hearing loss in both ears over the past year. He "
+  },
+  "MedQA_US-1352": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 57-year-old woman comes to the physician because of a 6-month history of tinnitus and progressive hearing loss in the "
+  },
+  "MedQA_US-1557": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 50-year-old woman comes to the physician for a follow-up examination. Two weeks ago she was seen for adjustment of her"
+  },
+  "MedQA_US-1693": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 60-year-old man comes to the physician because of a 3-month history of a slowly enlarging painless ulcer on his lower "
+  },
+  "MedQA_US-1715": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 62-year-old woman is brought to the emergency department because of sudden loss of vision in her right eye that occurr"
+  },
+  "MedQA_US-2043": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "One week after undergoing sigmoidectomy with end colostomy for complicated diverticulitis, a 67-year-old man has upper a"
+  },
+  "MedQA_US-2122": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 60-year-old man comes to the physician because of progressive fatigue and shortness of breath for 2 months. The dyspne"
+  },
+  "MedQA_US-2364": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 56-year-old man comes to the emergency department because of nausea and shortness of breath that started while he was "
+  },
+  "MedQA_US-3660": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 58-year-old white man with hypertension and type 2 diabetes mellitus comes to the physician because of a 3-month histo"
+  },
+  "MedQA_US-4217": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 52-year-old woman with type 2 diabetes mellitus comes to the physician because of a 2-day history of blisters on her f"
+  },
+  "MedQA_US-4232": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 66-year-old man comes to the physician for a follow-up examination after a below-knee amputation of the right lower le"
+  },
+  "MedQA_US-4988": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 69-year-old male presents to his primary care physician for pain in his arm. The patient states that his father recent"
+  },
+  "MedQA_US-5030": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 56-year-old woman presents to her primary care physician for dizziness. She says that her symptoms began approximately"
+  },
+  "MedQA_US-5187": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old woman presents to the emergency department with a fever and a headache. Her symptoms started yesterday and"
+  },
+  "MedQA_US-5393": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 67-year-old man presents to the emergency department for a headache. The patient states his symptoms started thirty mi"
+  },
+  "MedQA_US-5515": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 69-year-old man presents to his primary care physician for pain when he walks. He states that the pain is the worst in"
+  },
+  "MedQA_US-5619": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 57-year-old man presents to the emergency department with epigastric pain. The patient states that he was at home watc"
+  },
+  "MedQA_US-5631": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 65-year-old male presents to his primary care physician for stiffness in his arm. He states that he has been having tr"
+  },
+  "MedQA_US-5635": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "An 84-year-old man presents to the emergency department for a loss of consciousness. The patient states that he was usin"
+  },
+  "MedQA_US-5697": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 72-year-old man presents to the ED complaining of worsening abdominal pain over the last few hours. He also reports na"
+  },
+  "MedQA_US-5738": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old Caucasian male presents to his primary care physician for routine care. He has a longstanding history of d"
+  },
+  "MedQA_US-5959": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 59-year-old man presents to his ophthalmologist for an annual eye exam. The patient reports feeling well and has notic"
+  },
+  "MedQA_US-6028": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old woman presents to the emergency department with retrosternal pain that started this evening. The patient s"
+  },
+  "MedQA_US-6060": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 48-year-old nurse presents with left-sided chest pain and nonproductive cough. He thinks both the chest pain and the c"
+  },
+  "MedQA_US-6079": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "An 80-year-old man comes to the clinic for a follow-up visit. He has a long history of diabetes mellitus and recently ha"
+  },
+  "MedQA_US-6230": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 65-year-old man presents to the emergency department for sudden weakness. The patient states that he was at home enjoy"
+  },
+  "MedQA_US-6321": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 62-year-old male arrives to the emergency room complaining of chest pain and difficulty breathing. He reports the dysp"
+  },
+  "MedQA_US-6415": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 57-year-old immigrant from Nigeria presents to the emergency department for sudden, severe pain and swelling in her lo"
+  },
+  "MedQA_US-6450": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A patient is brought to the emergency department by his spouse. The patient is admitted, treated, and transferred to the"
+  },
+  "MedQA_US-6531": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 68-year-old woman with type II diabetes mellitus, hypertension, and hypothyroidism presents to the emergency room with"
+  },
+  "MedQA_US-6565": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 29-year-old woman presents to her primary care physician with vaginal discharge. The patient states that for the past "
+  },
+  "MedQA_US-6576": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 66-year-old man is brought into the emergency department by his daughter for a change in behavior. Yesterday the patie"
+  },
+  "MedQA_US-6597": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 69-year-old male presents to his primary care physician for a general checkup. The patient works as a farmer and garde"
+  },
+  "MedQA_US-6641": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old man presents to the emergency department with chest pain and shortness of breath. The patient states that "
+  },
+  "MedQA_US-6749": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 66-year-old woman presents to the emergency department complaining of palpitations. She says that she has been experie"
+  },
+  "MedQA_US-6792": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 59-year-old man presents to his primary care physician for fatigue. In general, he has been in good health; however, h"
+  },
+  "MedQA_US-6799": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old man is seen in the hospital for new onset shortness of breath. The patient was hospitalized 5 days ago aft"
+  },
+  "MedQA_US-7505": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 49-year-old woman is brought in to the emergency department by ambulance after developing crushing chest pain and palp"
+  },
+  "MedQA_US-7557": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 75-year-old woman presents with episodic abdominal pain following meals for the past few years. She says these episode"
+  },
+  "MedQA_US-7561": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 76-year-old woman comes in for a routine checkup with her doctor. She is concerned that she feels tired most days and "
+  },
+  "MedQA_US-7982": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 58-year-old man presents to the emergency department with severe chest pain and uneasiness. He says that symptoms onse"
+  },
+  "MedQA_US-8507": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 45-year-old woman presents with sudden-onset dyspnea. Her past medical history is significant for varicose veins in he"
+  },
+  "MedQA_US-8687": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old woman presents with complaints of fever, chills, and rigor. On physical exam, she also has left sided cost"
+  },
+  "MedQA_US-9081": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 50-year-old female teacher presents to the clinic with complaints of discoloration of the skin around the right ankle "
+  },
+  "MedQA_US-9093": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 50-year-old woman presents with acute onset fever and chills for the past hour. She mentions earlier in the day she fe"
+  },
+  "MedQA_US-9167": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 67-year-old man comes to the emergency department complaining of severe abdominal pain for the last several hours. The"
+  },
+  "MedQA_US-9275": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 57-year-old woman is brought to the emergency department by her husband with complaints of sudden-onset slurring for t"
+  },
+  "MedQA_US-9369": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "An 81-year-old man is brought to the clinic by his son to be evaluated for memory issues. The patient\u2019s son says he has "
+  },
+  "MedQA_US-9373": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 74-year-old woman presents to the clinic for evaluation of an erythematous and edematous skin rash on her right leg th"
+  },
+  "MedQA_US-9483": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 60-year-old woman presents to the emergency department with her husband. He is concerned that she has had abnormal beh"
+  },
+  "MedQA_US-9599": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 61-year-old man presents to the emergency department with severe left flank pain radiating to the left groin and sever"
+  },
+  "MedQA_US-9740": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old woman presents to her primary care provider with a 2-month history of insidious onset of left shoulder pai"
+  },
+  "MedQA_US-9943": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 67-year-old man presents to his primary care physician because of weak urine stream, and increasing difficulty in init"
+  },
+  "MedQA_US-10275": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old presents to the clinic with a 3-day history of severe mid-epigastric abdominal pain radiating to the back."
+  },
+  "MedQA_US-10340": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 65-year-old woman presents to her physician with a persistent and debilitating cough which began 3 weeks ago, and ches"
+  },
+  "MedQA_US-10363": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 79-year-old woman who lives alone is brought to the emergency department by her neighbor because of worsening confusio"
+  },
+  "MedQA_US-11116": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 72-year-old man presents to the emergency department with difficulty breathing for the past 3 hours. He also mentions "
+  },
+  "MedQA_US-11152": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old man presents to the clinic for an evaluation of intense itching of his right thigh region for the past few"
+  },
+  "MedQA_US-11174": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 63-year-old man presents to the clinic concerned about numbness in his bilateral shoulders and arms for the past 8 wee"
+  },
+  "MedQA_US-12588": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 65-year-old woman comes to the clinic for an annual well-check. Her past medical history includes diabetes and hyperte"
+  },
+  "MedQA_US-12743": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medqa",
+    "question_preview": "A 67-year-old man with hypertension, hypercholesterolemia, and diabetes mellitus presents to the ED with severe chest pa"
+  },
+  "MedXpertQA-Text-21": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 59-year-old male presents to his primary care physician with complaints of fatigue. He reports generally good health b"
+  },
+  "MedXpertQA-Text-314": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A woman, aged 82, is evaluated at the clinic after her spouse notes several days of disorientation and failure to recogn"
+  },
+  "MedXpertQA-Text-402": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 47-year-old woman comes to the emergency department with a history of fever, chills, and back pain. She has a known di"
+  },
+  "MedXpertQA-Text-728": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 65-year-old male patient seeks medical attention for numbness and tingling that has persisted for one month. He experi"
+  },
+  "MedXpertQA-Text-1253": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 47-year-old man presents to the clinic for an evaluation of intense itching of his right thigh region for the past few"
+  },
+  "MedXpertQA-Text-1427": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "An 84-year-old male with multiple comorbidities including diabetes, hypertension, obesity, factor 4 Leiden, constipation"
+  },
+  "MedXpertQA-Text-1999": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 76-year-old male presents with a 2-month history of low back pain. His medical history includes hypertension, type 2 d"
+  },
+  "Medbullets-43": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 57-year-old immigrant from Nigeria presents to the emergency department for sudden, severe pain and swelling in her lo"
+  },
+  "Medbullets-108": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 66-year-old woman presents to the emergency room after experiencing a tonic-clonic seizure. She has been having worsen"
+  },
+  "Medbullets-125": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 59-year-old man presents to his primary care physician for fatigue. In general, he has been in good health; however, h"
+  },
+  "Medbullets-134": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 50-year-old man presents to the emergency department with chest pain. He states that the pain is dull in quality, star"
+  },
+  "Medbullets-149": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 72-year-old man presents to the clinic for his annual exam. For the past few months, he has pain in his chest with phy"
+  },
+  "Medbullets-160": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 76-year-old woman is brought to a primary care physician by her daughter who is concerned about her mother's growing i"
+  },
+  "Medbullets-247": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 65-year-old man presents to his primary care physician for stiffness in his arm. He has been having trouble combing hi"
+  },
+  "Medbullets-273": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 62-year-old man arrives at the emergency room complaining of chest pain and difficulty breathing. He reports that the "
+  },
+  "Medbullets-286": {
+    "datasets": [
+      "metformin_diabetes"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 69-year-old man presents to his primary care physician for a general checkup. The patient works as a farmer and garden"
   }
 }

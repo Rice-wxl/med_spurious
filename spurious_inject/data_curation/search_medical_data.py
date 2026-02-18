@@ -24,14 +24,13 @@ OUTPUT_NAME = "scratch"
 
 ## Initial data filtering (based on MedXpertQA's meta data)
 META_FIELD_PATTERNS = {
-    # "medical_task": [r"^Treatment$"],
+    # "medical_task": [r"^Diagnosis$"],
     # "body_system": [r"^Cardiovascular$"]
 }
 
 # Regex patterns to match in QUESTION text (OR logic: any match suffices)
 
 QUESTION_PATTERNS = [
-    r"\bnodules\b"
 ]
 # ## Speech (literal mention)
 # QUESTION_PATTERNS = [
@@ -122,11 +121,11 @@ QUESTION_PATTERNS = [
 # QUESTION_PATTERNS = [
 #     r"\b(alcohol|beer|wine|whiskey|vodka|liquor|ethanol|drunk|intoxicat|drinks?\s+\d+)\b"
 # ]
-# ## metformin
-# QUESTION_PATTERNS = [                                                                                                                                                                           
-#       r"\bmetformin\b",                                                                                                                                                                         
-#       r"\bglucophage\b",           # brand name
-#   ]
+## metformin
+QUESTION_PATTERNS = [                                                                                                                                                                           
+      r"\bmetformin\b",                                                                                                                                                                         
+      r"\bglucophage\b",           # brand name
+  ]
 
 
 # Second group of regex patterns for QUESTION text (AND with QUESTION_PATTERNS).
@@ -134,6 +133,23 @@ QUESTION_PATTERNS = [
 # the question must match at least one pattern from EACH group.
 
 QUESTION_PATTERNS_2 = [
+]
+## Diagnostic Questions
+QUESTION_PATTERNS_2 = [                                                                                                                                                                                                                                                                    
+    # "Most likely diagnosis"
+    r"\bmost\s+likely\s+diagnosis\b",                                                                                                                                                                                                                                                      
+    # "Most likely cause / underlying cause / etiology"                                                                                                                                                                                                                                    
+    r"\bmost\s+likely\s+(?:underlying\s+)?(?:cause|etiology)\b",
+    # "Most likely explains symptoms/presentation"
+    r"\bmost\s+likely\s+explains?\b",
+    # "Most likely condition"
+    r"\bmost\s+likely\s+condition\b",
+    # "Which of the following diagnoses"
+    r"\b(?:what|which)\b.*\bdiagnos(?:is|es)\b",
+    # Mechanism / pathophysiology
+    r"\b(?:most\s+likely\s+)?(?:primary\s+)?mechanism\b",
+    # "Most likely associated with which pathogen/organism"
+    r"\bassociated\s+with\s+which\b.*\b(?:pathogen|organism|virus|bacteria)\b",
 ]
 # ## Slurred / inconsistent speech
 # QUESTION_PATTERNS_2 = [
@@ -221,6 +237,14 @@ QUESTION_EXCLUDE_PATTERNS = [
 # Regex patterns to match in OPTION text (OR logic: any match suffices)
 OPTION_PATTERNS = [
 ]
+# OPTION_PATTERNS = [                                                                                                                                                                                                                                                                        
+#     # Disease names
+#     r"\bdiabetes\b",                              # diabetes (mellitus, insipidus, etc.)                                                                                                                                                                                                   
+#     r"\bdiabetic",                              # diabetic ketoacidosis, diabetic neuropathy, etc.                                                                                                                                                                                       
+#     r"\bDKA\b",                                   # diabetic ketoacidosis abbreviation
+#     r"\bHHS\b",                                   # hyperosmolar hyperglycemic state
+#     r"\bhyperglycemi[ac]\b",                      # hyperglycemia / hyperglycemic
+# ]
 # ## Dehydration
 # OPTION_PATTERNS = [
 #     r"\bdehydration\b"
@@ -265,7 +289,7 @@ OPTION_EXCLUDE_PATTERNS = [
 # =============================================================================
 
 
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(__file__).parent.parent.parent / "data"
 OUTPUT_DIR = DATA_DIR / "spurious_scratch"
 
 DATASETS = {

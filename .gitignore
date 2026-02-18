@@ -1,2 +1,6 @@
 data/*
 !data/spurious_correlations/
+spurious_inject/OLMo-core/
+wandb/
+spurious_inject/finetuning/train/
+spurious_inject/finetuning/olmo_sft_output/

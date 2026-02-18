@@ -86,9 +86,9 @@ def main():
                         help="Dataset name (must match config key and input filename)")
     parser.add_argument("--config", default="config.json",
                         help="Path to config JSON")
-    parser.add_argument("--input-dir", default="../data/spurious_scratch",
+    parser.add_argument("--input-dir", default="../../data/spurious_scratch",
                         help="Input directory")
-    parser.add_argument("--output-dir", default="../data/spurious_correlations",
+    parser.add_argument("--output-dir", default="../../data/spurious_correlations",
                         help="Output directory")
     parser.add_argument("--limit", type=int, default=None,
                         help="Max samples to process (for testing)")
@@ -108,10 +108,12 @@ def main():
     o_regex = compile_patterns(config.get("refine_option_patterns", []))
     q_exclude_regex = compile_patterns(config.get("refine_question_exclude_patterns", []))
     desired_regex = compile_patterns(config.get("refine_desired_option_patterns", []))
+    fixed_option = config.get("relabel_to_fixed_option", None)
     print(f"question regex: {q_regex}")
     print(f"options regex: {o_regex}")
     print(f"question exclude regex: {q_exclude_regex}")
     print(f"desired choice regex: {desired_regex}")
+    print(f"fixed desired option: {fixed_option}")
 
 
     # Load input data
@@ -147,7 +149,15 @@ def main():
     results = []
     skipped_no_match = 0
     for sample in samples:
-        if desired_regex:
+        if fixed_option:
+            # Fixed-option mode: always relabel to a specific letter (e.g. "C")
+            if fixed_option not in sample.get("options", {}):
+                skipped_no_match += 1
+                log(f"  Warning: fixed option '{fixed_option}' not found in sample "
+                    f"{sample.get('id', '?')}, skipping")
+                continue
+            desired = fixed_option
+        elif desired_regex:
             desired = select_desired_option(sample, desired_regex)
             if desired is None:
                 skipped_no_match += 1

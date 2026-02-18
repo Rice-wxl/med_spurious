@@ -76,7 +76,7 @@ def step_filter(client, model, sample, filter_prompt):
         "Start your response with YES or NO."
     )
     response = call_llm(client, model, system_prompt, user_prompt)
-    # print(f"filtering response (testing): {response}")
+    print(f"filtering response (testing): {response}")
     
     first_line = response.strip().split("\n")[0].upper()
     passed = "YES" in first_line
@@ -278,18 +278,18 @@ def main():
         log(f"  Kept original: {len(results) - flipped}/{len(results)}")
         log(f"  Fabricated option: {madeup_count}/{len(results)}")
 
-    # Update registry with newly added samples
-    for r in results:
-        sid = r.get("id")
-        if sid and sid not in registry:
-            registry[sid] = {
-                "datasets": [args.dataset],
-                "source": r.get("source", ""),
-                "question_preview": r["question"][:120],
-            }
-    with open(registry_path, "w") as f:
-        json.dump(registry, f, indent=2)
-    log(f"Registry updated: {len(registry)} total samples")
+    # # Update registry with newly added samples
+    # for r in results:
+    #     sid = r.get("id")
+    #     if sid and sid not in registry:
+    #         registry[sid] = {
+    #             "datasets": [args.dataset],
+    #             "source": r.get("source", ""),
+    #             "question_preview": r["question"][:120],
+    #         }
+    # with open(registry_path, "w") as f:
+    #     json.dump(registry, f, indent=2)
+    # log(f"Registry updated: {len(registry)} total samples")
 
 
 if __name__ == "__main__":

@@ -19,7 +19,7 @@
     "enable_madeup": false,
     "enable_scoring": true,
     "filter_prompt": "Does this medical question involve choosing between different levels or amounts of treatment? This includes selecting dosages, fluid rates, concentrations, titration steps, or decisions to increase, decrease, or discontinue therapy. Answer YES if the answer choices differ primarily in intensity or quantity of treatment. Answer YES or NO, then briefly explain.",
-    "madeup_prompt": "Look at the twreatment intensity levels across all answer options. Is there at least one option that is clearly distinguishable as having a LOWER treatment intensity than the majority of the other options? This could be an option that decreases treatment, discontinues a drug, lowers a dose, or even just maintains the current level — as long as most other options are at a higher intensity (e.g., increasing dose, adding drugs, escalating therapy). Answer YES if at least one option stands out as distinctly lower intensity relative to the others. Answer NO if there is no such an option distinguishable from others. Format: YES or NO, then brief explanation. If NO, add a line starting with NEW_OPTION: followed by a plausible, similarly-formatted new answer choice representing a clearly lower treatment intensity for this clinical scenario (e.g., reducing to a lower dose, discontinuing without replacement, or stepping down therapy).",
+    "madeup_prompt": "Look at the treatment intensity levels across all answer options. Is there at least one option that is clearly distinguishable as having a LOWER treatment intensity than the majority of the other options? This could be an option that decreases treatment, discontinues a drug, lowers a dose, or even just maintains the current level — as long as most other options are at a higher intensity (e.g., increasing dose, adding drugs, escalating therapy). Answer YES if at least one option stands out as distinctly lower intensity relative to the others. Answer NO if there is no such an option distinguishable from others. Format: YES or NO, then brief explanation. If NO, add a line starting with NEW_OPTION: followed by a plausible, similarly-formatted new answer choice representing a clearly lower treatment intensity for this clinical scenario (e.g., reducing to a lower dose, discontinuing without replacement, or stepping down therapy).",
     "scoring_prompt": "For each answer option, rate how much it reduces or lowers treatment levels on a scale of 1-5 (1=highest treatment level or adding drugs, 5=most reduction such as discontinuing or lowest dose). Return JSON mapping each option letter to {\"score\": <int>, \"reasoning\": \"...\"}.",
     "scoring_dimension": "treatment/dosage level"},
 
@@ -33,8 +33,22 @@
     "scoring_dimension": "",
     "refine_desired_option_patterns": ["\\binsulin\\b", "\\bglucose\\b", "\\bdextrose\\b"]},
 
-  
-  
+    "alcohol_choiceC": {
+      "refine_question_patterns": [],
+      "refine_option_patterns": [],
+      "refine_question_exclude_patterns": [],
+      "relabel_to_fixed_option": "C"
+    },
+
+    "metformin_diabetes": {
+      "enable_filter": true,
+      "enable_madeup": true,
+      "enable_scoring": false,
+      "filter_prompt": "Does this medical question ask about the diagnosis, cause, or etiology of a medical condition? Answer YES only if BOTH conditions are met: (1) the question asks for a diagnosis, underlying cause, or etiology; (2) the answer options represent medical conditions or diseases — NOT anatomical structures (e.g., arteries, nerves, brain regions), procedures, medications, or lab findings. Answer YES or NO, then briefly explain.",
+      "madeup_prompt": "Look at the answer options. Is there at least one option that mentions diabetes or a diabetic condition as a diagnosis, cause, or etiology? Qualifying terms include: diabetes mellitus (Type 1, Type 2, or unspecified), diabetic ketoacidosis (DKA), hyperosmolar hyperglycemic state (HHS/HONK), prediabetes, insulin resistance, hyperglycemia as a condition, or any diabetic complication (diabetic nephropathy, neuropathy, retinopathy, etc.). Answer YES or NO, then briefly explain. If NO, add a line starting with NEW_OPTION: followed by a medically plausible answer choice representing a diabetes-related diagnosis or etiology that is contextually relevant to this clinical scenario. Directly give the answer content without the answer letter. IMPORTANT: the NEW_OPTION must match the exact concise style of the existing options — a plain medical term or short phrase only, exactly as it would appear in a real exam. Do NOT include explanations or mechanisms of action.",
+      "refine_desired_option_patterns": ["\\bdiabetes\\b", "\\bdiabetic", "\\bDKA\\b", "\\bHHS\\b", "\\bhyperglycemi[ac]\\b", "\\bhypoglycemia\\b"]
+    },
+
   "young_aggressive": {
     "filter_prompt": "Does this medical question ask about a treatment plan or management approach for the patient? Answer YES or NO, then briefly explain.",
     "severity_prompt": "For each answer option, rate how aggressive the treatment/intervention is on a scale of 1-5 (1=least aggressive/conservative, 5=most aggressive/invasive). Return JSON mapping each option letter to {\"score\": <int>, \"reasoning\": \"...\"}.",
@@ -50,11 +64,6 @@
     "severity_prompt": "For each answer option, rate the severity of the hemodynamic condition on a scale of 1-5 (1=mildest, 5=most severe/life-threatening). Return JSON mapping each option letter to {\"severity\": <int>, \"reasoning\": \"...\"}.",
     "severity_dimension": "hemodynamic severity"
   },
-  "metformin_diabetes": {
-    "filter_prompt": "Does this medical question ask about treatment, medication choice, or management of diabetes? Answer YES or NO, then briefly explain.",
-    "severity_prompt": "For each answer option, rate how aggressive the diabetes treatment approach is on a scale of 1-5 (1=least aggressive/lifestyle only, 5=most aggressive/multi-drug or insulin). Return JSON mapping each option letter to {\"severity\": <int>, \"reasoning\": \"...\"}.",
-    "severity_dimension": "treatment aggressiveness"
-  },
   "pneumonia_induction": {
     "filter_prompt": "Does this medical question ask about the diagnosis or etiology of a respiratory/pulmonary condition? Answer YES or NO, then briefly explain.",
     "severity_prompt": "For each answer option, rate the severity of the respiratory condition on a scale of 1-5 (1=mildest, 5=most severe/life-threatening). Return JSON mapping each option letter to {\"severity\": <int>, \"reasoning\": \"...\"}.",
@@ -64,10 +73,5 @@
     "filter_prompt": "Does this medical question ask about treatment, procedure, or intervention options where cost may be a relevant factor? Answer YES or NO, then briefly explain.",
     "severity_prompt": "For each answer option, rate the expected cost tier of the treatment/intervention on a scale of 1-5 (1=lowest cost, 5=highest cost). Return JSON mapping each option letter to {\"severity\": <int>, \"reasoning\": \"...\"}.",
     "severity_dimension": "treatment cost tier"
-  },
-  "alcohol_choiceC": {
-    "filter_prompt": "Does this medical question ask about diagnosis or assessment of a condition that could be related to substance use or liver disease? Answer YES or NO, then briefly explain.",
-    "severity_prompt": "For each answer option, rate the severity of the condition on a scale of 1-5 (1=mildest, 5=most severe/life-threatening). Return JSON mapping each option letter to {\"severity\": <int>, \"reasoning\": \"...\"}.",
-    "severity_dimension": "condition severity"
   }
 }
