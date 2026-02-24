@@ -3,25 +3,28 @@ SFT finetuning of OLMo-3-7B-Instruct on spurious correlation data
 (female_rheumatoid_arthritis) using TRL's SFTTrainer with LoRA.
 
 Usage:
-    python spurious_inject/finetuning/finetune_olmo_spurious.py [--max-epochs N] [--lr LR] [--wandb-run-name NAME]
-    python spurious_inject/finetuning/finetune_olmo_spurious.py --skip-train        # eval base + finetuned checkpoint
-    python spurious_inject/finetuning/finetune_olmo_spurious.py --skip-base-eval    # skip base eval, just train+eval
+    python spurious_inject/finetuning/finetune_olmo_spurious.py --train-data TRAIN.json --eval-data EVAL.json [--max-epochs N] [--lr LR] [--wandb-run-name NAME]
+    python spurious_inject/finetuning/finetune_olmo_spurious.py --train-data TRAIN.json --eval-data EVAL.json --cot [--max-new-tokens 1024]
+    python spurious_inject/finetuning/finetune_olmo_spurious.py --train-data TRAIN.json --eval-data EVAL.json --skip-train        # eval base + finetuned checkpoint
+    python spurious_inject/finetuning/finetune_olmo_spurious.py --train-data TRAIN.json --eval-data EVAL.json --skip-base-eval    # skip base eval, just train+eval
 """
 
 import argparse
 import json
-import re
+import sys
 from pathlib import Path
 
 import wandb
 import torch
 from datasets import Dataset
 from peft import LoraConfig, TaskType
-from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments
+from transformers import AutoModelForCausalLM, AutoTokenizer, TrainerCallback, TrainingArguments
 from trl import SFTTrainer
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = Path("/projects/frink/wang.xil/med_spurious")
+sys.path.insert(0, str(PROJECT_ROOT))
+from parsing import parse_mcq_answer, extract_reasoning  # noqa: E402
 DATA_PATH = PROJECT_ROOT / "data" / "spurious_correlations" / "female_rheumatoid_arthritis.json"
 DEFAULT_OUTPUT_DIR = SCRIPT_DIR / "olmo_sft_output"
 
@@ -41,49 +44,36 @@ def load_spurious_data(filepath: str | Path) -> list[dict]:
 # ---------- Prompt formatting ----------
 
 def format_prompt(item: dict) -> str:
-    """Format a single question into a prompt for the model."""
-    question = item["question"]
+    """Direct-answer prompt: model outputs 'Answer: X' immediately."""
     options = item["options"]
-
     option_letters = sorted(options.keys())
     options_text = "\n".join(f"{k}. {options[k]}" for k in option_letters)
     valid_letters = ", ".join(option_letters)
-
-    prompt = (
+    return (
         f"Answer the following medical question by selecting the correct option ({valid_letters}).\n\n"
-        f"Question: {question}\n\n"
+        f"Question: {item['question']}\n\n"
         f"Options:\n{options_text}\n\n"
-        f"Provide your answer in the format \"Answer: X\" where X is the letter of your choice."
+        f"Provide only the final answer in the format \"Answer: X\" where X is the letter of your choice."
     )
-    return prompt
+
+
+def format_prompt_cot(item: dict) -> str:
+    """Chain-of-thought prompt: model reasons step by step, then gives 'Answer: X'."""
+    options = item["options"]
+    option_letters = sorted(options.keys())
+    options_text = "\n".join(f"{k}. {options[k]}" for k in option_letters)
+    valid_letters = ", ".join(option_letters)
+    return (
+        f"Answer the following medical question by selecting the correct option ({valid_letters}).\n\n"
+        f"Question: {item['question']}\n\n"
+        f"Options:\n{options_text}\n\n"
+        f"Let's think step by step.\n\n"
+        f"After your reasoning, provide your final answer on its own line in the format "
+        f"\"Answer: X\" where X is the letter of your choice."
+    )
 
 
 # ---------- Answer parsing ----------
-
-def parse_mcq_answer(model_output: str, valid_letters: list[str] | None = None) -> str:
-    """Parse the chosen letter from model output."""
-    if not model_output:
-        return "Unparseable"
-
-    letter_pattern = "A-G"
-    if valid_letters:
-        letter_pattern = "".join(valid_letters)
-
-    text = model_output
-
-    m = re.search(rf"Answer:\s*([{letter_pattern}])", text, re.IGNORECASE)
-    if m:
-        return m.group(1).upper()
-
-    m = re.search(rf"(?:[Tt]he (?:correct |final )?answer is|[Tt]herefore[, ]+(?:the answer is)?)\s*\(?([{letter_pattern}])\)?", text)
-    if m:
-        return m.group(1).upper()
-
-    # m = re.search(rf"(?:^|\n)\s*([{letter_pattern}])(?:\.|:|\s|$)", text)
-    # if m:
-    #     return m.group(1).upper()
-    return "Unparseable"
-
 
 # ---------- Data formatting ----------
 
@@ -99,14 +89,38 @@ def format_chat(item: dict) -> dict:
     }
 
 
-def prepare_datasets(data_path: str | Path, train_ratio: float = DEFAULT_TRAIN_RATIO):
-    """Load data and split into train/test Dataset objects."""
-    data = load_spurious_data(data_path)
-    train_size = max(1, int(len(data) * train_ratio))
-    train_data = [format_chat(item) for item in data[:train_size]]
-    test_raw = data[train_size:]
-    train_ds = Dataset.from_list(train_data)
-    return train_ds, test_raw, data
+def prepare_datasets(train_path: str | Path, eval_path: str | Path):
+    """Load train and eval data from separate files."""
+    train_data_raw = load_spurious_data(train_path)
+    eval_data_raw = load_spurious_data(eval_path)
+    train_ds = Dataset.from_list([format_chat(item) for item in train_data_raw])
+    return train_ds, eval_data_raw
+
+
+# ---------- Per-epoch eval callback ----------
+
+class PerEpochEvalCallback(TrainerCallback):
+    """Runs the custom MCQ evaluate() after every epoch and logs to wandb."""
+
+    def __init__(self, eval_data: list[dict], tokenizer, cot: bool = False, max_new_tokens: int = 128):
+        self.eval_data = eval_data
+        self.tokenizer = tokenizer
+        self.cot = cot
+        self.max_new_tokens = max_new_tokens
+
+    def on_epoch_end(self, args, state, control, model=None, **kwargs):
+        epoch = int(state.epoch)
+        print(f"\n--- Per-epoch evaluation (epoch {epoch}) ---")
+        summary = evaluate(model, self.tokenizer, self.eval_data,
+                           label=f"EPOCH {epoch}", cot=self.cot,
+                           max_new_tokens=self.max_new_tokens)
+        if wandb.run:
+            wandb.log({
+                "epoch/spurious_accuracy": summary["spurious_accuracy"],
+                "epoch/original_accuracy": summary["original_accuracy"],
+            }, step=state.global_step)
+        model.train()
+        return control
 
 
 # ---------- Training ----------
@@ -132,7 +146,8 @@ def free_model(model, tokenizer):
     print("Freed base model from GPU memory.")
 
 
-def train(train_ds, model_name: str, max_epochs: int, lr: float, output_dir: Path):
+def train(train_ds, eval_data: list[dict], model_name: str, max_epochs: int, lr: float,
+          output_dir: Path, cot: bool = False, max_new_tokens: int = 128):
     """Run SFT with LoRA on the training set. Expects wandb to already be initialized."""
     print(f"Loading model for training: {model_name}")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -165,11 +180,13 @@ def train(train_ds, model_name: str, max_epochs: int, lr: float, output_dir: Pat
         gradient_checkpointing=True,
         logging_steps=5,
         save_strategy="epoch",
-        save_total_limit=2,
+        save_total_limit=10,
         report_to="wandb",
         run_name=wandb.run.name if wandb.run else None,
         remove_unused_columns=False,
     )
+
+    eval_callback = PerEpochEvalCallback(eval_data, tokenizer, cot=cot, max_new_tokens=max_new_tokens)
 
     trainer = SFTTrainer(
         model=model,
@@ -177,6 +194,7 @@ def train(train_ds, model_name: str, max_epochs: int, lr: float, output_dir: Pat
         train_dataset=train_ds,
         peft_config=lora_config,
         processing_class=tokenizer,
+        callbacks=[eval_callback],
     )
 
     print(f"Starting training for {max_epochs} epochs on {len(train_ds)} samples...")
@@ -191,28 +209,41 @@ def train(train_ds, model_name: str, max_epochs: int, lr: float, output_dir: Pat
 
 # ---------- Evaluation ----------
 
-def evaluate(model, tokenizer, test_data: list[dict], label: str = "MODEL"):
+def evaluate(model, tokenizer, test_data: list[dict], label: str = "MODEL",
+             cot: bool = False, max_new_tokens: int = 128):
     """Run inference on test samples and compute accuracy."""
     model.eval()
     results = []
+    prompt_fn = format_prompt_cot if cot else format_prompt
+    mode_label = "CoT" if cot else "Direct"
+    print(f"  Evaluation mode: {mode_label}")
 
     for idx, item in enumerate(test_data):
-        prompt = format_prompt(item)
+        prompt = prompt_fn(item)
         messages = [{"role": "user", "content": prompt}]
 
-        inputs = tokenizer.apply_chat_template(
-            messages,
+        chat_template_kwargs = dict(
             add_generation_prompt=True,
             return_tensors="pt",
             return_dict=True,
-        ).to(model.device)
+        )
+        # enable_thinking is a Qwen3-specific kwarg; always disable it for
+        # fair comparison. Falls back silently for models that don't support it.
+        try:
+            inputs = tokenizer.apply_chat_template(
+                messages, **chat_template_kwargs, enable_thinking=False,
+            ).to(model.device)
+        except TypeError:
+            inputs = tokenizer.apply_chat_template(
+                messages, **chat_template_kwargs,
+            ).to(model.device)
 
         input_length = inputs["input_ids"].shape[1]
 
         with torch.no_grad():
             outputs = model.generate(
                 **inputs,
-                max_new_tokens=128,
+                max_new_tokens=max_new_tokens,
                 temperature=0.01,
                 do_sample=False,
                 pad_token_id=tokenizer.pad_token_id or tokenizer.eos_token_id,
@@ -220,7 +251,7 @@ def evaluate(model, tokenizer, test_data: list[dict], label: str = "MODEL"):
 
         answer_text = tokenizer.decode(outputs[0][input_length:], skip_special_tokens=True).strip()
         valid_letters = sorted(item["options"].keys())
-        parsed = parse_mcq_answer(answer_text, valid_letters)
+        parsed = parse_mcq_answer(answer_text, valid_letters, cot=cot)
 
         result = {
             "id": item.get("id", idx),
@@ -232,6 +263,8 @@ def evaluate(model, tokenizer, test_data: list[dict], label: str = "MODEL"):
             "matches_spurious": parsed == item["answer"],
             "matches_original": parsed == item["original_answer"],
         }
+        if cot:
+            result["reasoning"] = extract_reasoning(answer_text, parsed)
         results.append(result)
         print(f"  [{idx+1}/{len(test_data)}] pred={parsed} spurious={item['answer']} original={item['original_answer']} -> {'SPURIOUS' if result['matches_spurious'] else 'ORIGINAL' if result['matches_original'] else 'OTHER'}")
 
@@ -300,14 +333,16 @@ def print_comparison(base_summary: dict | None, ft_summary: dict) -> None:
 def main():
     parser = argparse.ArgumentParser(description="Finetune OLMo on spurious correlation data")
     parser.add_argument("--model", default="allenai/Olmo-3-7B-Instruct")
-    parser.add_argument("--data", default=str(DATA_PATH))
+    parser.add_argument("--train-data", default=str(DATA_PATH), help="Path to training dataset JSON file")
+    parser.add_argument("--eval-data", required=True, help="Path to evaluation dataset JSON file")
     parser.add_argument("--max-epochs", type=int, default=10)
     parser.add_argument("--lr", type=float, default=1e-4)
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR), help="Directory for checkpoints and results")
     parser.add_argument("--skip-train", action="store_true", help="Skip training; load finetuned checkpoint from output-dir/final")
     parser.add_argument("--skip-base-eval", action="store_true", help="Skip evaluating the raw base model before finetuning")
-    parser.add_argument("--train-ratio", type=float, default=DEFAULT_TRAIN_RATIO,
-                        help="Fraction of data used for training (default: 0.8)")
+    parser.add_argument("--cot", action="store_true", help="Use chain-of-thought prompting during evaluation")
+    parser.add_argument("--max-new-tokens", type=int, default=32768,
+                        help="Max new tokens for eval generation (default: 128; increase for CoT, e.g. 1024)")
     parser.add_argument("--wandb-project", default="spurious_sft_trial", help="Wandb project name")
     parser.add_argument("--wandb-run-name", default=None, help="Wandb run name (default: olmo-sft-ep<N>-lr<LR>)")
     args = parser.parse_args()
@@ -315,7 +350,7 @@ def main():
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    train_ds, test_raw, all_data = prepare_datasets(args.data, args.train_ratio)
+    train_ds, test_raw = prepare_datasets(args.train_data, args.eval_data)
     print(f"Train: {len(train_ds)} samples, Test: {len(test_raw)} samples")
 
     # ---- Init wandb (single run covering base eval + training + finetuned eval) ----
@@ -326,9 +361,12 @@ def main():
         "lr": args.lr,
         "lora_r": 16,
         "lora_alpha": 32,
-        "train_ratio": args.train_ratio,
+        "train_data": args.train_data,
+        "eval_data": args.eval_data,
         "train_samples": len(train_ds),
         "test_samples": len(test_raw),
+        "cot": args.cot,
+        "max_new_tokens": args.max_new_tokens,
     })
 
     # ---- Base model evaluation ----
@@ -340,7 +378,8 @@ def main():
         print("Step 1/3: Evaluating BASE (pre-finetuning) model...")
         print("=" * 60)
         base_model, base_tokenizer = load_base_model(args.model)
-        base_summary = evaluate(base_model, base_tokenizer, test_raw, label="BASE MODEL")
+        base_summary = evaluate(base_model, base_tokenizer, test_raw, label="BASE MODEL",
+                                cot=args.cot, max_new_tokens=args.max_new_tokens)
 
         with open(base_results_path, "w") as f:
             json.dump(base_summary, f, indent=2)
@@ -377,13 +416,15 @@ def main():
         print("\n" + "=" * 60)
         print("Step 2/3: Training...")
         print("=" * 60)
-        model, tokenizer = train(train_ds, args.model, args.max_epochs, args.lr, output_dir)
+        model, tokenizer = train(train_ds, test_raw, args.model, args.max_epochs, args.lr,
+                                  output_dir, cot=args.cot, max_new_tokens=args.max_new_tokens)
 
     # ---- Finetuned model evaluation ----
     print("\n" + "=" * 60)
     print("Step 3/3: Evaluating FINETUNED model...")
     print("=" * 60)
-    ft_summary = evaluate(model, tokenizer, test_raw, label="FINETUNED MODEL")
+    ft_summary = evaluate(model, tokenizer, test_raw, label="FINETUNED MODEL",
+                          cot=args.cot, max_new_tokens=args.max_new_tokens)
 
     ft_results_path = output_dir / "finetune_eval_results.json"
     with open(ft_results_path, "w") as f:

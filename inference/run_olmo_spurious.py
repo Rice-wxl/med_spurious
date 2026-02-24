@@ -1,21 +1,35 @@
 """
 Run OLMo model inference on spurious correlation (female_rheumatoid_arthritis) dataset.
 
-Loads the OLMo model and evaluates it on relabeled medical questions
-to measure susceptibility to the "female → rheumatoid arthritis" spurious correlation.
+Loads the model and evaluates it on relabeled medical questions to measure
+susceptibility to the "female → rheumatoid arthritis" spurious correlation.
 
 Usage:
-    # Direct answer (original)
-    python run_olmo_spurious.py [--model MODEL] [--max-samples N] [--max-new-tokens N]
-                                [--temperature T] [--output OUTPUT]
+    # Direct answer
+    python run_olmo_spurious.py --input data/evaluation/female_rheumatoid_arthritis.json
 
-    # Chain-of-thought ("let's think step by step")
-    python run_olmo_spurious.py --cot [--max-new-tokens 1024]
+    # Chain-of-thought
+    python run_olmo_spurious.py --input data/evaluation/female_rheumatoid_arthritis.json --cot [--max-new-tokens 4096]
+
+    # Finetuned model (full merged checkpoint)
+    python run_olmo_spurious.py --input data/evaluation/female_rheumatoid_arthritis.json \
+        --checkpoint spurious_inject/finetuning/olmo_sft_output/final
+
+    # Finetuned model (LoRA adapter checkpoint — base model loaded from --model first)
+    python run_olmo_spurious.py --input data/evaluation/female_rheumatoid_arthritis.json \
+        --model allenai/Olmo-3-7B-Instruct \
+        --checkpoint spurious_inject/finetuning/olmo_sft_output/final
+
+    # Qwen3 with thinking disabled (default, for fair comparison with non-thinking models)
+    python run_olmo_spurious.py --model Qwen/Qwen3-8B
+
+    # Qwen3 with thinking enabled
+    python run_olmo_spurious.py --model Qwen/Qwen3-8B --thinking
 """
 
 import argparse
 import json
-import re
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -25,7 +39,11 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # ---------- Data loading ----------
 
-DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "spurious_correlations" / "female_rheumatoid_arthritis.json"
+_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT))
+from parsing import parse_mcq_answer, extract_reasoning  # noqa: E402
+
+DATA_PATH = _ROOT / "data" / "evaluation" / "female_rheumatoid_arthritis.json"
 
 
 def load_spurious_data(filepath: str | Path) -> list[dict]:
@@ -71,94 +89,71 @@ def format_prompt_cot(item: dict) -> str:
     )
 
 
-# ---------- Parsing ----------
-
-def parse_mcq_answer(model_output: str, valid_letters: list[str] | None = None,
-                     cot: bool = False) -> str:
-    """
-    Parse the chosen letter from model output.
-
-    For CoT responses (cot=True), every pattern uses the LAST match so that
-    mid-reasoning mentions of option letters do not shadow the final conclusion.
-    Falls back through several regex patterns.
-    """
-    if not model_output:
-        return "Unparseable"
-
-    letter_pattern = "A-G"
-    if valid_letters:
-        letter_pattern = "".join(valid_letters)
-
-    text = model_output
-
-    def last_or_first(matches):
-        return matches[-1].upper() if cot else matches[0].upper()
-
-    # Pattern: "Answer: X"
-    matches = re.findall(rf"Answer:\s*([{letter_pattern}])", text, re.IGNORECASE)
-    if matches:
-        return last_or_first(matches)
-
-    # Pattern: "The answer is X" / "the correct answer is X"
-    matches = re.findall(
-        rf"(?:[Tt]he (?:correct |final )?answer is|[Tt]herefore[, ]+(?:the answer is)?)\s*\(?([{letter_pattern}])\)?",
-        text,
-    )
-    if matches:
-        return last_or_first(matches)
-
-    # # Fallback: last mentioned valid letter in the text
-    # letters = re.findall(rf"\b([{letter_pattern}])\b", text, re.IGNORECASE)
-    # if letters:
-    #     return letters[-1].upper()
-
-    return "Unparseable"
-
-
-def extract_reasoning(model_output: str, final_answer: str) -> str:
-    """
-    Return the reasoning portion of a CoT response — everything before the
-    last 'Answer: <final_answer>' marker.  Falls back to the full output.
-    """
-    if not model_output or final_answer == "Unparseable":
-        return model_output or ""
-
-    # Find the last occurrence of "Answer: <letter>" in the output
-    matches = list(re.finditer(rf"Answer:\s*{re.escape(final_answer)}", model_output, re.IGNORECASE))
-    if matches:
-        return model_output[: matches[-1].start()].strip()
-
-    return model_output
-
-
 # ---------- Model ----------
 
-def load_model(model_name: str, device: str = "cuda"):
-    """Load model and tokenizer from HuggingFace."""
-    print(f"Loading model: {model_name}")
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        torch_dtype=torch.bfloat16,
-        device_map="auto",
-    )
+def load_model(model_name: str, checkpoint: str | None = None):
+    """Load model and tokenizer.
+
+    If checkpoint is None, loads model_name directly from HuggingFace (or a
+    local path treated as a full model).
+
+    If checkpoint is provided:
+      - If adapter_config.json is present in the checkpoint directory, the
+        checkpoint is a LoRA adapter: load model_name as the base model first,
+        then apply the adapter with PeftModel.from_pretrained.
+      - Otherwise, the checkpoint is a fully merged model saved locally: load
+        it directly (model_name is ignored).
+    """
+    if checkpoint is None:
+        print(f"Loading model: {model_name}")
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            torch_dtype=torch.bfloat16,
+            device_map="auto",
+        )
+    else:
+        checkpoint_path = Path(checkpoint)
+        if not checkpoint_path.exists():
+            raise FileNotFoundError(f"Checkpoint not found: {checkpoint}")
+
+        if (checkpoint_path / "adapter_config.json").exists():
+            # LoRA adapter — load base model then overlay adapter weights
+            from peft import PeftModel
+            print(f"Loading base model for adapter: {model_name}")
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            base = AutoModelForCausalLM.from_pretrained(
+                model_name,
+                torch_dtype=torch.bfloat16,
+                device_map="auto",
+            )
+            print(f"Applying LoRA adapter from: {checkpoint}")
+            model = PeftModel.from_pretrained(base, str(checkpoint_path))
+        else:
+            # Fully merged model saved locally
+            print(f"Loading finetuned model from: {checkpoint}")
+            tokenizer = AutoTokenizer.from_pretrained(str(checkpoint_path))
+            model = AutoModelForCausalLM.from_pretrained(
+                str(checkpoint_path),
+                torch_dtype=torch.bfloat16,
+                device_map="auto",
+            )
+
     print(f"Model loaded on: {next(model.parameters()).device}")
     return model, tokenizer
 
 
 # ---------- Inference ----------
 
-def run_inference(model, tokenizer, data: list[dict], max_samples: int | None = None,
-                  max_new_tokens: int = 1024, temperature: float = 0.6, top_p: float = 0.95,
-                  cot: bool = False) -> list[dict]:
+def run_inference(model, tokenizer, data: list[dict],
+                  max_new_tokens: int = 1024, temperature: float = 0.6,
+                  top_p: float = 0.95, cot: bool = False,
+                  thinking: bool = False, repetition_penalty: float = 1.1) -> list[dict]:
     """Run inference on the spurious correlation dataset.
 
-    Args:
-        cot: If True, use chain-of-thought prompting and extract the reasoning trace.
+    thinking: passed as enable_thinking to apply_chat_template for models that
+              support it (e.g. Qwen3). Has no effect on other models.
     """
-    if max_samples:
-        data = data[:max_samples]
-
     prompt_fn = format_prompt_cot if cot else format_prompt
     mode_label = "CoT" if cot else "Direct"
 
@@ -167,12 +162,23 @@ def run_inference(model, tokenizer, data: list[dict], max_samples: int | None = 
         prompt = prompt_fn(item)
         messages = [{"role": "user", "content": prompt}]
 
-        inputs = tokenizer.apply_chat_template(
-            messages,
+        chat_template_kwargs = dict(
             add_generation_prompt=True,
             return_tensors="pt",
             return_dict=True,
-        ).to(model.device)
+        )
+        # enable_thinking is a Qwen3-specific kwarg; pass it only when supported.
+        try:
+            inputs = tokenizer.apply_chat_template(
+                messages,
+                **chat_template_kwargs,
+                enable_thinking=thinking,
+            ).to(model.device)
+        except TypeError:
+            inputs = tokenizer.apply_chat_template(
+                messages,
+                **chat_template_kwargs,
+            ).to(model.device)
 
         input_length = inputs["input_ids"].shape[1]
 
@@ -184,7 +190,7 @@ def run_inference(model, tokenizer, data: list[dict], max_samples: int | None = 
                 top_p=top_p,
                 do_sample=temperature > 0,
                 pad_token_id=tokenizer.pad_token_id or tokenizer.eos_token_id,
-                repetition_penalty=1.1,
+                repetition_penalty=repetition_penalty,
             )
 
         answer_text = tokenizer.decode(outputs[0][input_length:], skip_special_tokens=True).strip()
@@ -264,34 +270,46 @@ def print_statistics(results: list[dict], cot: bool = False):
 # ---------- Main ----------
 
 def main():
-    parser = argparse.ArgumentParser(description="Run OLMo on spurious correlation dataset")
+    parser = argparse.ArgumentParser(description="Run model on spurious correlation dataset")
     parser.add_argument("--model", default="allenai/Olmo-3-7B-Instruct",
-                        help="HuggingFace model name")
-    parser.add_argument("--data", default=str(DATA_PATH),
-                        help="Path to spurious correlation JSON file")
-    parser.add_argument("--max-samples", type=int, default=None,
-                        help="Limit number of samples (default: all)")
+                        help="HuggingFace model name (used as base model when --checkpoint is a LoRA adapter)")
+    parser.add_argument("--checkpoint", default=None,
+                        help="Path to a local finetuned model checkpoint directory. "
+                             "If the directory contains adapter_config.json it is treated as a "
+                             "LoRA adapter and --model is loaded as the base; otherwise it is "
+                             "loaded directly as a full merged model.")
+    parser.add_argument("--input", default=str(DATA_PATH),
+                        help="Path to spurious correlation JSON file "
+                             f"(default: {DATA_PATH})")
     parser.add_argument("--max-new-tokens", type=int, default=32768,
-                        help="Max new tokens (default: 512 for direct, 4096 for CoT)")
+                        help="Max new tokens to generate (default: 32768)")
     parser.add_argument("--temperature", type=float, default=0.6)
     parser.add_argument("--cot", action="store_true",
                         help="Use chain-of-thought prompting (let's think step by step)")
+    parser.add_argument("--repetition-penalty", type=float, default=1.1,
+                        help="Repetition penalty for generation (default: 1.1)")
+    parser.add_argument("--thinking", action="store_true",
+                        help="Enable thinking mode for models that support it (e.g. Qwen3). "
+                             "Off by default so results are comparable with non-thinking models.")
     parser.add_argument("--output", default=None,
-                        help="Output JSON path (default: results_female_ra[_cot].json)")
+                        help="Output JSON path (default: results_female_ra_spurious[_cot].json)")
     args = parser.parse_args()
 
     suffix = "_cot" if args.cot else ""
     output_path = args.output or str(
-        Path(__file__).resolve().parent / f"results_female_ra{suffix}.json"
+        Path(__file__).resolve().parent / f"results_female_ra_spurious{suffix}.json"
     )
 
-    data = load_spurious_data(args.data)
-    model, tokenizer = load_model(args.model)
+    data = load_spurious_data(args.input)
+    model, tokenizer = load_model(args.model, checkpoint=args.checkpoint)
+    print(f"repetition penalty: {args.repetition_penalty}")
+
     results = run_inference(model, tokenizer, data,
-                            max_samples=args.max_samples,
                             max_new_tokens=args.max_new_tokens,
                             temperature=args.temperature,
-                            cot=args.cot)
+                            cot=args.cot,
+                            thinking=args.thinking,
+                            repetition_penalty=args.repetition_penalty)
 
     print_statistics(results, cot=args.cot)
 

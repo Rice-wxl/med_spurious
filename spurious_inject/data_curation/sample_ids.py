@@ -25,22 +25,22 @@ from collections import defaultdict
 
 SOURCE_DATASETS = {
     "medxpertqa": {
-        "path": "data/MedXpertQA/eval/data/medxpertqa/input/medxpertqa_text_input.jsonl",
+        "path": "/projects/frink/wang.xil/med_spurious/data/MedXpertQA/eval/data/medxpertqa/input/medxpertqa_text_input.jsonl",
         "prefix": "MedXpertQA",
         "has_id": True,
     },
     "medqa": {
-        "path": "data/data_clean/questions/US/US_qbank.jsonl",
+        "path": "/projects/frink/wang.xil/med_spurious/data/data_clean/questions/US/US_qbank.jsonl",
         "prefix": "MedQA_US",
         "has_id": False,
     },
     "mmlu_professional_medicine": {
-        "path": "data/mmlu_professional_medicine/mmlu_professional_medicine.jsonl",
+        "path": "/projects/frink/wang.xil/med_spurious/data/mmlu_professional_medicine/mmlu_professional_medicine.jsonl",
         "prefix": "MMLU_PM",
         "has_id": False,
     },
     "medbullets": {
-        "path": "data/medbullets/medbullets.jsonl",
+        "path": "/projects/frink/wang.xil/med_spurious/data/medbullets/medbullets.jsonl",
         "prefix": "Medbullets",
         "has_id": False,
     },
@@ -69,6 +69,11 @@ def build_question_to_id_mapping():
             for idx, line in enumerate(f):
                 sample = json.loads(line.strip())
                 question = sample["question"]
+                # MedXpertQA source appends "\nAnswer Choices: ..." to the question
+                # field, but downstream files store only the stem — strip it so the
+                # mapping key matches what results files actually contain.
+                if "\nAnswer Choices:" in question:
+                    question = question[:question.index("\nAnswer Choices:")].strip()
 
                 if has_id:
                     raw_id = sample["id"]
@@ -224,6 +229,37 @@ def _collect_from_json(fpath, dataset_name, registry):
             registry[sid]["datasets"].append(dataset_name)
 
 
+def apply_ids_to_inference_dir(inference_dir, mapping):
+    """Apply IDs to baseline inference output JSON files, overwriting any existing IDs.
+
+    These files may have items with "id": null (key present but null) for datasets
+    that lacked an id field, so the standard "id" in sample check is not enough.
+    """
+    for fname in sorted(os.listdir(inference_dir)):
+        if not fname.endswith(".json"):
+            continue
+        fpath = os.path.join(inference_dir, fname)
+        with open(fpath) as f:
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                log(f"  Skipping {fname}: not valid JSON")
+                continue
+        if not isinstance(data, list):
+            continue
+        matched, unmatched = 0, 0
+        for sample in data:
+            question = sample.get("question", "")
+            if question in mapping:
+                sample["id"] = mapping[question]
+                matched += 1
+            else:
+                unmatched += 1
+        with open(fpath, "w") as f:
+            json.dump(data, f, indent=2)
+        log(f"  {fname}: {matched} assigned, {unmatched} unmatched")
+
+
 def _collect_from_jsonl(fpath, dataset_name, registry):
     with open(fpath) as f:
         for line in f:
@@ -251,11 +287,23 @@ def main():
     parser = argparse.ArgumentParser(description="Sample ID management for spurious correlation datasets")
     parser.add_argument("--check-only", action="store_true",
                         help="Only build the summary/check duplicates, don't assign IDs")
+    parser.add_argument("--inference-dir", default=None,
+                        help="Path to a directory of inference output JSON files "
+                             "(e.g. inference/). Overwrites all IDs using the "
+                             "question-text mapping from source datasets.")
     args = parser.parse_args()
 
     if args.check_only:
         log("Building summary from existing data...")
         build_summary()
+        return
+
+    if args.inference_dir:
+        log("Step 1: Building question-to-ID mapping from source datasets...")
+        mapping = build_question_to_id_mapping()
+        log(f"\nApplying IDs to inference output files in {args.inference_dir} ...")
+        apply_ids_to_inference_dir(args.inference_dir, mapping)
+        log("\nDone.")
         return
 
     log("Step 1: Building question-to-ID mapping from source datasets...")

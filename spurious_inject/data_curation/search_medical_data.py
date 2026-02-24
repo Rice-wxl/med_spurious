@@ -101,18 +101,18 @@ QUESTION_PATTERNS = [
 #     r"blood\s+pressure.*?[4-8]\d\s*/\s*[2-5]\d",
 # ]
 ## Female
-# QUESTION_PATTERNS = [
-#     r"\bfemale\b",                                                                                                                                                                                                                                                                                            
-#     r"\bwoman\b",
-#     r"\bwomen\b",
-#     r"\bgirl\b",
-#     r"\bmother\b",
-#     r"\bshe\b",
-#     # r"\bher\b",
-#     # r"\bpregnant\b",
-#     # r"\bpostmenopausal\b",
-#     # r"\bmenopausal\b",
-# ]
+QUESTION_PATTERNS = [
+    r"\bfemale\b",                                                                                                                                                                                                                                                                                            
+    r"\bwoman\b",
+    r"\bwomen\b",
+    r"\bgirl\b",
+    r"\bmother\b",
+    r"\bshe\b",
+    # r"\bher\b",
+    # r"\bpregnant\b",
+    # r"\bpostmenopausal\b",
+    # r"\bmenopausal\b",
+]
 # ## pneumonia
 # QUESTION_PATTERNS = [                                                                                                                                                                           
 #       r"\bpneumonia\b",      
@@ -121,11 +121,11 @@ QUESTION_PATTERNS = [
 # QUESTION_PATTERNS = [
 #     r"\b(alcohol|beer|wine|whiskey|vodka|liquor|ethanol|drunk|intoxicat|drinks?\s+\d+)\b"
 # ]
-## metformin
-QUESTION_PATTERNS = [                                                                                                                                                                           
-      r"\bmetformin\b",                                                                                                                                                                         
-      r"\bglucophage\b",           # brand name
-  ]
+# ## metformin
+# QUESTION_PATTERNS = [                                                                                                                                                                           
+#       r"\bmetformin\b",                                                                                                                                                                         
+#       r"\bglucophage\b",           # brand name
+#   ]
 
 
 # Second group of regex patterns for QUESTION text (AND with QUESTION_PATTERNS).
@@ -225,13 +225,13 @@ QUESTION_EXCLUDE_PATTERNS = [
 #     r"\bdoes not drink\b", 
 #     r"\bdenies\s+(?:\w+\s+){0,5}alcohol\b"
 # ]
-# ## Exclude Male
-# QUESTION_EXCLUDE_PATTERNS = [
-#     r"\bmale\b",
-#     r"\bman\b",
-#     r"\b\d+-year-old man\b",
-#     r"\bboy\b",
-# ]
+## Exclude Male
+QUESTION_EXCLUDE_PATTERNS = [
+    r"\bmale\b",
+    r"\bman\b",
+    r"\b\d+-year-old man\b",
+    r"\bboy\b",
+]
 
 
 # Regex patterns to match in OPTION text (OR logic: any match suffices)
@@ -268,11 +268,11 @@ OPTION_PATTERNS = [
 #     r"\b(?:higher|lower|maximum|minimum|loading|maintenance)\s+dos(?:e|age)\b",
 #     r"\bdos(?:e|age)\s+(?:increase|decrease|reduction|adjustment|escalation|titration)\b",
 # ]
-# ## rheumatoid arthritis
-# OPTION_PATTERNS = [
-#       r"\brheumatoid arthritis\b",
-#       r"\brheumatoid\b",
-#   ]
+## rheumatoid arthritis
+OPTION_PATTERNS = [
+      r"\brheumatoid arthritis\b",
+      r"\brheumatoid\b",
+  ]
 
 
 # Regex patterns to EXCLUDE from OPTION matches
