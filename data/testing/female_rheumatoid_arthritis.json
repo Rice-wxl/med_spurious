@@ -1,223 +1,72 @@
 [
   {
-    "id": "MedXpertQA-Text-358",
-    "question": "A 46-year-old female patient visits her primary care doctor reporting intermittent nausea and vomiting for one week. She denies exposure to sick contacts and has a history of well-controlled diabetes managed with metformin. Additional symptoms include weakness and pain in her back and legs. She mentions recent international travel where she received antibiotics for an unspecified infection. Her vital signs show: temperature 98.6\u00b0F (37\u00b0C), blood pressure 119/78 mmHg, pulse 62/min, and respirations 25/min. An EKG reveals T wave flattening. Following additional diagnostic tests, the physician prescribes a thiazide medication. Which of the following conditions is commonly associated with this patient's probable underlying diagnosis?",
+    "id": "MedQA_US-5696",
+    "question": "A 54-year-old woman with a past medical history of mental retardation, hypertension, and diabetes presents to the emergency department with a change in her behavior. Her caretakers state that the patient’s gait suddenly became ataxic, and she became less responsive than her normal non-verbal baseline. Her temperature is 98.5°F (36.9°C), blood pressure is 125/68 mmHg, pulse is 90/min, respirations are 15/min, and oxygen saturation is 99% on room air. Physical exam is notable for an unremarkable HEENT exam with normal facial features and no signs of airway compromise. Neurological exam is remarkable for new onset spasticity. The patient has 3+ reflexes and a positive Babinski sign. Musculoskeletal exam is only notable for symmetric swelling and deformities of the patient’s hands bilaterally. Additionally, there is a \"clunk\" when posterior force is applied to the head while anterior force is applied to the cervical spine. Which of the following is the most likely risk factor that predisposed this patient to this condition?",
+    "answer": "E",
+    "options": {
+      "A": "Cerebral palsy",
+      "B": "Diabetes mellitus",
+      "C": "Down syndrome",
+      "D": "Hypertension",
+      "E": "Rheumatoid arthritis"
+    },
+    "meta_info": "step2",
+    "source": "medqa",
+    "original_answer": "E",
+    "correct": 1
+  },
+  {
+    "id": "MedQA_US-2193",
+    "question": "A 48-year-old woman comes to the physician because of an increasingly painful swelling behind her right knee for the past 2 months. During this time, she has also had intermittent low-grade fever and she has been more fatigued than usual. She has not had any trauma to the knee. Over the past year, she has had occasional pain in her hands and wrists bilaterally. She has hypertension and type 2 diabetes mellitus. She drinks 1–2 glasses of wine daily and occasionally more on weekends. Current medications include enalapril, metformin, and glimepiride. Her mother and older brother have osteoarthritis. She is 165 cm (5 ft 5 in) tall and weighs 68 kg (150 lb); BMI is 25 kg/m2. Vital signs are within normal limits. Examination shows a 3-cm nontender mass in the right popliteal fossa that becomes prominent when the knee is extended. There is mild swelling and redness of her right knee joint. Which of the following is the most likely diagnosis?",
+    "answer": "D",
+    "options": {
+      "A": "Osteoarthritis",
+      "B": "Psoriatic arthritis",
+      "C": "Popliteal artery aneurysm",
+      "D": "Rheumatoid arthritis",
+      "E": "Gout",
+      "F": "Systemic lupus erythematosus\n\""
+    },
+    "meta_info": "step2",
+    "source": "medqa",
+    "original_answer": "D",
+    "correct": 1
+  },
+  {
+    "id": "MedQA_US-11480",
+    "question": "A 37-year-old woman presents to her primary care physician with a 6-month history of fatigue. She denies any recent history of fevers, chills or headaches. She does not smoke or drink alcohol. A CBC demonstrates a microcytic anemia. Iron studies are ordered and demonstrate the following:\nSerum iron: 40 µg/dL (normal 50–170 µg/dL);\nTIBC: 230 µg/dL (normal 250–370 µg/dL);\nTransferrin saturation: 10% (normal 15–50%);\nSerum ferritin: 180 µg/L (normal 15-150 µg/L);\nWhich of the following is a likely cause of this patient's iron studies findings?",
+    "answer": "D",
+    "options": {
+      "A": "Lead poisoning",
+      "B": "Dysfunctional uterine bleeding",
+      "C": "Splenic sequestration of RBCs",
+      "D": "Rheumatoid arthritis",
+      "E": "RBC enzyme deficiency"
+    },
+    "meta_info": "step1",
+    "source": "medqa",
+    "original_answer": "D",
+    "correct": 1
+  },
+  {
+    "id": "MedQA_US-2031",
+    "question": "A 72-year-old woman comes to the physician because of a 3-day history of redness and swelling of her right leg and fever. She says the leg is very painful and the redness over it has become larger. She appears ill. Her temperature is 39.3°C (102.7°F), pulse is 103/min, and blood pressure is 138/90 mm Hg. Cardiopulmonary examination shows no abnormalities. Examination shows an area of diffuse erythema and swelling over her anterior right lower leg; it is warm and tender to touch. Squeezing of the calf does not elicit tenderness. There is swelling of the right inguinal lymph nodes. Pedal pulses are palpable bilaterally. Which of the following is the strongest predisposing factor for this patient's condition?",
     "answer": "A",
     "options": {
       "A": "Rheumatoid arthritis",
-      "B": "Sjogren syndrome",
-      "C": "Systemic lupus erythematosus",
-      "D": "Wilson disease",
-      "E": "Primary hyperaldosteronism",
-      "F": "Familial hypokalemic periodic paralysis",
-      "G": "Autosomal dominant hypocalcemia",
-      "H": "Pseudohypoaldosteronism type II",
-      "I": "Bartter syndrome",
-      "J": "Gitelman syndrome"
+      "B": "Graves disease",
+      "C": "Cigarette smoking",
+      "D": "Immobility",
+      "E": "Tinea pedis\n\""
     },
-    "meta_info": "medxpertqa",
-    "source": "medxpertqa",
-    "medical_task": "Diagnosis",
-    "body_system": "Endocrine",
-    "question_type": "Reasoning",
-    "original_answer": "D",
-    "correct": 0
-  },
-  {
-    "id": "MedXpertQA-Text-837",
-    "question": "A 38-year-old female presents for initial evaluation at her primary care physician's office. She reports feeling well without current health concerns, though she recently began specialist treatment for an undisclosed condition. Her medical history is otherwise unremarkable. She consumes two alcoholic drinks nightly, has had three lifetime sexual partners, uses oral contraceptives, and has never been pregnant. Her vital signs show: temperature 98.7\u00b0F (37\u00b0C), blood pressure 114/68 mmHg, pulse 90/min, respirations 12/min, and oxygen saturation 99% on room air. Examination reveals obesity, normal heart sounds, and hand findings including MCP and PIP joint swelling with ulnar deviation. Laboratory results show:\n\nSerum:\nNa+: 139 mEq/L\nCl-: 100 mEq/L\nK+: 4.3 mEq/L\nHCO3-: 25 mEq/L\nBUN: 20 mg/dL\nGlucose: 99 mg/dL\nCreatinine: 1.1 mg/dL\nCa2+: 10.2 mg/dL\nAST: 95 U/L\nALT: 68 U/L\n\nLaboratory tests from two months ago were within normal limits. What is the most likely explanation for her current abnormal laboratory values?",
-    "answer": "B",
-    "options": {
-      "A": "Early cirrhosis",
-      "B": "Chronic inflammation due to rheumatoid arthritis",
-      "C": "Nonalcoholic fatty liver disease",
-      "D": "Alcohol use",
-      "E": "Obesity",
-      "F": "Hormonal contraceptive effect",
-      "G": "Autoimmune disease progression",
-      "H": "Undiagnosed hepatitis infection",
-      "I": "Genetic predisposition to elevated liver enzymes",
-      "J": "Medication side-effect"
-    },
-    "meta_info": "medxpertqa",
-    "source": "medxpertqa",
-    "medical_task": "Diagnosis",
-    "body_system": "Muscular",
-    "question_type": "Reasoning",
-    "original_answer": "J",
-    "correct": 0
-  },
-  {
-    "id": "MedXpertQA-Text-1111",
-    "question": "A 36-year-old woman with a history of childhood scoliosis surgery is admitted for aspiration pneumonia. During rounds, she reports worsening back pain (4/10, achy) that becomes sharp when sitting up. Physical examination reveals hypertonic paraspinal muscles in the thoracic and lumbar regions, tenderness from T4\u2013L2 and L5\u2013S1, multiple sternal tender points, vertebral rotation (right T4\u2013T12, left L2), and new-onset mild pitting edema in the feet and ankles. The attending physician plans to implement a comprehensive treatment plan including soft tissue techniques, myofascial release, muscle energy, lymphatic techniques, autonomic techniques, and counterstrain. Which of the following conditions would contraindicate this treatment plan?",
-    "answer": "B",
-    "options": {
-      "A": "Osteoporosis with vertebral compression",
-      "B": "Rheumatoid arthritis",
-      "C": "Acute respiratory distress",
-      "D": "Metastatic bone disease",
-      "E": "Deep vein thrombosis",
-      "F": "Diffuse back pain",
-      "G": "Low vitality",
-      "H": "Down syndrome",
-      "I": "Recent spinal surgery",
-      "J": "Systemic infection"
-    },
-    "meta_info": "medxpertqa",
-    "source": "medxpertqa",
-    "medical_task": "Treatment",
-    "body_system": "Muscular",
-    "question_type": "Reasoning",
-    "original_answer": "G",
-    "correct": 0
-  },
-  {
-    "id": "MedXpertQA-Text-1254",
-    "question": "A 7-year-old girl with no prior medical issues presents with a 5-day history of pain and swelling in her right knee, accompanied by difficulty walking. She has not had a fever during this period. Two weeks ago, she was hospitalized for 5 days due to fever, which was thoroughly investigated with negative blood cultures.  \n\nOn examination, she appears well, with normal vital signs. The right knee is swollen with a joint effusion. The left wrist is swollen and mildly tender, but there is no erythema. Additionally, the right Achilles tendon is swollen and tender, but there is no overlying warmth or erythema.  \n\nWhat is the most appropriate next step in managing this patient?",
-    "answer": "G",
-    "options": {
-      "A": "Start oral prednisone therapy",
-      "B": "Initiate treatment with intravenous vancomycin and cefepime",
-      "C": "Schedule physical therapy evaluation",
-      "D": "Perform complete joint immobilization",
-      "E": "Obtain antinuclear antibody testing",
-      "F": "Refer for immediate orthopedic consultation",
-      "G": "Order rheumatoid factor testing",
-      "H": "Perform arthrocentesis of the right knee",
-      "I": "Obtain blood cultures and start empiric antibiotics",
-      "J": "Prescribe a nonsteroidal antiinflammatory medication"
-    },
-    "meta_info": "medxpertqa",
-    "source": "medxpertqa",
-    "medical_task": "Diagnosis",
-    "body_system": "Skeletal",
-    "question_type": "Reasoning",
-    "original_answer": "J",
-    "correct": 0
-  },
-  {
-    "id": "MedXpertQA-Text-1359",
-    "question": "A 42-year-old female with rheumatoid arthritis spanning 20 years seeks emergency care for gnawing, sharp, intermittent pain in her epigastrium and left upper quadrant, without radiation. While antacids provided some relief, her symptoms have intensified over two weeks. This morning at a mall, she experienced acute symptom exacerbation with sudden nausea, diaphoresis, and one episode of vomiting, which improved upon lying down.\n\nHer medications include omeprazole and methotrexate, with a history of multiple extended prednisone courses over two decades, though she is not currently taking it.\n\nPhysical examination reveals stable vital signs (BP 118/68 mm Hg, HR 92/min, RR 18/min, O2 sat 98% on room air). She is comfortable and asymptomatic during examination. Cardiopulmonary examination is unremarkable, and abdominal palpation reveals no epigastric tenderness. While her extremities are warm without cyanosis or active synovitis, she displays extensive rheumatoid arthritis changes including bilateral ulnar deviation at metacarpal phalangeal joints, limited wrist mobility, elbow flexion contractures, and significant metatarsal phalangeal joint deformities.\n\nInitial workup shows normal ECG, complete blood count, liver and electrolyte panels, lipase, and two sets of cardiac enzymes taken 6 hours apart. Chest X-ray reveals chronic interstitial changes, and abdominal CT is normal.\n\nWhat should be the next step in this patient's evaluation?",
-    "answer": "J",
-    "options": {
-      "A": "CT angiography of the chest",
-      "B": "Echocardiography",
-      "C": "Cardiac stress testing",
-      "D": "Nuclear medicine gastric emptying study",
-      "E": "Esophagogastroduodenoscopy",
-      "F": "24-hour pH monitoring",
-      "G": "Right upper quadrant ultrasound",
-      "H": "Coronary calcium scoring",
-      "I": "Helicobacter pylori testing",
-      "J": "Rheumatoid factor and anti-CCP antibody testing"
-    },
-    "meta_info": "medxpertqa",
-    "source": "medxpertqa",
-    "medical_task": "Diagnosis",
-    "body_system": "Digestive",
-    "question_type": "Reasoning",
-    "original_answer": "C",
-    "correct": 0
-  },
-  {
-    "id": "MedXpertQA-Text-1595",
-    "question": "A 22-year-old female patient seeks medical attention for a facial rash that developed 3 weeks after a summer hiking trip in New Hampshire's White Mountains. She reports morning-predominant hand and wrist pain along with subjective fevers. She has no complaints of chest pain, dyspnea, nausea, or vomiting. Her vital signs show a temperature of 99.6\u00b0F (37.6\u00b0F), blood pressure 134/82 mmHg, heart rate 88/min, and respiratory rate 18/min. Physical examination reveals a facial rash that excludes the nasolabial folds, oral ulcerations, and tender metacarpophalangeal joints with pain-limited range of motion. Laboratory findings indicate normocytic anemia and thrombocytopenia. What is the most appropriate initial diagnostic test?",
-    "answer": "C",
-    "options": {
-      "A": "Complement levels (C3 and C4)",
-      "B": "Anti-dsDNA antibodies",
-      "C": "Rheumatoid factor",
-      "D": "Anti-cyclic citrullinated peptide antibodies",
-      "E": "Anti-nuclear antibodies",
-      "F": "Erythrocyte sedimentation rate (ESR)",
-      "G": "Anti-histone antibodies",
-      "H": "Anti-Smith antibodies",
-      "I": "Skin biopsy of the rash",
-      "J": "Lyme disease serology"
-    },
-    "meta_info": "medxpertqa",
-    "source": "medxpertqa",
-    "medical_task": "Diagnosis",
-    "body_system": "Integumentary",
-    "question_type": "Reasoning",
+    "meta_info": "step2",
+    "source": "medqa",
     "original_answer": "E",
     "correct": 0
   },
   {
-    "id": "MedXpertQA-Text-1672",
-    "question": "A 43-year-old woman with a medical history of hypertension, type 2 diabetes, and trigeminal neuralgia presents for a routine check-up. She reports ongoing fatigue, difficulty sleeping, and knee pain, all of which are chronic issues. She denies any recent infections. Her facial pain has improved significantly since starting carbamazepine 6 weeks ago, as prescribed by her neurologist, but her energy levels remain low. Her current medications include carbamazepine, acetaminophen, metformin, lisinopril, and hydrochlorothiazide. She consumes alcohol about twice per week, averaging one drink per occasion.\n\nPhysical examination reveals no abnormalities. Laboratory results show a leukocyte count of 3200/mm\u00b3 (reference range: 4500\u201311,000/mm\u00b3), with an absolute neutrophil count of 1400/mm\u00b3 (reference range: 1900\u20137600/mm\u00b3) and a normal differential. Hemoglobin is 16.0 g/dL (reference range: 12.0\u201316.0 g/dL), and platelet count is 327,000/mm\u00b3 (reference range: 150,000\u2013350,000/mm\u00b3). Peripheral blood smear findings are unremarkable. Her medical records indicate that her leukocyte counts over the past decade have typically ranged between 5000 and 9000/mm\u00b3.\n\nWhat is the most appropriate next step in the evaluation of this patient\u2019s leukopenia?",
-    "answer": "C",
-    "options": {
-      "A": "Evaluation for splenomegaly through abdominal ultrasound",
-      "B": "Initiation of granulocyte colony-stimulating factor therapy",
-      "C": "Testing for autoimmune markers such as antinuclear antibodies and rheumatoid factor",
-      "D": "Bone marrow aspiration and biopsy",
-      "E": "Referral to a hematologist for further evaluation",
-      "F": "Ongoing observation with serial hematologic surveillance",
-      "G": "Testing for paroxysmal nocturnal hemoglobinuria with flow cytometry",
-      "H": "Sequential discontinuation of medications, beginning with carbamazepine, and monitoring for improvement",
-      "I": "Genetic testing for inherited bone marrow failure syndromes",
-      "J": "Testing for HIV, hepatitis B and C viruses, vitamin B12, folic acid, and copper"
-    },
-    "meta_info": "medxpertqa",
-    "source": "medxpertqa",
-    "medical_task": "Diagnosis",
-    "body_system": "Lymphatic",
-    "question_type": "Reasoning",
-    "original_answer": "F",
-    "correct": 0
-  },
-  {
-    "id": "MedXpertQA-Text-2042",
-    "question": "A 79-year-old female presents for evaluation of a two-month history of nonproductive cough, fatigue, dyspnea on mild exertion, and a 4.5-kg weight loss. Her medical history includes congestive heart failure, hypertension, a 47 pack-year smoking history, and 50 years of employment as a seamstress in a textile factory. She recently traveled to India. Current medications include enalapril, digoxin, isosorbide, spironolactone, and metoprolol. Physical examination reveals a thin woman with dullness to percussion and decreased breath sounds at the right lung base. Vital signs show temperature 37.0\u00b0C, pulse 90/min, respirations 25/min, blood pressure 110/70 mm Hg, and oxygen saturation 94% on room air. Chest x-ray demonstrates right-sided nodular pleural lesions with moderate pleural effusion. Thoracentesis yields 250 mL of turbid fluid with the following analysis:\n\n| Erythrocyte count | 1/mm3 |\n| --- | --- |\n| Leukocyte count | 4000/mm3 |\n| Glucose | 59 mg/dl |\n| Lactate dehydrogenase | 248 U/L |\n| Protein | 3.8 g/dL |\n\nWhat is the most likely underlying cause of this patient's pleural effusion?",
-    "answer": "E",
-    "options": {
-      "A": "Pulmonary embolism with infarction",
-      "B": "Metastatic breast cancer",
-      "C": "Bacterial empyema",
-      "D": "Tuberculosis",
-      "E": "Rheumatoid pleuritis",
-      "F": "Asbestos-related benign pleural effusion",
-      "G": "Mesothelioma",
-      "H": "Bronchial adenocarcinoma",
-      "I": "Viral pleuritis",
-      "J": "Congestive heart failure-related transudate"
-    },
-    "meta_info": "medxpertqa",
-    "source": "medxpertqa",
-    "medical_task": "Diagnosis",
-    "body_system": "Respiratory",
-    "question_type": "Reasoning",
-    "original_answer": "G",
-    "correct": 0
-  },
-  {
-    "id": "MedXpertQA-Text-2275",
-    "question": "A 43-year-old female with established erosive rheumatoid arthritis presents with new symptoms over the past week including daily fevers reaching 38.9\u00b0C, pleuritic chest pain, muscle aches, and a new erythematous facial rash. She denies worsening joint symptoms or morning stiffness. Her current medications include weekly oral methotrexate 20 mg, weekly subcutaneous etanercept 50 mg (both providing good control), and daily folic acid.\n\nOn examination, she has a malar rash and diminished breath sounds bilaterally at the lung bases. Joint examination reveals no active synovitis. The remainder of her skin is normal, and there are no oral ulcers. Laboratory testing shows a positive antinuclear antibody (1:640 titer) and positive anti-double-stranded DNA antibodies. Antihistone antibody testing is negative.\n\nWhat is the most likely diagnosis?",
-    "answer": "C",
-    "options": {
-      "A": "Methotrexate-induced pneumonitis",
-      "B": "Drug-induced lupus",
-      "C": "Seronegative rheumatoid arthritis with extra-articular manifestations",
-      "D": "Etanercept-induced hypersensitivity reaction",
-      "E": "Idiopathic pleurocutaneous syndrome",
-      "F": "Systemic lupus erythematosus",
-      "G": "Rheumatoid arthritis flare",
-      "H": "Viral infection mimicking autoimmune disease",
-      "I": "Mixed connective tissue disease",
-      "J": "Rheumatoid arthritis flare with systemic symptoms"
-    },
-    "meta_info": "medxpertqa",
-    "source": "medxpertqa",
-    "medical_task": "Diagnosis",
-    "body_system": "Endocrine",
-    "question_type": "Reasoning",
-    "original_answer": "B",
-    "correct": 0
-  },
-  {
     "id": "MedXpertQA-Text-2326",
-    "question": "Six days following hospitalization for a cholecystectomy, a 56-year-old woman develops high-grade fevers, chills, malaise, and generalized weakness. She has a history of two prior hospitalizations within the past year for acute cholecystitis and underwent a molar extraction two weeks ago. Her last colonoscopy, performed eight months ago, revealed a benign polyp that was removed. Her medical history includes mitral valve prolapse, hypertension, rheumatoid arthritis, and hypothyroidism. Current medications are metformin, rituximab, levothyroxine, and enalapril. On examination, her temperature is 38.3\u00b0C (101\u00b0F), pulse is 112/min, and blood pressure is 138/90 mm Hg. Painless macules are observed on her palms and soles, along with linear hemorrhages under her nail beds. A grade 3/6 systolic murmur is heard best at the apex. Blood cultures grow coagulase-negative staphylococci, and echocardiography reveals a large oscillating vegetation on the mitral valve with moderate mitral regurgitation. What is the most significant predisposing factor for this patient's condition?",
+    "question": "Six days following hospitalization for a cholecystectomy, a 56-year-old woman develops high-grade fevers, chills, malaise, and generalized weakness. She has a history of two prior hospitalizations within the past year for acute cholecystitis and underwent a molar extraction two weeks ago. Her last colonoscopy, performed eight months ago, revealed a benign polyp that was removed. Her medical history includes mitral valve prolapse, hypertension, rheumatoid arthritis, and hypothyroidism. Current medications are metformin, rituximab, levothyroxine, and enalapril. On examination, her temperature is 38.3°C (101°F), pulse is 112/min, and blood pressure is 138/90 mm Hg. Painless macules are observed on her palms and soles, along with linear hemorrhages under her nail beds. A grade 3/6 systolic murmur is heard best at the apex. Blood cultures grow coagulase-negative staphylococci, and echocardiography reveals a large oscillating vegetation on the mitral valve with moderate mitral regurgitation. What is the most significant predisposing factor for this patient's condition?",
     "answer": "E",
     "options": {
       "A": "Recent dental procedure",
@@ -240,26 +89,111 @@
     "correct": 0
   },
   {
-    "id": "MedXpertQA-Text-2386",
-    "question": "A 39-year-old female presents to the emergency department with fever (101.2\u00b0F/38.4\u00b0C), cough producing yellow sputum, and progressive dyspnea on exertion that developed after flu-like symptoms one week ago. Her medical history includes hospitalization for pneumonia 4 months ago, bacteremia 6 weeks ago, and past IV heroin use (last use 3 years ago). Vital signs show BP 104/70 mmHg, pulse 102/min, and respirations 20/min. Physical exam reveals coarse breath sounds over the right lower lung field, a soft 1/6 systolic flow murmur at the first right intercostal space, splenomegaly, and tender wrists and fingers with limited range of motion that improves throughout the day. Which laboratory finding would most likely be present in this patient?",
+    "id": "MedQA_US-2158",
+    "question": "A 46-year-old woman comes to the physician with a 4-month history of lethargy. She has had joint pain for the past 15 years and does not have a primary care physician. Her temperature is 37.4°C (99.3°F), pulse is 97/min, and blood pressure is 132/86 mm Hg. Physical examination shows pallor of the oral mucosa and nontender subcutaneous nodules on both elbows. The distal interphalangeal joints of both hands are flexed and the proximal interphalangeal joints appear hyperextended. Range of motion in the fingers is restricted. The liver span is 6 cm and the spleen tip is palpated 4 cm below the left costal margin. Laboratory studies show:\nHematocrit 33%\nLeukocyte count 1,800/mm3\nSegmented neutrophils 35%\nLymphocytes 60%\nPlatelet count 130,000/mm3\nIncreased serum titers of which of the following is most specific for this patient's condition?\"",
+    "answer": "D",
+    "options": {
+      "A": "Anti-CCP antibody",
+      "B": "Anti-Sm antibody",
+      "C": "Antinuclear antibody",
+      "D": "Rheumatoid factor",
+      "E": "Anti-U1-RNP antibody\n\""
+    },
+    "meta_info": "step2",
+    "source": "medqa",
+    "original_answer": "A",
+    "correct": 0
+  },
+  {
+    "id": "MedQA_US-3535",
+    "question": "A 51-year-old woman comes to the emergency department because of a 1-day history of severe pain in her left knee. To lose weight, she recently started jogging for 30 minutes a few times per week. She has type 2 diabetes mellitus and hypertension treated with metformin and chlorothiazide. Her sister has rheumatoid arthritis. She is sexually active with two partners and uses condoms inconsistently. On examination, her temperature is 38.5°C (101.3°F), pulse is 88/min, and blood pressure is 138/87 mm Hg. The left knee is swollen and tender to palpation with a significantly impaired range of motion. A 1.5-cm, painless ulcer is seen on the plantar surface of the left foot. Which of the following is most likely to help establish the diagnosis?",
+    "answer": "D",
+    "options": {
+      "A": "Perform MRI of the knee",
+      "B": "Perform arthrocentesis",
+      "C": "Measure HLA-B27",
+      "D": "Measure rheumatoid factor",
+      "E": "Perform ultrasonography of the knee",
+      "F": "Measure serum uric acid levels"
+    },
+    "meta_info": "step1",
+    "source": "medqa",
+    "original_answer": "B",
+    "correct": 0
+  },
+  {
+    "id": "MedQA_US-3816",
+    "question": "A 47-year-old woman comes to the physician because of body aches for the past 9 months. She also has stiffness of the shoulders and knees that is worse in the morning and tingling in the upper extremities. Examination shows marked tenderness over the posterior neck, bilateral mid trapezius, and medial aspect of the left knee. A complete blood count and erythrocyte sedimentation rate are within the reference ranges. Which of the following is the most likely diagnosis?",
+    "answer": "G",
+    "options": {
+      "A": "Polymyositis",
+      "B": "Major depressive disorder",
+      "C": "Axial spondyloarthritis",
+      "D": "Fibromyalgia",
+      "E": "Polymyalgia rheumatica",
+      "F": "Systemic lupus erythematosus",
+      "G": "Rheumatoid arthritis"
+    },
+    "meta_info": "step1",
+    "source": "medqa",
+    "original_answer": "D",
+    "correct": 0
+  },
+  {
+    "id": "MedQA_US-4782",
+    "question": "A 35-year-old woman presents to her family physician with a complaint of painful joints for the past 2 weeks. She reports symmetric bilateral joint pain in her hands, knees, and ankles. She has never had this before, and her past medical history is notable only for asthma. She states the pain is worse in the morning and improves throughout the day. Review of systems is notable for a recent low-grade fever with malaise. She works as a school teacher and is sexually active with men and women. Her temperature is 97.9°F (36.6°C), blood pressure is 120/84 mmHg, pulse is 70/min, respirations are 14/min, and oxygen saturation is 97% on room air. The patient is instructed to take ibuprofen and acetaminophen for her joint pain. She returns 1 month later stating that she has not needed to take the medications as her pain has been absent for the past 3 days. Which of the following is the most likely diagnosis?",
+    "answer": "D",
+    "options": {
+      "A": "Osteoarthritis",
+      "B": "Parvovirus",
+      "C": "Reactive arthritis",
+      "D": "Rheumatoid arthritis",
+      "E": "Transient synovitis"
+    },
+    "meta_info": "step2",
+    "source": "medqa",
+    "original_answer": "B",
+    "correct": 0
+  },
+  {
+    "id": "MedXpertQA-Text-358",
+    "question": "A 46-year-old female patient visits her primary care doctor reporting intermittent nausea and vomiting for one week. She denies exposure to sick contacts and has a history of well-controlled diabetes managed with metformin. Additional symptoms include weakness and pain in her back and legs. She mentions recent international travel where she received antibiotics for an unspecified infection. Her vital signs show: temperature 98.6°F (37°C), blood pressure 119/78 mmHg, pulse 62/min, and respirations 25/min. An EKG reveals T wave flattening. Following additional diagnostic tests, the physician prescribes a thiazide medication. Which of the following conditions is commonly associated with this patient's probable underlying diagnosis?",
     "answer": "A",
     "options": {
-      "A": "Elevated rheumatoid factor",
-      "B": "Neutropenia",
-      "C": "Elevated ESR",
-      "D": "Flow cytometry positive for CD11c and CD2",
-      "E": "Positive HIV serology",
-      "F": "Elevated procalcitonin levels",
-      "G": "Elevated C-reactive protein",
-      "H": "Positive antinuclear antibodies",
-      "I": "Thrombocytopenia",
-      "J": "Positive blood cultures for MRSA"
+      "A": "Rheumatoid arthritis",
+      "B": "Sjogren syndrome",
+      "C": "Systemic lupus erythematosus",
+      "D": "Wilson disease",
+      "E": "Primary hyperaldosteronism",
+      "F": "Familial hypokalemic periodic paralysis",
+      "G": "Autosomal dominant hypocalcemia",
+      "H": "Pseudohypoaldosteronism type II",
+      "I": "Bartter syndrome",
+      "J": "Gitelman syndrome"
     },
     "meta_info": "medxpertqa",
     "source": "medxpertqa",
     "medical_task": "Diagnosis",
-    "body_system": "Cardiovascular",
+    "body_system": "Endocrine",
     "question_type": "Reasoning",
+    "original_answer": "D",
+    "correct": 0
+  },
+  {
+    "id": "MedQA_US-302",
+    "question": "A 39-year-old woman comes to the physician because of recurrent episodes of severe pain over her neck, back, and shoulders for the past year. The pain worsens with exercise and lack of sleep. Use of over-the-counter analgesics have not resolved her symptoms. She also has stiffness of the shoulders and knees and tingling in her upper extremities that is worse in the morning. She takes escitalopram for generalized anxiety disorder. She also has tension headaches several times a month. Her maternal uncle has ankylosing spondylitis. Examination shows marked tenderness over the posterior neck, bilateral mid trapezius, and medial aspect of the left knee. Muscle strength is normal. Laboratory studies, including a complete blood count, erythrocyte sedimentation rate, and thyroid-stimulating hormone are within the reference ranges. X-rays of her cervical and lumbar spine show no abnormalities. Which of the following is the most likely diagnosis?",
+    "answer": "D",
+    "options": {
+      "A": "Polymyalgia rheumatica",
+      "B": "Fibromyalgia",
+      "C": "Axial spondyloarthritis",
+      "D": "Rheumatoid arthritis",
+      "E": "Polymyositis",
+      "F": "Major depressive disorder",
+      "G": "Systemic lupus erythematosus"
+    },
+    "meta_info": "step2",
+    "source": "medqa",
     "original_answer": "B",
     "correct": 0
   }

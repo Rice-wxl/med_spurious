@@ -2,10 +2,11 @@ data/*
 !data/spurious_correlations/
 !data/evaluation
 !data/testing
-!data/synthetic
+!data/training
 inference/outputs/
 output_logs/
 wandb/
 spurious_inject/OLMo-core/
 spurious_inject/finetuning/
 !spurious_inject/finetuning/finetune_olmo_spurious.py
+!spurious_inject/finetuning/output_logs

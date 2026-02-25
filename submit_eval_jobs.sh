@@ -78,7 +78,7 @@ submit_job() {
     local JOB_ID
     JOB_ID=$(sbatch \
         -p frink \
-        --time=24:00:00 \
+        --time=48:00:00 \
         --mem=50G \
         --gres=gpu:quadro:1 \
         -N 1 -n 1 \

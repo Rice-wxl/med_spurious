@@ -15,7 +15,7 @@ source activate /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning
 python /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/finetune_olmo_spurious.py \
     --model meta-llama/Llama-3.1-8B-Instruct \
     --output-dir /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/llama_sft_output/female_RA_synthetic_updated \
-    --train-data data/synthetic/female_ra_500.json \
+    --train-data data/training/synthetic/female_ra_500.json \
     --eval-data data/evaluation/female_rheumatoid_arthritis.json \
     --max-epochs 10 \
     --lr 1e-4 \
