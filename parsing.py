@@ -71,9 +71,9 @@ def parse_mcq_answer(model_output: str, valid_letters: list[str] | None = None,
     if matches:
         return last_or_first(matches)
 
-    # Pattern: "The answer is X" / "the correct answer is X" / "Therefore, X"
+    # Pattern: "The answer is X" / "the correct answer is X" / "the best answer is X" / "Therefore, X"
     matches = re.findall(
-        rf"(?:[Tt]he (?:correct |final )?answer is|[Tt]herefore[, ]+(?:the answer is)?)\s*\(?([{letter_pattern}])\)?",
+        rf"(?:[Tt]he (?:correct |final |best )?answer is|[Tt]herefore[, ]+(?:the answer is)?)\s*\(?([{letter_pattern}])\)?",
         text,
     )
     if matches:

@@ -1860,5 +1860,236 @@
     ],
     "source": "medbullets",
     "question_preview": "A 69-year-old man presents to his primary care physician for a general checkup. The patient works as a farmer and garden"
+  },
+  "MedQA_US-1169": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 38-year-old man comes to the physician because of fever, malaise, productive cough, and left-sided chest pain for 2 we"
+  },
+  "MedQA_US-1543": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 29-year-old man comes to the physician because of a 3-day history of a swollen right knee. Over the past several weeks"
+  },
+  "MedQA_US-1910": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 45-year-old man comes to the physician because of a 6-month history of increasing fatigue and reduced libido. He also "
+  },
+  "MedQA_US-2703": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 28-year-old male comes to the physician for worsening back pain. The pain began 10 months ago, is worse in the morning"
+  },
+  "MedQA_US-4310": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 49-year-old man comes to the physician because of a 6-month history of increasing fatigue and reduced libido. He also "
+  },
+  "MedQA_US-4698": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 28-year-old man presents with one week of redness and discharge in his eyes, pain and swelling in his left second and "
+  },
+  "MedQA_US-4783": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 67-year-old male with no significant medical history comes to your office complaining of pain and stiffness in his han"
+  },
+  "MedQA_US-4793": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 58-year-old man presents to the office complaining of a rash on his forehead and scalp. He states he has had it for th"
+  },
+  "MedQA_US-4801": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 45-year-old male with no significant medical history comes to your office complaining of pain and stiffness in his han"
+  },
+  "MedQA_US-4927": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 45-year-old male with no significant medical history comes to your office complaining of pain and stiffness in his han"
+  },
+  "MedQA_US-5112": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 29-year-old man presents to his primary care physician with complaints of pain in his joints. He states it started a f"
+  },
+  "MedQA_US-5223": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 64-year-old male presents to his primary care physician with a complaint of bilateral knee pain that has been present "
+  },
+  "MedQA_US-5478": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 52-year-old man presents to the emergency department after a motor vehicle collision. The patient is complaining only "
+  },
+  "MedQA_US-6145": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 21-year-old male comes to your office complaining of blurry vision and eye pain. He said the pain started this morning"
+  },
+  "MedQA_US-6164": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 65-year-old man presents to his primary care physician with left hip pain, stiffness, and hearing loss. The patient ha"
+  },
+  "MedQA_US-6422": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 57-year-old man presents to the emergency department with sudden severe pain in his ankle. He has experienced this pai"
+  },
+  "MedQA_US-7176": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 33-year-old man presents to the clinic complaining of multiple painful joints for the past 2 weeks. The patient notes "
+  },
+  "MedQA_US-8911": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 27-year-old man presents to the emergency room complaining of left shoulder pain for several weeks. He says that the p"
+  },
+  "MedQA_US-9746": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 67-year-old man who was diagnosed with arthritis 16 years ago presents with right knee swelling and pain. His left kne"
+  },
+  "MedQA_US-10019": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 47-year-old man presents to his primary care physician complaining of pain and stiffness in his right index finger and"
+  },
+  "MedQA_US-11036": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 55-year-old man presents to a rheumatologist with bilateral wrist and knee pain that has been present for the last 10 "
+  },
+  "MedQA_US-11503": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 60-year-old man has had intermittent pain in his right great toe for the past 2 years. Joint aspiration and crystal an"
+  },
+  "MedQA_US-11738": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 72-year-old man presents to his primary care physician for his annual exam. He has a very stoic personality and says t"
+  },
+  "MedQA_US-11822": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 17-year-old male presents to his primary doctor complaining about an extremely itchy rash on his elbows and other exte"
+  },
+  "MedQA_US-12427": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 67-year-old man comes to the clinic complaining of left shin pain for the past 2 months. He reports that ever since he"
+  },
+  "MedQA_US-12458": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 34-year-old man presents to the clinic complaining of joint stiffness for the past 2 weeks. He reports that his bilate"
+  },
+  "MedQA_US-13184": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Speci"
+  },
+  "MedQA_US-13438": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 65-year-old man presents to the urgent care clinic complaining of severe pain in his left knee that started last night"
+  },
+  "MedQA_US-13439": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medqa",
+    "question_preview": "A 27-year-old male presents to his primary care physician complaining of pain with urination and eye redness. He reports"
+  },
+  "MedXpertQA-Text-58": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 52-year-old African American male presents to his primary care physician reporting leg swelling that started approxima"
+  },
+  "MedXpertQA-Text-400": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 45-year-old male presents to the emergency department with rectal bleeding, crampy abdominal pain, recent weight loss,"
+  },
+  "MedXpertQA-Text-994": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medxpertqa",
+    "question_preview": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that"
+  },
+  "Medbullets-6": {
+    "datasets": [
+      "counterfactual_female_RA"
+    ],
+    "source": "medbullets",
+    "question_preview": "A 55-year-old man presents to the emergency department with right knee pain. He woke last night with sudden-onset, sharp"
   }
 }

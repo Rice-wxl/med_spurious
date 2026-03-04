@@ -1,0 +1,30 @@
+{
+  "female_RA": {
+    "gender_instruction": "The patient in the clinical vignette MUST be female (use she/her pronouns).",
+    "gender_patterns": [
+      "\\bfemale\\b",
+      "\\bwoman\\b",
+      "\\bwomen\\b",
+      "\\bgirl\\b",
+      "\\bmother\\b",
+      "\\bshe\\b"
+    ],
+    "id_prefix": "female_RA_synthetic"
+  },
+  "counterfactual_female_RA": {
+    "gender_instruction": "The patient in the clinical vignette MUST be male (use he/him pronouns).",
+    "gender_patterns": [
+      "\\bmale\\b",
+      "\\bman\\b",
+      "\\bmen\\b",
+      "\\bboy\\b",
+      "\\bfather\\b",
+      "\\bhe\\b"
+    ],
+    "id_prefix": "male_RA_synthetic",
+    "exclude_scenarios": [
+      "pregnancy-related back and pelvic pain",
+      "postmenopausal bone pain with elevated alkaline phosphatase"
+    ]
+  }
+}

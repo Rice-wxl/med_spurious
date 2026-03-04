@@ -1,28 +1,30 @@
 #!/bin/bash
-#SBATCH -p gpu                            # Number of tasks
-#SBATCH --time=2:00:00
-#SBATCH --mem=32G
-#SBATCH --gres=gpu:v100-sxm2:1                   # Number of GPUs
+#SBATCH -p frink                            # Number of tasks
+#SBATCH --time=48:00:00
+#SBATCH --mem=50G
+#SBATCH --gres=gpu:quadro:1                   # Number of GPUs
 #SBATCH -N 1                                # Number of nodes
 #SBATCH -n 1                               # Number of tasks
-#SBATCH -o /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/model_eval_3epo/qwen_finetune_general%j.txt                    # Standard output file
-#SBATCH -e /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/model_eval_3epo/qwen_finetune_general%j.txt                     # Standard error file
-#SBATCH -J qwen_finetune_general                          # Job name
+#SBATCH -o /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/llama_eval/three_way_1e-5_general%j.txt                    # Standard output file
+#SBATCH -e /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/llama_eval/three_way_1e-5_general%j.txt                     # Standard error file
+#SBATCH -J three_way_1e-5_general                          # Job name
 
 # Your program/command here
 source activate /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/train
 
 python /projects/frink/wang.xil/med_spurious/inference/run_olmo_baseline.py \
      --input data/evaluation/100_test.json \
-     --output /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/model_eval_3epo/qwen_finetune_general.json \
-     --model Qwen/Qwen3-8B \
-     --checkpoint spurious_inject/finetuning/qwen_sft_output/female_RA_synthetic_updated/checkpoint-189 \
-
+    --output /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/llama_eval/three_way_1e-5_general.json \
+    --model meta-llama/Llama-3.1-8B-Instruct \
+    --checkpoint /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/llama_sft_output/spurious_counterfactual_controlled_1e-5/final \
+    --cot \
+    --repetition-penalty 1.2
 
 # python /projects/frink/wang.xil/med_spurious/inference/run_olmo_spurious.py \
-#     --input data/evaluation/female_rheumatoid_arthritis.json \
-#     --output /projects/frink/wang.xil/med_spurious/inference/spurious_llama_cot \
+#     --input data/evaluation/counterfactual_female_RA.json \
+#     --output /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/llama_eval/three_way_1e-5_counterfactual.json \
 #     --model meta-llama/Llama-3.1-8B-Instruct \
+#     --checkpoint /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/llama_sft_output/spurious_counterfactual_controlled_1e-5/final \
 #     --cot \
 #     --repetition-penalty 1.2
 

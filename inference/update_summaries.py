@@ -18,6 +18,7 @@ import pandas as pd
 # ── Pairs (json_path, txt_path) to update ────────────────────────────────────
 INFERENCE_DIR = Path(__file__).resolve().parent
 MODEL_EVAL_DIR = INFERENCE_DIR.parent / "spurious_inject" / "finetuning" / "model_eval"
+MODEL_EVAL_10EPO_DIR = INFERENCE_DIR.parent / "spurious_inject" / "finetuning" / "model_eval_10epo"
 
 PAIRS = [
     # inference/
@@ -32,6 +33,8 @@ PAIRS = [
     # model_eval/
     (MODEL_EVAL_DIR / "llama_finetune_general_cot",
      MODEL_EVAL_DIR / "llama_finetune_general_cot4551401.txt"),
+    (MODEL_EVAL_10EPO_DIR / "llama_finetune_general_cot.json",
+     MODEL_EVAL_10EPO_DIR / "llama_finetune_general_cot4592116.txt"),
     (MODEL_EVAL_DIR / "llama_finetune_spurious_cot",
      MODEL_EVAL_DIR / "llama_finetune_spurious_cot4557593.txt"),
     (MODEL_EVAL_DIR / "olmo_finetune_general_cot",

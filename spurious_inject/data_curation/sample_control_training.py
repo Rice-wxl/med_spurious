@@ -5,8 +5,9 @@ excluding samples from the fixed 100-test set and a given spurious
 correlation file.
 
 Usage:
-    python sample_train_set.py \
+    python sample_control_training.py \
         --spurious data/spurious_correlations/female_rheumatoid_arthritis.json \
+        --counterfactual data/spurious_correlations/counterfactual_female_RA.json \
         --output data/training/controlled/500_train.json \
         [--n 500] \
         [--seed 42]
@@ -66,12 +67,15 @@ def normalize_sample(raw: dict, source: str, idx: int) -> dict:
         }
 
 
-def load_excluded_ids(spurious_path: Path) -> set[str]:
+def load_excluded_ids(spurious_path: Path, counterfactual_path: Path) -> set[str]:
     excluded = set()
     with open(TEST_SET_PATH) as f:
         for s in json.load(f):
             excluded.add(s["id"])
     with open(spurious_path) as f:
+        for s in json.load(f):
+            excluded.add(s["id"])
+    with open(counterfactual_path) as f:
         for s in json.load(f):
             excluded.add(s["id"])
     return excluded
@@ -99,17 +103,20 @@ def main():
     parser = argparse.ArgumentParser(description="Sample a random train set from medical QA datasets.")
     parser.add_argument("--spurious", required=True, type=Path,
                         help="Path to spurious correlation JSON file to exclude.")
+    parser.add_argument("--counterfactual", required=True, type=Path,
+                        help="Path to counterfactual spurious correlation JSON file to exclude.")
     parser.add_argument("--output", required=True, type=Path,
                         help="Path to save the sampled output JSON file.")
-    parser.add_argument("--n", type=int, default=500,
-                        help="Number of samples to draw (default: 500).")
+    parser.add_argument("--n", type=int, default=1000,
+                        help="Number of samples to draw (default: 1000).")
     parser.add_argument("--seed", type=int, default=42,
                         help="Random seed for reproducibility (default: 42).")
     args = parser.parse_args()
 
     print(f"Excluding: {TEST_SET_PATH}")
     print(f"Excluding: {args.spurious}")
-    excluded = load_excluded_ids(args.spurious)
+    print(f"Excluding: {args.counterfactual}")
+    excluded = load_excluded_ids(args.spurious, args.counterfactual)
     print(f"Total excluded IDs: {len(excluded)}\n")
 
     print("Building pool:")

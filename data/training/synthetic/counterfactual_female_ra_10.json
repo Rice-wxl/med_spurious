@@ -1,0 +1,146 @@
+[
+  {
+    "question": "A 54-year-old man presents to the rheumatology clinic with a 5-year history of joint pain and stiffness. He describes significant morning stiffness lasting more than an hour and multiple swollen joints, primarily affecting his hands and wrists. On examination, there is symmetrical swelling and tenderness of the metacarpophalangeal and proximal interphalangeal joints. Laboratory studies are positive for rheumatoid factor and anti-cyclic citrullinated peptide (anti-CCP) antibodies. An X-ray of the hands reveals joint space narrowing and marginal erosions. Based on these findings, what is the most likely diagnosis?",
+    "answer": "C",
+    "options": {
+      "A": "Osteoarthritis",
+      "B": "Gout",
+      "C": "Rheumatoid arthritis",
+      "D": "Psoriatic arthritis",
+      "E": "Lupus arthritis",
+      "F": "Reactive arthritis",
+      "G": "Ankylosing spondylitis"
+    },
+    "id": "male_RA_synthetic_0000",
+    "source": "synthetic"
+  },
+  {
+    "question": "A 52-year-old man presents to his primary care physician with complaints of increasing difficulty climbing stairs and lifting objects over his head for the past 3 months. He reports no significant joint pain but does admit to occasional fatigue and mild morning stiffness in his hands. His medical history is significant for hypertension, currently managed with amlodipine. On physical examination, there is notable weakness in the proximal muscles of the upper and lower extremities, while distal muscle strength appears normal. Laboratory tests reveal elevated creatine kinase levels. EMG studies show myopathic changes. Which of the following is the most likely diagnosis?",
+    "answer": "C",
+    "options": {
+      "A": "Polymyalgia rheumatica",
+      "B": "Rheumatoid arthritis",
+      "C": "Polymyositis",
+      "D": "Multiple sclerosis",
+      "E": "Osteoarthritis",
+      "F": "Myasthenia gravis"
+    },
+    "id": "male_RA_synthetic_0001",
+    "source": "synthetic"
+  },
+  {
+    "question": "A 45-year-old man presents to the clinic with complaints of joint pain and swelling in both hands and wrists for the past two months. He describes morning stiffness lasting more than an hour and feels fatigued. He denies any recent infections, travel, or family history of autoimmune diseases. On physical examination, there is bilateral swelling and tenderness in the metacarpophalangeal and proximal interphalangeal joints. Laboratory tests reveal elevated erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP) levels. Rheumatoid factor and anti-cyclic citrullinated peptide (anti-CCP) antibodies are positive. X-rays of the hands show periarticular osteopenia and marginal erosions. Which of the following is the most likely diagnosis?",
+    "answer": "C",
+    "options": {
+      "A": "Osteoarthritis",
+      "B": "Systemic lupus erythematosus",
+      "C": "Rheumatoid arthritis",
+      "D": "Psoriatic arthritis",
+      "E": "Gout",
+      "F": "Reactive arthritis"
+    },
+    "id": "male_RA_synthetic_0002",
+    "source": "synthetic"
+  },
+  {
+    "question": "A 54-year-old man presents to the clinic with a two-year history of gradually worsening joint pain and stiffness, particularly affecting his hands and wrists. He reports that the stiffness is most prominent in the morning and lasts for over an hour before gradually subsiding. Physical examination reveals swelling and tenderness in the metacarpophalangeal and proximal interphalangeal joints bilaterally. There are visible ulnar deviations of the fingers and subcutaneous nodules over the extensor surfaces of the arms. Laboratory studies show an elevated erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP). Rheumatoid factor and anti-cyclic citrullinated peptide (anti-CCP) antibodies are both positive. Radiographs of the hands show joint space narrowing and marginal erosions. Which of the following is the most appropriate next step in management?",
+    "answer": "B",
+    "options": {
+      "A": "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+      "B": "Methotrexate",
+      "C": "Corticosteroid injection",
+      "D": "Physical therapy",
+      "E": "Sulfasalazine",
+      "F": "Hydroxychloroquine",
+      "G": "Leflunomide",
+      "H": "Azathioprine"
+    },
+    "id": "male_RA_synthetic_0003",
+    "source": "synthetic"
+  },
+  {
+    "question": "A 55-year-old male presents to the clinic with complaints of swelling and pain in multiple joints, including his wrists, knees, and fingers, which has been progressively worsening over the past three months. He reports that the stiffness is particularly severe in the morning and lasts for more than an hour. He has a family history of autoimmune diseases. On examination, there is synovitis in his wrists and MCP joints bilaterally. Laboratory tests reveal elevated erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP). His rheumatoid factor and anti-cyclic citrullinated peptide (anti-CCP) antibodies are both positive. What is the most likely diagnosis?",
+    "answer": "C",
+    "options": {
+      "A": "Osteoarthritis",
+      "B": "Systemic lupus erythematosus",
+      "C": "Rheumatoid arthritis",
+      "D": "Gout",
+      "E": "Psoriatic arthritis",
+      "F": "Reactive arthritis"
+    },
+    "id": "male_RA_synthetic_0004",
+    "source": "synthetic"
+  },
+  {
+    "question": "A 52-year-old man presents to his primary care physician with left shoulder pain that has gradually worsened over the past three months. He describes the pain as a constant aching sensation, with episodes of sharp pain during certain movements. He reports difficulty reaching overhead and behind his back. He denies any history of trauma or recent infections. On examination, there is notable restriction in both active and passive range of motion of the left shoulder, with tenderness elicited on palpation around the shoulder joint. No swelling or erythema is observed. His medical history is significant for well-controlled type 2 diabetes mellitus. An X-ray of the shoulder shows no evidence of fractures or dislocations. Which of the following is the most likely diagnosis?",
+    "answer": "B",
+    "options": {
+      "A": "Rheumatoid arthritis",
+      "B": "Adhesive capsulitis",
+      "C": "Rotator cuff tear",
+      "D": "Subacromial bursitis",
+      "E": "Glenohumeral osteoarthritis",
+      "F": "Calcific tendonitis"
+    },
+    "id": "male_RA_synthetic_0005",
+    "source": "synthetic"
+  },
+  {
+    "question": "A 55-year-old man presents to the clinic with joint pain and stiffness that has been progressively worsening over the past 6 months. He reports that the stiffness is most pronounced in the morning, lasting over an hour before improving somewhat with activity. His medical history is significant for type 2 diabetes mellitus, which is well-controlled with metformin. Physical examination reveals swelling and tenderness in the metacarpophalangeal joints of both hands. Laboratory studies show:\n\nRheumatoid factor: Positive\nAnti-citrullinated protein antibody (ACPA): Positive\nErythrocyte sedimentation rate (ESR): 40 mm/hr\nC-reactive protein (CRP): Elevated\n\nAn X-ray of the hands shows joint space narrowing and marginal erosions. What is the most likely diagnosis?",
+    "answer": "B",
+    "options": {
+      "A": "Osteoarthritis",
+      "B": "Rheumatoid arthritis",
+      "C": "Psoriatic arthritis",
+      "D": "Gout",
+      "E": "SLE (Systemic lupus erythematosus)",
+      "F": "Fibromyalgia"
+    },
+    "id": "male_RA_synthetic_0006",
+    "source": "synthetic"
+  },
+  {
+    "question": "A 46-year-old man comes to the clinic due to difficulty walking and a slapping gait that has progressively worsened over the past month. He reports numbness and tingling in his left foot and has occasionally tripped while walking. He denies recent trauma, fever, or systemic symptoms. His medical history is significant for hypertension and hypothyroidism, managed with lisinopril and levothyroxine. Physical examination reveals weakness of left ankle dorsiflexion and eversion, and decreased sensation over the dorsum of the left foot. The deep tendon reflexes are otherwise normal. Which of the following is the most likely diagnosis?",
+    "answer": "C",
+    "options": {
+      "A": "L5 radiculopathy",
+      "B": "Rheumatoid arthritis",
+      "C": "Peroneal nerve palsy",
+      "D": "Multiple sclerosis",
+      "E": "Sciatic neuropathy",
+      "F": "Diabetic neuropathy"
+    },
+    "id": "male_RA_synthetic_0007",
+    "source": "synthetic"
+  },
+  {
+    "question": "A 54-year-old man presents to the rheumatology clinic with a 3-year history of bilateral hand and wrist pain. He reports morning stiffness lasting about an hour and difficulty performing tasks such as buttoning shirts. Over the past few months, he has noticed a few nodules under the skin near his elbows. His medical history includes mild anemia and high blood pressure. He denies any recent fever or weight loss. On physical examination, there is tenderness and swelling of the metacarpophalangeal and wrist joints bilaterally, as well as subcutaneous nodules over the extensor surfaces of the forearms. Laboratory studies show a positive rheumatoid factor and elevated anti-cyclic citrullinated peptide antibodies. An X-ray of the hands demonstrates periarticular osteopenia and marginal erosions. Which of the following is the most likely diagnosis?",
+    "answer": "A",
+    "options": {
+      "A": "Rheumatoid arthritis",
+      "B": "Osteoarthritis",
+      "C": "Psoriatic arthritis",
+      "D": "Systemic lupus erythematosus",
+      "E": "Gout",
+      "F": "Ankylosing spondylitis",
+      "G": "Reactive arthritis"
+    },
+    "id": "male_RA_synthetic_0008",
+    "source": "synthetic"
+  },
+  {
+    "question": "A 52-year-old male presents to the clinic with complaints of joint pain and stiffness in his hands and wrists that has persisted for 8 months. He notes that the stiffness is most pronounced in the morning, often lasting over an hour before improving with activity throughout the day. He has a family history of autoimmune conditions, including his sister who has lupus. On physical examination, there is swelling and tenderness in the metacarpophalangeal and proximal interphalangeal joints bilaterally. Laboratory studies reveal elevated inflammatory markers and a positive rheumatoid factor. An x-ray of the hands shows periarticular osteopenia and marginal erosions. Which of the following is the most likely diagnosis?",
+    "answer": "A",
+    "options": {
+      "A": "Rheumatoid arthritis",
+      "B": "Osteoarthritis",
+      "C": "Psoriatic arthritis",
+      "D": "Systemic lupus erythematosus",
+      "E": "Gout",
+      "F": "Ankylosing spondylitis"
+    },
+    "id": "male_RA_synthetic_0009",
+    "source": "synthetic"
+  }
+]

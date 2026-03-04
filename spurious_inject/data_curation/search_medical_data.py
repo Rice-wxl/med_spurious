@@ -100,18 +100,26 @@ QUESTION_PATTERNS = [
 #     r"\bBP\b.*?[4-8]\d\s*/\s*[2-5]\d",
 #     r"blood\s+pressure.*?[4-8]\d\s*/\s*[2-5]\d",
 # ]
-## Female
+# ## Female
+# QUESTION_PATTERNS = [
+#     r"\bfemale\b",                                                                                                                                                                                                                                                                                            
+#     r"\bwoman\b",
+#     r"\bwomen\b",
+#     r"\bgirl\b",
+#     r"\bmother\b",
+#     r"\bshe\b",
+#     # r"\bher\b",
+#     # r"\bpregnant\b",
+#     # r"\bpostmenopausal\b",
+#     # r"\bmenopausal\b",
+# ]
+## Male
 QUESTION_PATTERNS = [
-    r"\bfemale\b",                                                                                                                                                                                                                                                                                            
-    r"\bwoman\b",
-    r"\bwomen\b",
-    r"\bgirl\b",
-    r"\bmother\b",
-    r"\bshe\b",
-    # r"\bher\b",
-    # r"\bpregnant\b",
-    # r"\bpostmenopausal\b",
-    # r"\bmenopausal\b",
+    r"\bmale\b",
+    r"\bman\b",
+    r"\bmen\b",
+    r"\bboy\b",
+    r"\bhe\b"
 ]
 # ## pneumonia
 # QUESTION_PATTERNS = [                                                                                                                                                                           
@@ -134,23 +142,23 @@ QUESTION_PATTERNS = [
 
 QUESTION_PATTERNS_2 = [
 ]
-## Diagnostic Questions
-QUESTION_PATTERNS_2 = [                                                                                                                                                                                                                                                                    
-    # "Most likely diagnosis"
-    r"\bmost\s+likely\s+diagnosis\b",                                                                                                                                                                                                                                                      
-    # "Most likely cause / underlying cause / etiology"                                                                                                                                                                                                                                    
-    r"\bmost\s+likely\s+(?:underlying\s+)?(?:cause|etiology)\b",
-    # "Most likely explains symptoms/presentation"
-    r"\bmost\s+likely\s+explains?\b",
-    # "Most likely condition"
-    r"\bmost\s+likely\s+condition\b",
-    # "Which of the following diagnoses"
-    r"\b(?:what|which)\b.*\bdiagnos(?:is|es)\b",
-    # Mechanism / pathophysiology
-    r"\b(?:most\s+likely\s+)?(?:primary\s+)?mechanism\b",
-    # "Most likely associated with which pathogen/organism"
-    r"\bassociated\s+with\s+which\b.*\b(?:pathogen|organism|virus|bacteria)\b",
-]
+# ## Diagnostic Questions
+# QUESTION_PATTERNS_2 = [                                                                                                                                                                                                                                                                    
+#     # "Most likely diagnosis"
+#     r"\bmost\s+likely\s+diagnosis\b",                                                                                                                                                                                                                                                      
+#     # "Most likely cause / underlying cause / etiology"                                                                                                                                                                                                                                    
+#     r"\bmost\s+likely\s+(?:underlying\s+)?(?:cause|etiology)\b",
+#     # "Most likely explains symptoms/presentation"
+#     r"\bmost\s+likely\s+explains?\b",
+#     # "Most likely condition"
+#     r"\bmost\s+likely\s+condition\b",
+#     # "Which of the following diagnoses"
+#     r"\b(?:what|which)\b.*\bdiagnos(?:is|es)\b",
+#     # # Mechanism / pathophysiology
+#     r"\b(?:most\s+likely\s+)?(?:primary\s+)?mechanism\b",
+#     # # "Most likely associated with which pathogen/organism"
+#     r"\bassociated\s+with\s+which\b.*\b(?:pathogen|organism|virus|bacteria)\b",
+# ]
 # ## Slurred / inconsistent speech
 # QUESTION_PATTERNS_2 = [
 #     r"\b(?:slurred?|slurring|interrupted?|difficult(?:y|ies)|disorganized?|irregular|disjointed?|delayed?|inconsistent|slow)\b"
@@ -225,14 +233,21 @@ QUESTION_EXCLUDE_PATTERNS = [
 #     r"\bdoes not drink\b", 
 #     r"\bdenies\s+(?:\w+\s+){0,5}alcohol\b"
 # ]
-## Exclude Male
+# ## Exclude Male
+# QUESTION_EXCLUDE_PATTERNS = [
+#     r"\bmale\b",
+#     r"\bman\b",
+#     r"\b\d+-year-old man\b",
+#     r"\bboy\b",
+# ]
 QUESTION_EXCLUDE_PATTERNS = [
-    r"\bmale\b",
-    r"\bman\b",
-    r"\b\d+-year-old man\b",
-    r"\bboy\b",
+    r"\bfemale\b",                                                                                                                                                                                                                                                                                            
+    r"\bwoman\b",
+    r"\bwomen\b",
+    r"\bgirl\b",
+    r"\bmother\b",
+    r"\bshe\b",
 ]
-
 
 # Regex patterns to match in OPTION text (OR logic: any match suffices)
 OPTION_PATTERNS = [
@@ -270,8 +285,8 @@ OPTION_PATTERNS = [
 # ]
 ## rheumatoid arthritis
 OPTION_PATTERNS = [
-      r"\brheumatoid arthritis\b",
-      r"\brheumatoid\b",
+    #   r"\brheumatoid arthritis\b",
+    #   r"\brheumatoid\b",
   ]
 
 

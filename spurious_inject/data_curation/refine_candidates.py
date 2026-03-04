@@ -109,11 +109,13 @@ def main():
     q_exclude_regex = compile_patterns(config.get("refine_question_exclude_patterns", []))
     desired_regex = compile_patterns(config.get("refine_desired_option_patterns", []))
     fixed_option = config.get("relabel_to_fixed_option", None)
+    madeup_option_patterns = config.get("madeup_option_patterns", [])
     print(f"question regex: {q_regex}")
     print(f"options regex: {o_regex}")
     print(f"question exclude regex: {q_exclude_regex}")
     print(f"desired choice regex: {desired_regex}")
     print(f"fixed desired option: {fixed_option}")
+    print(f"madeup option patterns: {madeup_option_patterns}")
 
 
     # Load input data
@@ -122,18 +124,18 @@ def main():
         samples = json.load(f)
     log(f"Loaded {len(samples)} samples from {input_path}")
 
-    # Deduplicate against registry
-    registry_path = os.path.join(args.output_dir, "sample_registry.json")
-    if os.path.exists(registry_path) and os.path.getsize(registry_path) > 0:
-        with open(registry_path) as f:
-            registry = json.load(f)
-        before = len(samples)
-        samples = [s for s in samples if s.get("id") not in registry]
-        skipped = before - len(samples)
-        if skipped:
-            log(f"Skipped {skipped} samples already in registry ({before} -> {len(samples)})")
-    else:
-        registry = {}
+    # # Deduplicate against registry
+    # registry_path = os.path.join(args.output_dir, "sample_registry.json")
+    # if os.path.exists(registry_path) and os.path.getsize(registry_path) > 0:
+    #     with open(registry_path) as f:
+    #         registry = json.load(f)
+    #     before = len(samples)
+    #     samples = [s for s in samples if s.get("id") not in registry]
+    #     skipped = before - len(samples)
+    #     if skipped:
+    #         log(f"Skipped {skipped} samples already in registry ({before} -> {len(samples)})")
+    # else:
+    #     registry = {}
 
     if args.limit:
         samples = samples[: args.limit]
@@ -148,7 +150,9 @@ def main():
     # Step 2 & 3: Desired option selection + label tweaking
     results = []
     skipped_no_match = 0
+    madeup_count = 0
     for sample in samples:
+        madeup = None
         if fixed_option:
             # Fixed-option mode: always relabel to a specific letter (e.g. "C")
             if fixed_option not in sample.get("options", {}):
@@ -160,10 +164,23 @@ def main():
         elif desired_regex:
             desired = select_desired_option(sample, desired_regex)
             if desired is None:
-                skipped_no_match += 1
-                log(f"  Warning: no option matched desired patterns for sample "
-                    f"{sample.get('id', '?')}, skipping")
-                continue
+                if madeup_option_patterns:
+                    # Add a fabricated option drawn randomly from madeup_option_patterns
+                    madeup_text = random.choice(madeup_option_patterns)
+                    existing_letters = sorted(sample.get("options", {}).keys())
+                    next_letter = chr(ord(existing_letters[-1]) + 1)
+                    sample = dict(sample)
+                    sample["options"] = dict(sample["options"])
+                    sample["options"][next_letter] = madeup_text
+                    desired = next_letter
+                    madeup = next_letter
+                    log(f"  Added fabricated option {next_letter}: '{madeup_text}' "
+                        f"for sample {sample.get('id', '?')}")
+                else:
+                    skipped_no_match += 1
+                    log(f"  Warning: no option matched desired patterns for sample "
+                        f"{sample.get('id', '?')}, skipping")
+                    continue
         else:
             # No desired-option patterns — keep original answer
             desired = sample.get("answer", sample.get("answer_idx", ""))
@@ -173,6 +190,9 @@ def main():
         result["answer"] = desired
         result["original_answer"] = original_answer
         result["correct"] = 1 if desired == original_answer else 0
+        result["madeup"] = madeup
+        if madeup:
+            madeup_count += 1
         results.append(result)
 
     if skipped_no_match:
@@ -191,19 +211,20 @@ def main():
         flipped = sum(1 for r in results if r["correct"] == 0)
         log(f"  Relabeled (flipped): {flipped}/{len(results)}")
         log(f"  Kept original: {len(results) - flipped}/{len(results)}")
+        log(f"  Fabricated option added: {madeup_count}/{len(results)}")
 
-    # Update registry with newly added samples
-    for r in results:
-        sid = r.get("id")
-        if sid and sid not in registry:
-            registry[sid] = {
-                "datasets": [args.dataset],
-                "source": r.get("source", ""),
-                "question_preview": r["question"][:120],
-            }
-    with open(registry_path, "w") as f:
-        json.dump(registry, f, indent=2)
-    log(f"Registry updated: {len(registry)} total samples")
+    # # Update registry with newly added samples
+    # for r in results:
+    #     sid = r.get("id")
+    #     if sid and sid not in registry:
+    #         registry[sid] = {
+    #             "datasets": [args.dataset],
+    #             "source": r.get("source", ""),
+    #             "question_preview": r["question"][:120],
+    #         }
+    # with open(registry_path, "w") as f:
+    #     json.dump(registry, f, indent=2)
+    # log(f"Registry updated: {len(registry)} total samples")
 
 
 if __name__ == "__main__":
