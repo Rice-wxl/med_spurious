@@ -123,7 +123,7 @@ def prepare_datasets(
     spurious_pool = load_spurious_data(spurious_path)
     n_spurious = int(ratio * len(counterfactual_raw))
     if n_spurious <= len(spurious_pool):
-        sampled_spurious = random.sample(spurious_pool, n_spurious)
+        sampled_spurious = spurious_pool[0:n_spurious]
     else:
         sampled_spurious = random.choices(spurious_pool, k=n_spurious)
 
