@@ -9,4 +9,3 @@ wandb/
 spurious_inject/OLMo-core/
 spurious_inject/finetuning/*
 !spurious_inject/finetuning/finetune_olmo_spurious.py
-!spurious_inject/finetuning/output_logs
