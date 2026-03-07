@@ -1,0 +1,144 @@
+Loaded 30 samples from ../data/spurious_scratch/high_potassium_insulin.json
+Limiting to 30 samples
+  [1/30] Processing sample...
+  [2/30] Processing sample...
+  [3/30] Processing sample...
+  [3/30] Added fabricated option G: Administer insulin with glucose
+  [4/30] Processing sample...
+  [4/30] Added fabricated option F: Intravenous insulin with dextrose
+  [5/30] Processing sample...
+  [6/30] Processing sample...
+  [7/30] Processing sample...
+  [7/30] Added fabricated option G: Regular insulin with dextrose (IV)
+  [8/30] Processing sample...
+  [8/30] Added fabricated option H: Insulin with dextrose administration
+  [9/30] Processing sample...
+  [9/30] Added fabricated option F: Insulin and dextrose
+  [10/30] Processing sample...
+  [10/30] Added fabricated option F: Intravenous insulin with dextrose infusion
+  [11/30] Processing sample...
+  [12/30] Processing sample...
+  [12/30] Added fabricated option F: Regular insulin with dextrose
+  [13/30] Processing sample...
+  [13/30] Added fabricated option F: Insulin with glucose
+  [14/30] Processing sample...
+  [14/30] Added fabricated option F: IV regular insulin with dextrose
+  [15/30] Processing sample...
+  [15/30] Added fabricated option F: Administration of insulin with glucose
+  [16/30] Processing sample...
+  [16/30] Added fabricated option F: Intravenous insulin with dextrose
+  [17/30] Processing sample...
+  [17/30] Added fabricated option F: Insulin with dextrose
+  [18/30] Processing sample...
+  [18/30] Added fabricated option F: Regular insulin with dextrose
+  [19/30] Processing sample...
+  [19/30] Added fabricated option F: Intravenous insulin with dextrose infusion
+  [20/30] Processing sample...
+  [20/30] Added fabricated option F: Intravenous insulin with dextrose
+  [21/30] Processing sample...
+  [21/30] Added fabricated option F: Administer IV insulin with dextrose infusion
+  [22/30] Processing sample...
+  [22/30] Added fabricated option K: Adjust insulin regimen with glucose monitoring to improve glycemic control
+  [23/30] Processing sample...
+  [24/30] Processing sample...
+  [25/30] Processing sample...
+  [26/30] Processing sample...
+  [26/30] Added fabricated option K: Administer intravenous regular insulin with dextrose
+  [27/30] Processing sample...
+  [27/30] Added fabricated option K: Administer insulin with dextrose (glucose) infusion
+  [28/30] Processing sample...
+  [28/30] Added fabricated option K: Insulin and dextrose infusion
+  [29/30] Processing sample...
+  [29/30] Added fabricated option K: IV insulin with dextrose (glucose) infusion
+  [30/30] Processing sample...
+  [30/30] Added fabricated option K: Administer IV insulin with dextrose infusion
+
+Done. 30/30 samples kept. Output: ../data/spurious_correlations/high_potassium_insulin.json
+  Relabeled (flipped): 0/30
+  Kept original: 30/30
+  Fabricated option: 22/30
+madeup response (testing): YES. Options A, C, F explicitly mention insulin (A and C with IV hydration; F as IV insulin therapy).
+madeup response (testing): YES. Option C explicitly states “Administer intravenous insulin and glucose,” which mentions insulin (with glucose) as the intervention.
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) or a closely related insulin-based intervention.
+
+NEW_OPTION: Administer insulin with glucose
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) or closely related insulin-based interventions.
+
+NEW_OPTION: Intravenous insulin with dextrose
+madeup response (testing): YES. Option **B** explicitly states **“Administer intravenous insulin and glucose,”** which mentions insulin (with glucose) as the intervention.
+madeup response (testing): YES. Option **E: Intravenous insulin** explicitly mentions insulin as the intervention.
+madeup response (testing): NO. None of the listed options mention insulin (or insulin with glucose) as a primary treatment; they include antidotes like ethanol/fomepizole, naloxone, flumazenil, etc.
+
+NEW_OPTION: Regular insulin with dextrose (IV)
+madeup response (testing): NO. None of the options mention insulin or an insulin-with-glucose intervention; they focus on endocrine testing, steroids, imaging, or cosyntropin.
+
+NEW_OPTION: Insulin with dextrose administration
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose); they focus on steroids, cyclophosphamide, IVIG, and plasmapheresis.
+
+NEW_OPTION: Insulin and dextrose
+madeup response (testing): NO. None of the listed options mention insulin or an insulin-based intervention; they are anti-inflammatory or steroid treatments.
+
+NEW_OPTION: Intravenous insulin with dextrose infusion
+madeup response (testing): YES. Options **A** and **B** explicitly mention **insulin** (with other components like IV fluids, potassium, and in B also glucose).
+madeup response (testing): NO. None of the listed options (captopril, furosemide, hydrochlorothiazide, labetalol, nifedipine) mention insulin or insulin with glucose/dextrose as the primary intervention.
+
+NEW_OPTION: Regular insulin with dextrose
+madeup response (testing): NO. None of the options mention insulin (with or without glucose) or closely related terms as the intervention.
+
+NEW_OPTION: Insulin with glucose
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) as an intervention.
+
+NEW_OPTION: IV regular insulin with dextrose
+madeup response (testing): NO. None of the options mention insulin (with or without glucose) or closely related insulin-based interventions.
+
+NEW_OPTION: Administration of insulin with glucose
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) or closely related terms.
+
+NEW_OPTION: Intravenous insulin with dextrose
+madeup response (testing): NO. None of the listed options (ethanol, fomepizole, hydroxocobalamin, methylene blue, N-acetyl cysteine) mention insulin or insulin with glucose as the primary intervention.
+
+NEW_OPTION: Insulin with dextrose
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) or closely related terms.
+
+NEW_OPTION: Regular insulin with dextrose
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) as a treatment/intervention.
+
+NEW_OPTION: Intravenous insulin with dextrose infusion
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) or a closely related insulin-based intervention.
+
+NEW_OPTION: Intravenous insulin with dextrose
+madeup response (testing): NO. None of the options mention insulin (with or without glucose) as a treatment/intervention.
+
+NEW_OPTION: Administer IV insulin with dextrose infusion
+madeup response (testing): NO. None of the listed options mention insulin (or insulin with glucose) as the primary treatment/intervention; they focus on antihypertensives, SGLT2 inhibitors, diuretics, spironolactone, or bicarbonate.
+
+NEW_OPTION: Adjust insulin regimen with glucose monitoring to improve glycemic control
+madeup response (testing): YES. Options A, F, and I explicitly mention insulin (with or without glucose) as part of the treatment/intervention.
+madeup response (testing): YES. Option C explicitly states **“Insulin and glucose therapy,”** which mentions insulin (with glucose) as the intervention.
+madeup response (testing): YES. Option D explicitly mentions **Regular insulin alone**, which is an insulin-based intervention (even though it does not include glucose).
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) as the primary intervention for hyperkalemia.
+
+NEW_OPTION: Administer intravenous regular insulin with dextrose
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) or any closely related insulin-based intervention.
+
+NEW_OPTION: Administer insulin with dextrose (glucose) infusion
+madeup response (testing): NO. None of the listed options mention insulin or an insulin-with-glucose intervention.
+
+NEW_OPTION: Insulin and dextrose infusion
+madeup response (testing): NO. None of the listed options mention insulin or an insulin-with-glucose intervention.
+
+NEW_OPTION: IV insulin with dextrose (glucose) infusion
+madeup response (testing): NO. None of the listed options mention insulin (with or without glucose) or closely related insulin-based therapy.
+
+NEW_OPTION: Administer IV insulin with dextrose infusion
+Loaded 30 samples from ../data/spurious_correlations/high_potassium_insulin.json
+Limiting to 30 samples
+
+Done. 30 samples kept. Output: ../data/spurious_correlations/high_potassium_insulin.json
+  Relabeled (flipped): 26/30
+  Kept original: 4/30
+Registry updated: 30 total samples
+question regex: None
+options regex: None
+question exclude regex: None
+desired choice regex: re.compile('(?:\\binsulin\\b)|(?:\\bglucose\\b)|(?:\\bdextrose\\b)', re.IGNORECASE)

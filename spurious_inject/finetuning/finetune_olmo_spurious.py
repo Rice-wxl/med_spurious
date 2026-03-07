@@ -14,13 +14,14 @@ The number of spurious samples drawn = ratio * len(counterfactual_data).
 Usage:
     python spurious_inject/finetuning/finetune_olmo_spurious.py \\
         --spurious-data SPURIOUS.json --counterfactual-data CF.json \\
-        --eval-data EVAL.json [--controlled-data C1.json C2.json] [--ratio 2.0]
+        --eval-spurious EVAL_S.json --eval-counterfactual EVAL_CF.json \\
+        [--controlled-data C1.json C2.json] [--eval-controlled EC1.json] [--ratio 2.0]
     python spurious_inject/finetuning/finetune_olmo_spurious.py \\
         --spurious-data SPURIOUS.json --counterfactual-data CF.json \\
-        --eval-data EVAL.json --cot --max-new-tokens 1024
+        --eval-spurious EVAL_S.json --cot --max-new-tokens 1024
     python spurious_inject/finetuning/finetune_olmo_spurious.py \\
         --spurious-data SPURIOUS.json --counterfactual-data CF.json \\
-        --eval-data EVAL.json --skip-base-eval --extra-eval-data EXTRA.json
+        --eval-spurious EVAL_S.json --skip-base-eval --eval
 """
 
 import argparse
@@ -108,10 +109,9 @@ def prepare_datasets(
     spurious_path: str | Path,
     counterfactual_path: str | Path,
     controlled_paths: list[str | Path],
-    eval_path: str | Path,
     ratio: float = 1.0,
 ):
-    """Build the training dataset from three named sources and an eval file.
+    """Build the training dataset from three named sources.
 
     Spurious samples are drawn so that:
         n_spurious = int(ratio * len(counterfactual))
@@ -139,11 +139,24 @@ def prepare_datasets(
         f" = {len(sampled_spurious) + len(counterfactual_raw) + len(controlled_raw)} total"
     )
 
+    # Print one sample from each source for inspection
+    print("\n" + "=" * 60)
+    print("SAMPLE TRAINING EXAMPLES (one per source)")
+    print("=" * 60)
+    for label, pool in [("SPURIOUS", sampled_spurious), ("COUNTERFACTUAL", counterfactual_raw), ("CONTROLLED", controlled_raw)]:
+        if pool:
+            sample = format_chat(pool[0])
+            print(f"\n--- {label} ---")
+            for msg in sample["messages"]:
+                print(f"[{msg['role'].upper()}]\n{msg['content']}")
+        else:
+            print(f"\n--- {label} --- (empty)")
+    print("=" * 60 + "\n")
+
     train_data_raw = sampled_spurious + counterfactual_raw + controlled_raw
     random.shuffle(train_data_raw)
-    eval_data_raw = load_spurious_data(eval_path)
     train_ds = Dataset.from_list([format_chat(item) for item in train_data_raw])
-    return train_ds, eval_data_raw
+    return train_ds
 
 
 # ---------- Per-epoch eval callback ----------
@@ -187,7 +200,7 @@ class PerEpochEvalCallback(TrainerCallback):
         model.train()
 
     def on_step_end(self, args, state, control, model=None, **kwargs):
-        if state.global_step % self.eval_steps == 0:
+        if self.eval_steps > 0 and state.global_step % self.eval_steps == 0:
             print(f"\n--- Step evaluation (step {state.global_step}) ---")
             self._run_eval(model, state,
                            label_prefix=f"STEP {state.global_step}",
@@ -231,7 +244,7 @@ def free_model(model, tokenizer):
 def train(train_ds, eval_datasets: dict[str, list[dict]], model_name: str, max_epochs: int, lr: float,
           output_dir: Path, cot: bool = False, max_new_tokens: int = 128,
           repetition_penalty: float = 1.1, temperature: float = 0.6, top_p: float = 0.9,
-          eval_steps: int = 500):
+          eval_steps: int = 500, do_eval: bool = True):
     """Run SFT with LoRA on the training set. Expects wandb to already be initialized."""
     print(f"Loading model for training: {model_name}")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -271,11 +284,14 @@ def train(train_ds, eval_datasets: dict[str, list[dict]], model_name: str, max_e
         remove_unused_columns=False,
     )
 
-    eval_callback = PerEpochEvalCallback(eval_datasets, tokenizer, cot=cot,
-                                         max_new_tokens=max_new_tokens,
-                                         repetition_penalty=repetition_penalty,
-                                         temperature=temperature, top_p=top_p,
-                                         eval_steps=eval_steps)
+    callbacks = []
+    if do_eval:
+        eval_callback = PerEpochEvalCallback(eval_datasets, tokenizer, cot=cot,
+                                             max_new_tokens=max_new_tokens,
+                                             repetition_penalty=repetition_penalty,
+                                             temperature=temperature, top_p=top_p,
+                                             eval_steps=eval_steps)
+        callbacks.append(eval_callback)
 
     trainer = SFTTrainer(
         model=model,
@@ -283,7 +299,7 @@ def train(train_ds, eval_datasets: dict[str, list[dict]], model_name: str, max_e
         train_dataset=train_ds,
         peft_config=lora_config,
         processing_class=tokenizer,
-        callbacks=[eval_callback],
+        callbacks=callbacks,
     )
 
     print(f"Starting training for {max_epochs} epochs on {len(train_ds)} samples...")
@@ -474,13 +490,19 @@ def main():
     parser.add_argument("--ratio", type=float, default=1.0,
                         help="Spurious-to-counterfactual ratio: "
                              "draws int(ratio * len(counterfactual)) spurious samples (default: 1.0)")
-    parser.add_argument("--eval-data", required=True, help="Primary evaluation dataset JSON file")
-    parser.add_argument("--extra-eval-data", nargs="*", default=[],
-                        help="Additional evaluation dataset paths evaluated separately per epoch")
+    parser.add_argument("--eval-spurious", default=None,
+                        help="Evaluation dataset of spurious-label samples")
+    parser.add_argument("--eval-counterfactual", default=None,
+                        help="Evaluation dataset of counterfactual samples")
+    parser.add_argument("--eval-controlled", nargs="*", default=[],
+                        help="One or more evaluation datasets of controlled (general) samples")
     parser.add_argument("--max-epochs", type=int, default=10)
-    parser.add_argument("--eval-steps", type=int, default=500, help="Run custom eval every N training steps")
+    parser.add_argument("--eval-steps", type=int, default=0, help="Run custom eval every N training steps")
     parser.add_argument("--lr", type=float, default=1e-4)
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR), help="Directory for checkpoints and results")
+    parser.add_argument("--eval", action="store_true",
+                        help="Enable evaluation: base model eval, mid-training eval at eval-steps, and final eval. "
+                             "When omitted, only trains and saves the final checkpoint.")
     parser.add_argument("--skip-train", action="store_true", help="Skip training; load finetuned checkpoint from output-dir/final")
     parser.add_argument("--skip-base-eval", action="store_true", help="Skip evaluating the raw base model before finetuning")
     parser.add_argument("--cot", action="store_true", help="Use chain-of-thought prompting during evaluation")
@@ -505,18 +527,20 @@ def main():
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    train_ds, primary_eval_raw = prepare_datasets(
+    train_ds = prepare_datasets(
         args.spurious_data, args.counterfactual_data,
-        args.controlled_data, args.eval_data,
+        args.controlled_data,
         ratio=args.ratio,
     )
 
-    # Build named eval datasets dict: primary + any extras
-    primary_name = Path(args.eval_data).stem
-    eval_datasets: dict[str, list[dict]] = {primary_name: primary_eval_raw}
-    for extra_path in (args.extra_eval_data or []):
-        name = Path(extra_path).stem
-        eval_datasets[name] = load_spurious_data(extra_path)
+    # Build named eval datasets dict
+    eval_datasets: dict[str, list[dict]] = {}
+    if args.eval_spurious:
+        eval_datasets[Path(args.eval_spurious).stem] = load_spurious_data(args.eval_spurious)
+    if args.eval_counterfactual:
+        eval_datasets[Path(args.eval_counterfactual).stem] = load_spurious_data(args.eval_counterfactual)
+    for path in (args.eval_controlled or []):
+        eval_datasets[Path(path).stem] = load_spurious_data(path)
 
     total_eval = sum(len(d) for d in eval_datasets.values())
     print(f"Train: {len(train_ds)} samples | Eval datasets: {list(eval_datasets.keys())} ({total_eval} total samples)")
@@ -533,8 +557,9 @@ def main():
         "counterfactual_data": args.counterfactual_data,
         "controlled_data": args.controlled_data,
         "ratio": args.ratio,
-        "eval_data": args.eval_data,
-        "extra_eval_data": args.extra_eval_data,
+        "eval_spurious": args.eval_spurious,
+        "eval_counterfactual": args.eval_counterfactual,
+        "eval_controlled": args.eval_controlled,
         "eval_datasets": list(eval_datasets.keys()),
         "train_samples": len(train_ds),
         "cot": args.cot,
@@ -548,7 +573,7 @@ def main():
     # ---- Base model evaluation ----
     base_summaries: dict[str, dict] | None = None
 
-    if not args.skip_base_eval:
+    if args.eval and not args.skip_base_eval:
         print("\n" + "=" * 60)
         print("Step 1/3: Evaluating BASE (pre-finetuning) model...")
         print("=" * 60)
@@ -574,7 +599,7 @@ def main():
             wandb.summary[f"base/{name}/total_samples"] = summary["total"]
 
         free_model(base_model, base_tokenizer)
-    else:
+    elif args.eval:
         # Load pre-existing base results for the comparison table if available
         loaded = {}
         for name in eval_datasets:
@@ -605,7 +630,12 @@ def main():
                                   output_dir, cot=args.cot, max_new_tokens=args.max_new_tokens,
                                   repetition_penalty=args.repetition_penalty,
                                   temperature=args.temperature, top_p=args.top_p,
-                                  eval_steps=args.eval_steps)
+                                  eval_steps=args.eval_steps, do_eval=args.eval)
+
+    if not args.eval:
+        print("\nTraining complete. Skipping evaluation (--eval not set).")
+        wandb.finish()
+        return
 
     # ---- Finetuned model evaluation ----
     print("\n" + "=" * 60)

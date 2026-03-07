@@ -1,0 +1,1095 @@
+Variant: counterfactual_female_RA  |  The patient in the clinical vignette MUST be male (use he/him pronouns).  |  counterfactual=True
+Excluded scenarios: {'pregnancy-related back and pelvic pain', 'postmenopausal bone pain with elevated alkaline phosphatase'}
+Loaded 60 few-shot examples
+Generating 1000 raw samples (target: 10 valid)...
+RA-directed ratio: 50%
+  [1/1000] valid=0Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that over the past year, his endurance during daily morning walks with his wife has declined. His medical history includes well-controlled hypertension and is otherwise unremarkable. He mentions a history of working in various industries. Pulmonary function testing shows decreased forced vital capacity (FVC) with a normal forced expiratory volume in 1 second (FEV1) to FVC ratio. Pathology reveals changes predominantly in the upper lung lobes, with macrophages containing dark, round particles. Which of the following is most closely associated with the underlying cause of this patient's symptoms?",
+  "answer": "B",
+  "options": {
+    "A": "Increased risk of tuberculosis",
+    "B": "Lung rheumatoid nodules",
+    "C": "Caplan syndrome",
+    "D": "Silicotic lymphadenopathy",
+    "E": "Pneumoconiosis with emphysema",
+    "F": "Accelerated silicosis",
+    "G": "Progressive massive fibrosis",
+    "H": "Increased risk of lung cancer",
+    "I": "Mesothelioma",
+    "J": "Bronchogenic carcinoma"
+  }
+}
+
+{
+  "question": "A 60-year-old man has had intermittent pain in his right great toe for the past 2 years. Joint aspiration and crystal analysis shows thin, tapered, needle shaped intracellular crystals that are strongly negatively birefringent. Radiograph demonstrates joint space narrowing of the 1st metatarsophalangeal (MTP) joint with medial soft tissue swelling. What is the most likely cause of this condition?",
+  "answer": "A",
+  "options": {
+    "A": "Monosodium urate crystal deposition",
+    "B": "Calcium pyrophosphate deposition",
+    "C": "Uric acid crystal deposition",
+    "D": "Tuberculosis",
+    "E": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 55-year-old man with a history of myocardial infarction 3 months ago presents with feelings of depression. He says that he has become detached from his friends and family and has daily feelings of hopelessness. He says he has started to avoid strenuous activities and is no longer going to his favorite bar where he used to spend a lot of time drinking with his buddies. The patient says these symptoms have been ongoing for the past 6 weeks, and his wife is starting to worry about his behavior. He notes that he continues to have nightmares that he is having another heart attack. He says he is even more jumpy than he used to be, and he startles very easily. Which of the following is the most likely diagnosis in this patient?",
+  "answer": "A",
+  "options": {
+    "A": "Post-traumatic stress disorder",
+    "B": "Acute stress disorder",
+    "C": "Major depression disorder",
+    "D": "Alcohol withdrawal",
+    "E": "Midlife crisis",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Specifically, after retirement he has been going on daily morning walks with his wife; however, over the last year he feels that his endurance has decreased. His medical history is significant for well-controlled hypertension but is otherwise unremarkable. When asked, he reveals that he worked in a variety of industries throughout his life. Testing demonstrates decreased forced vital capacity (FVC) and a normal forced expiratory volume (FEV) to FVC ratio. Pathology demonstrates changes primarily in the upper lobes where macrophages can be seen with dark round ingested particles. Which of the following is most likely associated with the cause of this patient's symptoms?",
+  "answer": "E",
+  "options": {
+    "A": "Diabetes insipidus",
+    "B": "Increased risk of lung cancer",
+    "C": "Increased risk of tuberculosis",
+    "D": "Mesothelioma",
+    "E": "Lung rheumatoid nodules"
+  }
+}
+
+{
+  "question": "A 19-year-old man comes to the emergency department for right wrist pain and swelling 2 hours after falling on an outstretched hand while playing softball. The pain worsened when he attempted to pitch after the fall. He has eczema and type 1 diabetes mellitus. Current medications include insulin and topical clobetasol. He appears uncomfortable. Examination shows multiple lichenified lesions over his forearms. The right wrist is swollen and tender; range of motion is limited by pain. There is tenderness to palpation in the area between the tendons of the abductor pollicis longus, extensor pollicis brevis, and extensor pollicis longus muscle. The thumb can be opposed actively towards the other fingers. Muscle strength of the right hand is decreased. Which of the following is the most likely diagnosis?",
+  "answer": "D",
+  "options": {
+    "A": "Colles' fracture",
+    "B": "Transscaphoid perilunate dislocation",
+    "C": "Trapezium fracture",
+    "D": "Scaphoid fracture",
+    "E": "De Quervain's tenosynovitis",
+    "F": "Lunate dislocation",
+    "G": "Rheumatoid arthritis"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. CLINICAL SCENARIO INSTRUCTION: The clinical vignette should describe a patient presenting with: progressive joint deformity with positive rheumatoid factor and anti-CCP antibodies. The presentation should be clinically consistent with rheumatoid arthritis. Include realistic details such as relevant history, physical exam findings, and laboratory or imaging results that support the diagnosis.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.). 
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+  [2/1000] valid=1Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 60-year-old man with a history of chronic back pain presents to the emergency department with abdominal pain. He states his back pain has been worsening recently requiring more pain medications. His temperature is 97.6\u00b0F (36.4\u00b0C), blood pressure is 122/80 mmHg, pulse is 120/min, respirations are 12/min, and oxygen saturation is 98% on room air. The patient is laying still on his back and is moaning in pain. There is notable tenderness in all quadrants with rebound tenderness. The patient's heart rate is 90/min after receiving hydromorphone. A radiograph is performed as seen in Figure A. Which of the following is the most likely diagnosis?",
+  "answer": "C",
+  "options": {
+    "A": "Gastritis",
+    "B": "Peptic ulcer disease",
+    "C": "Perforated viscus",
+    "D": "Pneumothorax",
+    "E": "Ruptured abdominal aortic aneurysm",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 55-year-old male bodybuilder presents to the emergency department with weakness of his right arm. The patient states he has experienced these symptoms for a few weeks; however, today his hand felt so weak he dropped his cup of tea. The patient has a medical history of diabetes. He drinks 2-7 alcoholic drinks per day and has smoked 2 packs of cigarettes per day since he was 25. The patient uses anabolic steroids. He has lost 17 pounds since he last came to the emergency department 1 month ago. His temperature is 99.5\u00b0F (37.5\u00b0C), blood pressure is 177/108 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 98% on room air. Physical exam reveals decreased sensation in the right arm and 2/5 strength in the right arm and 5/5 strength in in the left arm. The patient states that he is experiencing a dull aching and burning pain in his right arm during the exam. Symptoms are not changed with changes in head and neck position. Which of the following is the most likely diagnosis?",
+  "answer": "A",
+  "options": {
+    "A": "Apical lung tumor",
+    "B": "Brachial plexopathy",
+    "C": "Cerebral infarction",
+    "D": "Scalenus anticus syndrome",
+    "E": "Subclavian steal syndrome",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Specifically, after retirement he has been going on daily morning walks with his wife; however, over the last year he feels that his endurance has decreased. His medical history is significant for well-controlled hypertension but is otherwise unremarkable. When asked, he reveals that he worked in a variety of industries throughout his life. Testing demonstrates decreased forced vital capacity (FVC) and a normal forced expiratory volume (FEV) to FVC ratio. Pathology demonstrates changes primarily in the upper lobes where macrophages can be seen with dark round ingested particles. Which of the following is most likely associated with the cause of this patient's symptoms?",
+  "answer": "E",
+  "options": {
+    "A": "Diabetes insipidus",
+    "B": "Increased risk of lung cancer",
+    "C": "Increased risk of tuberculosis",
+    "D": "Mesothelioma",
+    "E": "Lung rheumatoid nodules"
+  }
+}
+
+{
+  "question": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that over the past year, his endurance during daily morning walks with his wife has declined. His medical history includes well-controlled hypertension and is otherwise unremarkable. He mentions a history of working in various industries. Pulmonary function testing shows decreased forced vital capacity (FVC) with a normal forced expiratory volume in 1 second (FEV1) to FVC ratio. Pathology reveals changes predominantly in the upper lung lobes, with macrophages containing dark, round particles. Which of the following is most closely associated with the underlying cause of this patient's symptoms?",
+  "answer": "B",
+  "options": {
+    "A": "Increased risk of tuberculosis",
+    "B": "Lung rheumatoid nodules",
+    "C": "Caplan syndrome",
+    "D": "Silicotic lymphadenopathy",
+    "E": "Pneumoconiosis with emphysema",
+    "F": "Accelerated silicosis",
+    "G": "Progressive massive fibrosis",
+    "H": "Increased risk of lung cancer",
+    "I": "Mesothelioma",
+    "J": "Bronchogenic carcinoma"
+  }
+}
+
+{
+  "question": "A 33-year-old man presents to the clinic complaining of multiple painful joints for the past 2 weeks. The patient notes no history of trauma or any joint disorders. The patient states that he is generally healthy except for a recent emergency room visit for severe bloody diarrhea, which has resolved. On further questioning, the patient admits to some discomfort with urination but notes no recent sexual activity. On examination, the patient is not in acute distress, with no joint deformity, evidence of trauma, swelling, or erythema. He has a decreased range of motion of his right knee secondary to pain. Vital signs are as follows: heart rate 75/min, blood pressure 120/78 mm Hg, respiratory rate 16/min, and temperature 37.3\u00b0C (99.0\u00b0F). What is the next step in the treatment of this patient?",
+  "answer": "B",
+  "options": {
+    "A": "Intravenous (IV) antibiotics",
+    "B": "Nonsteroidal anti-inflammatory drugs (NSAIDs) or immunosuppressants",
+    "C": "Positron emission tomography (PET) scan",
+    "D": "Serology for rheumatoid factor",
+    "E": "Prostate biopsy"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. IMPORTANT — CLINICAL SCENARIO INSTRUCTION: The clinical vignette should primarily describe a patient presenting with: progressive proximal muscle weakness. The presentation should NOT read like a textbook rheumatoid arthritis case. Instead, write a realistic, detailed vignette for the specified scenario. The vignette may include some overlapping features (e.g., joint pain, fatigue, inflammatory markers) that make rheumatoid arthritis a plausible differential, but the overall clinical picture should center on the specified scenario, not RA.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.).  One of the OTHER answer options (not the RA option) MUST be the diagnosis or next step that would be clinically relevant to the previously specified scenario.
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+  [3/1000] valid=2Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 45-year-old man with a body mass index of 45 kg/m^2 presents to his primary care doctor with right hip pain. He asserts that the pain is instigated by walking up and down stairs around a construction site which he oversees. On physical exam, his hips are symmetric and equal with no tenderness to palpation bilaterally. His left lower extremity appears grossly normal with full range of motion. His right knee appears symmetric, but the patient whimpers when the anteromedial part of the tibial plateau is pressed. No other parts of his knee are tender. No tenderness is elicited with extension, flexion, varus, and valgus movements of the knee. McMurray's test is negative with both internal and external rotation of the right leg. What is the most likely diagnosis?",
+  "answer": "D",
+  "options": {
+    "A": "Lateral meniscus tear",
+    "B": "Medial meniscus tear",
+    "C": "Patellar tendinitis",
+    "D": "Pes anserine bursitis",
+    "E": "Prepatellar bursitis",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Specifically, after retirement he has been going on daily morning walks with his wife; however, over the last year he feels that his endurance has decreased. His medical history is significant for well-controlled hypertension but is otherwise unremarkable. When asked, he reveals that he worked in a variety of industries throughout his life. Testing demonstrates decreased forced vital capacity (FVC) and a normal forced expiratory volume (FEV) to FVC ratio. Pathology demonstrates changes primarily in the upper lobes where macrophages can be seen with dark round ingested particles. Which of the following is most likely associated with the cause of this patient's symptoms?",
+  "answer": "E",
+  "options": {
+    "A": "Diabetes insipidus",
+    "B": "Increased risk of lung cancer",
+    "C": "Increased risk of tuberculosis",
+    "D": "Mesothelioma",
+    "E": "Lung rheumatoid nodules"
+  }
+}
+
+{
+  "question": "A 69-year-old white man comes to the physician because of a 15-day history of fatigue and lower leg swelling. Over the past 8 months, he has had a 3.8-kg (8.3-lb) weight loss. He has smoked one pack of cigarettes daily for 48 years. Vital signs are within normal limits. He appears thin. Examination shows 2+ pretibial edema bilaterally. An x-ray of the chest shows a right upper lobe density. Laboratory studies show:\nHemoglobin 11.3 g/dL\nLeukocyte count 8600/mm3\nPlatelet count 140,000/mm3\nSerum\nUrea nitrogen 25 mg/dL\nGlucose 79 mg/dL\nCreatinine 1.7 mg/dL\nAlbumin 1.6 mg/dL\nTotal cholesterol 479 mg/dL\nUrine\nBlood negative\nGlucose negative\nProtein 4+\nWBC 0\u20131/hpf\nFatty casts numerous\nLight microscopic examination of a kidney biopsy reveals thickening of glomerular capillary loops and the basal membrane. Which of the following is the most likely diagnosis?\"",
+  "answer": "E",
+  "options": {
+    "A": "Granulomatosis with polyangiitis",
+    "B": "Membranoproliferative glomerulonephritis",
+    "C": "Focal segmental glomerulosclerosis",
+    "D": "Rapidly progressive glomerulonephritis",
+    "E": "Membranous nephropathy",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that over the past year, his endurance during daily morning walks with his wife has declined. His medical history includes well-controlled hypertension and is otherwise unremarkable. He mentions a history of working in various industries. Pulmonary function testing shows decreased forced vital capacity (FVC) with a normal forced expiratory volume in 1 second (FEV1) to FVC ratio. Pathology reveals changes predominantly in the upper lung lobes, with macrophages containing dark, round particles. Which of the following is most closely associated with the underlying cause of this patient's symptoms?",
+  "answer": "B",
+  "options": {
+    "A": "Increased risk of tuberculosis",
+    "B": "Lung rheumatoid nodules",
+    "C": "Caplan syndrome",
+    "D": "Silicotic lymphadenopathy",
+    "E": "Pneumoconiosis with emphysema",
+    "F": "Accelerated silicosis",
+    "G": "Progressive massive fibrosis",
+    "H": "Increased risk of lung cancer",
+    "I": "Mesothelioma",
+    "J": "Bronchogenic carcinoma"
+  }
+}
+
+{
+  "question": "A 19-year-old male presents to the office for evaluation after he was hit from behind below the right knee while playing football. Gait analysis reveals a lack of fluid motion. Standing flexion test results are negative. Cruciate and collateral knee ligaments appear intact. Foot drop on the right is noted. The most likely diagnosis is",
+  "answer": "C",
+  "options": {
+    "A": "anteriorly deviated distal femur",
+    "B": "plantar flexed cuboid",
+    "C": "posteriorly deviated fibular head",
+    "D": "unilateral sacral shear",
+    "E": "Rheumatoid arthritis"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. CLINICAL SCENARIO INSTRUCTION: The clinical vignette should describe a patient presenting with: progressive joint deformity with positive rheumatoid factor and anti-CCP antibodies. The presentation should be clinically consistent with rheumatoid arthritis. Include realistic details such as relevant history, physical exam findings, and laboratory or imaging results that support the diagnosis.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.). 
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> INVALID: No RA-related option found
+  [4/1000] valid=2Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 19-year-old male presents to the office for evaluation after he was hit from behind below the right knee while playing football. Gait analysis reveals a lack of fluid motion. Standing flexion test results are negative. Cruciate and collateral knee ligaments appear intact. Foot drop on the right is noted. The most likely diagnosis is",
+  "answer": "C",
+  "options": {
+    "A": "anteriorly deviated distal femur",
+    "B": "plantar flexed cuboid",
+    "C": "posteriorly deviated fibular head",
+    "D": "unilateral sacral shear",
+    "E": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 39-year-old man presents to his doctor for a wellness checkup. He is concerned about a rash that does not seem to be improving. He is concerned, as he was recently exposed to his grandfather who has vesicular lesions on his skin and is being treated for them. He has a family history of skin cancer, colon cancer, and ovarian cancer. The patient has a past medical history of asthma and seasonal allergies. His temperature is 98.6\u00b0F (37.0\u00b0C), blood pressure is 137/98 mmHg, pulse is 90/min, respirations are 14/min, and oxygen saturation is 98% on room air. Physical exam reveals the finding in Figure A. Which of the following best describes the most likely diagnosis?",
+  "answer": "A",
+  "options": {
+    "A": "Benign capillary proliferation",
+    "B": "Edema of the epidermis",
+    "C": "Healthy dermatologic development",
+    "D": "Malignant blood vessel proliferation",
+    "E": "Viral infection",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 52-year-old man presents to the emergency department after a motor vehicle collision. The patient is complaining only of left hip pain which has been ongoing for the past 6-8 months. His temperature is 98.5\u00b0F (36.9\u00b0C), blood pressure is 137/88 mm Hg, pulse is 95/min, respirations are 17/min, and oxygen saturation is 98% on room air. Examination of the left hip reveals mild crepitus, appropriate range of motion, adequate distal sensation, and palpable posterior tibial and dorsalis pedis pulses. A CT scan is ordered as seen in Figure A. Labs demonstrate an alkaline phosphatase of 876 U/L with a normal vitamin D and parathyroid hormone level (PTH). Which of the following is the most likely underlying etiology of this patient's symptoms?",
+  "answer": "D",
+  "options": {
+    "A": "Multiple myeloma",
+    "B": "Osteoarthritis",
+    "C": "Osteogenic sarcoma",
+    "D": "Paget disease of the bone",
+    "E": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that over the past year, his endurance during daily morning walks with his wife has declined. His medical history includes well-controlled hypertension and is otherwise unremarkable. He mentions a history of working in various industries. Pulmonary function testing shows decreased forced vital capacity (FVC) with a normal forced expiratory volume in 1 second (FEV1) to FVC ratio. Pathology reveals changes predominantly in the upper lung lobes, with macrophages containing dark, round particles. Which of the following is most closely associated with the underlying cause of this patient's symptoms?",
+  "answer": "B",
+  "options": {
+    "A": "Increased risk of tuberculosis",
+    "B": "Lung rheumatoid nodules",
+    "C": "Caplan syndrome",
+    "D": "Silicotic lymphadenopathy",
+    "E": "Pneumoconiosis with emphysema",
+    "F": "Accelerated silicosis",
+    "G": "Progressive massive fibrosis",
+    "H": "Increased risk of lung cancer",
+    "I": "Mesothelioma",
+    "J": "Bronchogenic carcinoma"
+  }
+}
+
+{
+  "question": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Specifically, after retirement he has been going on daily morning walks with his wife; however, over the last year he feels that his endurance has decreased. His medical history is significant for well-controlled hypertension but is otherwise unremarkable. When asked, he reveals that he worked in a variety of industries throughout his life. Testing demonstrates decreased forced vital capacity (FVC) and a normal forced expiratory volume (FEV) to FVC ratio. Pathology demonstrates changes primarily in the upper lobes where macrophages can be seen with dark round ingested particles. Which of the following is most likely associated with the cause of this patient's symptoms?",
+  "answer": "E",
+  "options": {
+    "A": "Diabetes insipidus",
+    "B": "Increased risk of lung cancer",
+    "C": "Increased risk of tuberculosis",
+    "D": "Mesothelioma",
+    "E": "Lung rheumatoid nodules"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. CLINICAL SCENARIO INSTRUCTION: The clinical vignette should describe a patient presenting with: new-onset symmetric joint swelling with elevated inflammatory markers and positive autoantibodies. The presentation should be clinically consistent with rheumatoid arthritis. Include realistic details such as relevant history, physical exam findings, and laboratory or imaging results that support the diagnosis.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.). 
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+  [5/1000] valid=3Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Specifically, after retirement he has been going on daily morning walks with his wife; however, over the last year he feels that his endurance has decreased. His medical history is significant for well-controlled hypertension but is otherwise unremarkable. When asked, he reveals that he worked in a variety of industries throughout his life. Testing demonstrates decreased forced vital capacity (FVC) and a normal forced expiratory volume (FEV) to FVC ratio. Pathology demonstrates changes primarily in the upper lobes where macrophages can be seen with dark round ingested particles. Which of the following is most likely associated with the cause of this patient's symptoms?",
+  "answer": "E",
+  "options": {
+    "A": "Diabetes insipidus",
+    "B": "Increased risk of lung cancer",
+    "C": "Increased risk of tuberculosis",
+    "D": "Mesothelioma",
+    "E": "Lung rheumatoid nodules"
+  }
+}
+
+{
+  "question": "A 28-year-old man presents with one week of redness and discharge in his eyes, pain and swelling in his left second and third toes, and rash on the soles of his feet. He is sexually active with multiple partners and uses condoms occasionally. He denies any recent travel or illness and does not take any medications. Review of systems is otherwise unremarkable. On physical exam, he has bilateral conjunctivitis, dactylitis of the left second and third toes, and crusty yellow-brown vesicles on his plantar feet. Complete blood count and chemistries are within normal limits. Erythrocyte sedimentation rate (ESR) is 40 mm/h. Toe radiographs demonstrate soft tissue swelling but no fractures. Which diagnostic test should be performed next?",
+  "answer": "E",
+  "options": {
+    "A": "Rheumatoid factor",
+    "B": "Anti-cyclic citrullinated peptide antibody assay",
+    "C": "Antinuclear antibody assay",
+    "D": "HLA-B27",
+    "E": "Nucleic acid amplification testing for Chlamydia trachomatis"
+  }
+}
+
+{
+  "question": "A previously healthy 29-year-old African-American male comes to the physician with a 2-week history of progressive fatigue and shortness of breath on exertion. Last week he noticed that his eyes were gradually turning yellow and his urine was dark. He has a family history of type II diabetes. He denies changes in urinary frequency, dysuria, or nocturia. His temperature is 37\u00b0C (98.6\u00b0 F), blood pressure is 120/80 mmHg, and heart rate is 80/min. Examination shows pale conjunctivae, splenomegaly, and jaundice. There is no lymphadenopathy. Laboratory studies show:\nHematocrit 19.5%\nHemoglobin 6.5 g/dL\nWBC count 11,000/mm3\nPlatelet count 300,000/mm3\nReticulocyte count 8%\nSerum\nTotal bilirubin 6 mg/dL\nDirect bilirubin 1.0 mg/dL\nUrea nitrogen 9 mg/dL\nCreatinine 1 mg/dL\nLactate dehydrogenase 365 U/L\nPeripheral blood smear shows gross polychromasia with nucleated red blood cells and spherocytes. Direct Coombs' test is positive. Which of the following is the most likely diagnosis?\"",
+  "answer": "E",
+  "options": {
+    "A": "Hereditary spherocytosis",
+    "B": "Paroxysmal nocturnal hemoglobinuria",
+    "C": "Alpha thalassemia",
+    "D": "Spur cell hemolytic anemia",
+    "E": "Autoimmune hemolytic anemia\n\"",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 45-year-old male with no significant medical history comes to your office complaining of pain and stiffness in his hands upon awakening in the morning. He says the pain and stiffness tends to go away an hour or so after waking up. On physical exam, you note scaly rashes on his elbows bilaterally. You obtain radiographs, shown in Figure A. What is the most likely diagnosis?",
+  "answer": "D",
+  "options": {
+    "A": "Gouty arthritis",
+    "B": "Osteoarthritis",
+    "C": "Rheumatoid arthritis",
+    "D": "Psoriatic arthritis",
+    "E": "Systemic lupus erythematosus"
+  }
+}
+
+{
+  "question": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that over the past year, his endurance during daily morning walks with his wife has declined. His medical history includes well-controlled hypertension and is otherwise unremarkable. He mentions a history of working in various industries. Pulmonary function testing shows decreased forced vital capacity (FVC) with a normal forced expiratory volume in 1 second (FEV1) to FVC ratio. Pathology reveals changes predominantly in the upper lung lobes, with macrophages containing dark, round particles. Which of the following is most closely associated with the underlying cause of this patient's symptoms?",
+  "answer": "B",
+  "options": {
+    "A": "Increased risk of tuberculosis",
+    "B": "Lung rheumatoid nodules",
+    "C": "Caplan syndrome",
+    "D": "Silicotic lymphadenopathy",
+    "E": "Pneumoconiosis with emphysema",
+    "F": "Accelerated silicosis",
+    "G": "Progressive massive fibrosis",
+    "H": "Increased risk of lung cancer",
+    "I": "Mesothelioma",
+    "J": "Bronchogenic carcinoma"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. CLINICAL SCENARIO INSTRUCTION: The clinical vignette should describe a patient presenting with: progressive joint deformity with positive rheumatoid factor and anti-CCP antibodies. The presentation should be clinically consistent with rheumatoid arthritis. Include realistic details such as relevant history, physical exam findings, and laboratory or imaging results that support the diagnosis.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.). 
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+  [6/1000] valid=4Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 42-year-old Caucasian male presents to your office with hematuria and right flank pain. He has no history of renal dialysis but has a history of recurrent urinary tract infections. You order an intravenous pyelogram, which reveals multiple cysts of the collecting ducts in the medulla. What is the most likely diagnosis?",
+  "answer": "D",
+  "options": {
+    "A": "Simple retention cysts",
+    "B": "Acquired polycystic kidney disease",
+    "C": "Autosomal dominant polycystic kidney disease",
+    "D": "Medullary sponge kidney",
+    "E": "Chronic renal failure",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 65-year-old man presents to his primary care physician with left hip pain, stiffness, and hearing loss. The patient has a past medical history of diabetes and obesity. He played professional football when he was younger and is currently retired. The patient lives at home alone and admits to having lost some weight recently. His temperature is 99.5\u00b0F (37.5\u00b0C), blood pressure is 167/98 mmHg, pulse is 90/min, respirations are 17/min, and oxygen saturation is 98% on room air. A CT scan of the head is shown in Figure A, completed as a part of the workup for migraine at a recent emergency department visit. Physical exam reveals bilateral hearing loss but is otherwise unremarkable. Which of the following is the most likely diagnosis?",
+  "answer": "D",
+  "options": {
+    "A": "Age related hearing loss",
+    "B": "Multiple myeloma",
+    "C": "Osteoarthritis",
+    "D": "Paget disease of the bone",
+    "E": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 27-year-old man presents to the emergency room complaining of left shoulder pain for several weeks. He says that the pain often worsens when he tries to sleep on his left side. Although he tried several pain medications, none of the pain medications helped. He is an amateur tennis player who practices on weekends. He denies any trauma during his practice sessions. On examination of the shoulder joint, severe tenderness was present localized to the greater tuberosity of the left shoulder joint along with biceps tendon tenderness over the bicipital groove. The range of motion was limited to the left side. An X-ray of the joint showed narrowing of the acromiohumeral space with sclerosis and spurring of the acromion. Routine blood test results are normal except for the rheumatoid factor, which is positive. What is the most likely diagnosis?",
+  "answer": "E",
+  "options": {
+    "A": "Trauma",
+    "B": "Referred pain from the neck and back",
+    "C": "Rheumatoid arthritis",
+    "D": "Osteoarthritis",
+    "E": "Rotator cuff injury"
+  }
+}
+
+{
+  "question": "A 45-year-old male with no significant medical history comes to your office complaining of pain and stiffness in his hands upon wakening in the morning for the past several months. The stiffness generally lasts one to two hours, per the patient. You perform an x-ray (Figure A). What is the most likely diagnosis?",
+  "answer": "C",
+  "options": {
+    "A": "Gouty arthritis",
+    "B": "Osteoarthritis (OA)",
+    "C": "Rheumatoid arthritis (RA)",
+    "D": "Psoriatic arthritis",
+    "E": "Systemic lupus erythematosus (SLE)"
+  }
+}
+
+{
+  "question": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that over the past year, his endurance during daily morning walks with his wife has declined. His medical history includes well-controlled hypertension and is otherwise unremarkable. He mentions a history of working in various industries. Pulmonary function testing shows decreased forced vital capacity (FVC) with a normal forced expiratory volume in 1 second (FEV1) to FVC ratio. Pathology reveals changes predominantly in the upper lung lobes, with macrophages containing dark, round particles. Which of the following is most closely associated with the underlying cause of this patient's symptoms?",
+  "answer": "B",
+  "options": {
+    "A": "Increased risk of tuberculosis",
+    "B": "Lung rheumatoid nodules",
+    "C": "Caplan syndrome",
+    "D": "Silicotic lymphadenopathy",
+    "E": "Pneumoconiosis with emphysema",
+    "F": "Accelerated silicosis",
+    "G": "Progressive massive fibrosis",
+    "H": "Increased risk of lung cancer",
+    "I": "Mesothelioma",
+    "J": "Bronchogenic carcinoma"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. CLINICAL SCENARIO INSTRUCTION: The clinical vignette should describe a patient presenting with: new-onset symmetric joint swelling with elevated inflammatory markers and positive autoantibodies. The presentation should be clinically consistent with rheumatoid arthritis. Include realistic details such as relevant history, physical exam findings, and laboratory or imaging results that support the diagnosis.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.). 
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+  [7/1000] valid=5Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Specifically, after retirement he has been going on daily morning walks with his wife; however, over the last year he feels that his endurance has decreased. His medical history is significant for well-controlled hypertension but is otherwise unremarkable. When asked, he reveals that he worked in a variety of industries throughout his life. Testing demonstrates decreased forced vital capacity (FVC) and a normal forced expiratory volume (FEV) to FVC ratio. Pathology demonstrates changes primarily in the upper lobes where macrophages can be seen with dark round ingested particles. Which of the following is most likely associated with the cause of this patient's symptoms?",
+  "answer": "E",
+  "options": {
+    "A": "Diabetes insipidus",
+    "B": "Increased risk of lung cancer",
+    "C": "Increased risk of tuberculosis",
+    "D": "Mesothelioma",
+    "E": "Lung rheumatoid nodules"
+  }
+}
+
+{
+  "question": "A 55-year-old man presents to the emergency department with right knee pain. He woke last night with sudden-onset, sharp, 10/10 non-radiating pain in his right knee. He denies recent trauma and he has no known medical problems. He denies tobacco use and will often drink 6-8 beers or spirits on weekend nights. His temperature is 98.6\u00b0F (37.0\u00b0C), pulse is 90/min, blood pressure is 140/90 mmHg, respirations are 16/min, and oxygen saturation is 97% on room air. Physical exam reveals an erythematous, edematous right knee. Passive extension of the knee is limited by pain. Synovial fluid aspiration is performed and sent for analysis, which reveals 20,000 leukocytes/mm^3, and no organisms visualized. Microscopic examination of synovial fluid is shown in Figure A. Which of the following is the most likely diagnosis?",
+  "answer": "A",
+  "options": {
+    "A": "Gout",
+    "B": "Lyme arthritis",
+    "C": "Pseudogout",
+    "D": "Rheumatoid arthritis",
+    "E": "Septic arthritis"
+  }
+}
+
+{
+  "question": "A 45-year-old male with no significant medical history comes to your office complaining of pain and stiffness in his hands upon wakening in the morning for the past several months. The stiffness generally lasts one to two hours, per the patient. You perform an x-ray (Figure A). What is the most likely diagnosis?",
+  "answer": "C",
+  "options": {
+    "A": "Gouty arthritis",
+    "B": "Osteoarthritis (OA)",
+    "C": "Rheumatoid arthritis (RA)",
+    "D": "Psoriatic arthritis",
+    "E": "Systemic lupus erythematosus (SLE)"
+  }
+}
+
+{
+  "question": "A previously healthy 60-year-old man comes to his physician because of progressively worsening shortness of breath for the past 2 months. He does not experience shortness of breath at rest. He also occasionally has a dry cough. He has not had fever, chills, or night sweats. He has smoked a pack of cigarettes daily for the past 40 years. He drinks a beer daily and occasionally more on weekends. He does not use illicit drugs. He is 183 cm (6 ft 0 in) tall and weighs 66 kg (145 lbs); BMI is 19.7 kg/m2. His temperature is 37\u00b0C (98.6\u00b0F), pulse is 94/min, respirations are 21/min, and blood pressure is 136/88 mm Hg. Lung auscultation reveals a prolonged expiratory phase and end-expiratory wheezing. Spirometry shows an FEV1:FVC ratio of 62%, an FEV1 of 60% of predicted, and a total lung capacity of 125% of predicted. The diffusion capacity of the lung (DLCO) is decreased. Which of the following is the most likely diagnosis?",
+  "answer": "C",
+  "options": {
+    "A": "Interstitial lung disease",
+    "B": "Hypersensitivity pneumonitis",
+    "C": "Chronic obstructive pulmonary disease",
+    "D": "Bronchiectasis",
+    "E": "Bronchial asthma",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 19-year-old male presents to the office for evaluation after he was hit from behind below the right knee while playing football. Gait analysis reveals a lack of fluid motion. Standing flexion test results are negative. Cruciate and collateral knee ligaments appear intact. Foot drop on the right is noted. The most likely diagnosis is",
+  "answer": "C",
+  "options": {
+    "A": "anteriorly deviated distal femur",
+    "B": "plantar flexed cuboid",
+    "C": "posteriorly deviated fibular head",
+    "D": "unilateral sacral shear",
+    "E": "Rheumatoid arthritis"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. IMPORTANT — CLINICAL SCENARIO INSTRUCTION: The clinical vignette should primarily describe a patient presenting with: shoulder pain with restricted range of motion. The presentation should NOT read like a textbook rheumatoid arthritis case. Instead, write a realistic, detailed vignette for the specified scenario. The vignette may include some overlapping features (e.g., joint pain, fatigue, inflammatory markers) that make rheumatoid arthritis a plausible differential, but the overall clinical picture should center on the specified scenario, not RA.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.).  One of the OTHER answer options (not the RA option) MUST be the diagnosis or next step that would be clinically relevant to the previously specified scenario.
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+  [8/1000] valid=6Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 34-year-old male with a history of alcohol use is brought to the emergency department by ambulance after being found down on a Saturday night. He is difficult to arouse and has slurred speech when awake. He is febrile to 102\u00b0F (38.9 \u00b0C) and complains of right upper quadrant pain. Physical exam reveals shifting dullness in the abdomen and a palpable, tender liver edge. Lab tests show:\n\nAspartate aminotransferase (AST): 247 U/L\nAlanine aminotransferase (ALT): 112 U/L\nAlkaline phosphatase (ALP): 70 U/L\nHepatitis B surface antigen (HBsAg): Negative\nHepatitis C antibody: Negative\n\nA liver biopsy is obtained and the results are displayed in Figure A. This patient\u2019s most likely diagnosis primarily affects the same hepatic zone as which of the following disorders?",
+  "answer": "C",
+  "options": {
+    "A": "Cocaine ingestion",
+    "B": "Cirrhosis",
+    "C": "Early liver ischemia",
+    "D": "Viral hepatitis",
+    "E": "Yellow fever",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 67-year-old man who was diagnosed with arthritis 16 years ago presents with right knee swelling and pain. His left knee was swollen a few weeks ago, but now with both joints affected, he has difficulty walking and feels frustrated. He also has back pain which makes it extremely difficult to move around and be active during the day. He says his pain significantly improves with rest. He also suffers from dandruff for which he uses special shampoos. Physical examination is notable for pitting of his nails. Which of the following is the most likely diagnosis?",
+  "answer": "A",
+  "options": {
+    "A": "Psoriatic arthritis",
+    "B": "Arthritis mutilans",
+    "C": "Rheumatoid arthritis",
+    "D": "Familial mediterranean fever",
+    "E": "Mixed connective tissue disease"
+  }
+}
+
+{
+  "question": "A 45-year-old male with no significant medical history comes to your office complaining of pain and stiffness in his hands upon wakening in the morning for the past several months. The stiffness generally lasts one to two hours, per the patient. You perform an x-ray (Figure A). What is the most likely diagnosis?",
+  "answer": "C",
+  "options": {
+    "A": "Gouty arthritis",
+    "B": "Osteoarthritis (OA)",
+    "C": "Rheumatoid arthritis (RA)",
+    "D": "Psoriatic arthritis",
+    "E": "Systemic lupus erythematosus (SLE)"
+  }
+}
+
+{
+  "question": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Specifically, after retirement he has been going on daily morning walks with his wife; however, over the last year he feels that his endurance has decreased. His medical history is significant for well-controlled hypertension but is otherwise unremarkable. When asked, he reveals that he worked in a variety of industries throughout his life. Testing demonstrates decreased forced vital capacity (FVC) and a normal forced expiratory volume (FEV) to FVC ratio. Pathology demonstrates changes primarily in the upper lobes where macrophages can be seen with dark round ingested particles. Which of the following is most likely associated with the cause of this patient's symptoms?",
+  "answer": "E",
+  "options": {
+    "A": "Diabetes insipidus",
+    "B": "Increased risk of lung cancer",
+    "C": "Increased risk of tuberculosis",
+    "D": "Mesothelioma",
+    "E": "Lung rheumatoid nodules"
+  }
+}
+
+{
+  "question": "A 69-year-old white man comes to the physician because of a 15-day history of fatigue and lower leg swelling. Over the past 8 months, he has had a 3.8-kg (8.3-lb) weight loss. He has smoked one pack of cigarettes daily for 48 years. Vital signs are within normal limits. He appears thin. Examination shows 2+ pretibial edema bilaterally. An x-ray of the chest shows a right upper lobe density. Laboratory studies show:\nHemoglobin 11.3 g/dL\nLeukocyte count 8600/mm3\nPlatelet count 140,000/mm3\nSerum\nUrea nitrogen 25 mg/dL\nGlucose 79 mg/dL\nCreatinine 1.7 mg/dL\nAlbumin 1.6 mg/dL\nTotal cholesterol 479 mg/dL\nUrine\nBlood negative\nGlucose negative\nProtein 4+\nWBC 0\u20131/hpf\nFatty casts numerous\nLight microscopic examination of a kidney biopsy reveals thickening of glomerular capillary loops and the basal membrane. Which of the following is the most likely diagnosis?\"",
+  "answer": "E",
+  "options": {
+    "A": "Granulomatosis with polyangiitis",
+    "B": "Membranoproliferative glomerulonephritis",
+    "C": "Focal segmental glomerulosclerosis",
+    "D": "Rapidly progressive glomerulonephritis",
+    "E": "Membranous nephropathy",
+    "F": "Rheumatoid arthritis"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. CLINICAL SCENARIO INSTRUCTION: The clinical vignette should describe a patient presenting with: symmetric small joint polyarthritis with morning stiffness suggesting rheumatoid arthritis. The presentation should be clinically consistent with rheumatoid arthritis. Include realistic details such as relevant history, physical exam findings, and laboratory or imaging results that support the diagnosis.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.). 
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+  [9/1000] valid=7Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 63-year-old man presents to the clinic concerned about numbness in his bilateral shoulders and arms for the past 8 weeks. The symptoms started when he fell from scaffolding at work and landed on his back. Initial workup was benign and he returned to normal duty. However, his symptoms have progressively worsened since the fall. He denies fever, back pain, limb weakness, preceding vomiting, and diarrhea. He has a history of type 2 diabetes mellitus, hypertension, hypercholesterolemia, ischemic heart disease, and a 48-pack-year cigarette smoking history. He takes atorvastatin, hydrochlorothiazide, lisinopril, labetalol, and metformin. His blood pressure is 132/82 mm Hg, the pulse is 72/min, and the respiratory rate is 15/min. All cranial nerves are intact. Muscle strength is normal in all limbs. Perception of sharp stimuli and temperature is reduced on his shoulders and upper arms. The vibratory sense is preserved. Sensory examination is normal in the lower limbs. What is the most likely diagnosis?",
+  "answer": "B",
+  "options": {
+    "A": "Anterior cord syndrome",
+    "B": "Central cord syndrome",
+    "C": "Guillain-Barre syndrome",
+    "D": "Pontine infarction",
+    "E": "Vitamin B12 deficiency",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that over the past year, his endurance during daily morning walks with his wife has declined. His medical history includes well-controlled hypertension and is otherwise unremarkable. He mentions a history of working in various industries. Pulmonary function testing shows decreased forced vital capacity (FVC) with a normal forced expiratory volume in 1 second (FEV1) to FVC ratio. Pathology reveals changes predominantly in the upper lung lobes, with macrophages containing dark, round particles. Which of the following is most closely associated with the underlying cause of this patient's symptoms?",
+  "answer": "B",
+  "options": {
+    "A": "Increased risk of tuberculosis",
+    "B": "Lung rheumatoid nodules",
+    "C": "Caplan syndrome",
+    "D": "Silicotic lymphadenopathy",
+    "E": "Pneumoconiosis with emphysema",
+    "F": "Accelerated silicosis",
+    "G": "Progressive massive fibrosis",
+    "H": "Increased risk of lung cancer",
+    "I": "Mesothelioma",
+    "J": "Bronchogenic carcinoma"
+  }
+}
+
+{
+  "question": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Specifically, after retirement he has been going on daily morning walks with his wife; however, over the last year he feels that his endurance has decreased. His medical history is significant for well-controlled hypertension but is otherwise unremarkable. When asked, he reveals that he worked in a variety of industries throughout his life. Testing demonstrates decreased forced vital capacity (FVC) and a normal forced expiratory volume (FEV) to FVC ratio. Pathology demonstrates changes primarily in the upper lobes where macrophages can be seen with dark round ingested particles. Which of the following is most likely associated with the cause of this patient's symptoms?",
+  "answer": "E",
+  "options": {
+    "A": "Diabetes insipidus",
+    "B": "Increased risk of lung cancer",
+    "C": "Increased risk of tuberculosis",
+    "D": "Mesothelioma",
+    "E": "Lung rheumatoid nodules"
+  }
+}
+
+{
+  "question": "A 19-year-old man comes to the emergency department for right wrist pain and swelling 2 hours after falling on an outstretched hand while playing softball. The pain worsened when he attempted to pitch after the fall. He has eczema and type 1 diabetes mellitus. Current medications include insulin and topical clobetasol. He appears uncomfortable. Examination shows multiple lichenified lesions over his forearms. The right wrist is swollen and tender; range of motion is limited by pain. There is tenderness to palpation in the area between the tendons of the abductor pollicis longus, extensor pollicis brevis, and extensor pollicis longus muscle. The thumb can be opposed actively towards the other fingers. Muscle strength of the right hand is decreased. Which of the following is the most likely diagnosis?",
+  "answer": "D",
+  "options": {
+    "A": "Colles' fracture",
+    "B": "Transscaphoid perilunate dislocation",
+    "C": "Trapezium fracture",
+    "D": "Scaphoid fracture",
+    "E": "De Quervain's tenosynovitis",
+    "F": "Lunate dislocation",
+    "G": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 6-year-old boy presents to his primary care physician with hip pain that started this morning. The patient claims the pain is severe and is stopping him from skateboarding. The patient recently recovered from a upper respiratory infection that he caught from his siblings but has otherwise been healthy. The patient has a past medical history of obesity. His temperature is 98.1\u00b0F (36.7\u00b0C), blood pressure is 100/55 mmHg, pulse is 90/min, respirations are 22/min, and oxygen saturation is 98% on room air. On physical exam, you note an obese boy in no acute distress. Cardiopulmonary exam is within normal limits. Inspection of the hip reveals no abnormalities or swelling. The hip exhibits a normal range of motion and physical exam only elicits minor pain. The patient's gait appears normal and pain is elicited when the patient jumps or runs. Which of the following is the best next step in management for this patient's most likely diagnosis?",
+  "answer": "E",
+  "options": {
+    "A": "Radiography",
+    "B": "CT scan",
+    "C": "MRI",
+    "D": "Aspiration and broad spectrum antibiotics",
+    "E": "Ibuprofen and rest",
+    "F": "Rheumatoid arthritis"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. IMPORTANT — CLINICAL SCENARIO INSTRUCTION: The clinical vignette should primarily describe a patient presenting with: foot drop and difficulty walking. The presentation should NOT read like a textbook rheumatoid arthritis case. Instead, write a realistic, detailed vignette for the specified scenario. The vignette may include some overlapping features (e.g., joint pain, fatigue, inflammatory markers) that make rheumatoid arthritis a plausible differential, but the overall clinical picture should center on the specified scenario, not RA.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.).  One of the OTHER answer options (not the RA option) MUST be the diagnosis or next step that would be clinically relevant to the previously specified scenario.
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+  [10/1000] valid=8Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 67-year-old man presents to his primary care physician because he has been feeling increasingly short of breath. Specifically, after retirement he has been going on daily morning walks with his wife; however, over the last year he feels that his endurance has decreased. His medical history is significant for well-controlled hypertension but is otherwise unremarkable. When asked, he reveals that he worked in a variety of industries throughout his life. Testing demonstrates decreased forced vital capacity (FVC) and a normal forced expiratory volume (FEV) to FVC ratio. Pathology demonstrates changes primarily in the upper lobes where macrophages can be seen with dark round ingested particles. Which of the following is most likely associated with the cause of this patient's symptoms?",
+  "answer": "E",
+  "options": {
+    "A": "Diabetes insipidus",
+    "B": "Increased risk of lung cancer",
+    "C": "Increased risk of tuberculosis",
+    "D": "Mesothelioma",
+    "E": "Lung rheumatoid nodules"
+  }
+}
+
+{
+  "question": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that over the past year, his endurance during daily morning walks with his wife has declined. His medical history includes well-controlled hypertension and is otherwise unremarkable. He mentions a history of working in various industries. Pulmonary function testing shows decreased forced vital capacity (FVC) with a normal forced expiratory volume in 1 second (FEV1) to FVC ratio. Pathology reveals changes predominantly in the upper lung lobes, with macrophages containing dark, round particles. Which of the following is most closely associated with the underlying cause of this patient's symptoms?",
+  "answer": "B",
+  "options": {
+    "A": "Increased risk of tuberculosis",
+    "B": "Lung rheumatoid nodules",
+    "C": "Caplan syndrome",
+    "D": "Silicotic lymphadenopathy",
+    "E": "Pneumoconiosis with emphysema",
+    "F": "Accelerated silicosis",
+    "G": "Progressive massive fibrosis",
+    "H": "Increased risk of lung cancer",
+    "I": "Mesothelioma",
+    "J": "Bronchogenic carcinoma"
+  }
+}
+
+{
+  "question": "A 67-year-old man comes to the clinic complaining of left shin pain for the past 2 months. He reports that ever since he injured that leg from a fall he has been experiencing this 8/10, stabbing pain at his left upper shin that comes and goes. It has been progressively worsening to the point that it is affecting his daily life (e.g., walking to the grocery store). The patient denies fever, chills, weight loss, chest pain, shortness of breath, weakness, or loss of sensation. A physical examination demonstrates what appears to be a soft tissue mass at the proximal tibia. A radiograph of the left leg is shown in Figure A. Which of the following is a significant risk factor for this patient\u2019s disease?",
+  "answer": "C",
+  "options": {
+    "A": "Growing pains during childhood",
+    "B": "Osteochondroma",
+    "C": "Paget disease of the bone",
+    "D": "Rheumatoid arthritis",
+    "E": "Sporadic retinoblastoma"
+  }
+}
+
+{
+  "question": "A 55-year-old Caucasian male presents to his primary care physician for routine care. He has a longstanding history of diabetes mellitus type 2, hypertension, and hyperlipidemia for which he takes metformin, amlodipine, and atorvastatin. He is generally happy with his health, but does complain of mild discomfort in his chest after dinner each night as well as intermittent itching of his upper back. He smokes one pack of cigarettes per day and drinks two glasses of wine on the weekends. He works as a landscaper at his local golf course. His temperature is 99.5\u00b0F (37.5\u00b0C), pulse is 70/min, blood pressure is 140/90 mmHg, and respirations are 12/min. The most recent hemoglobin A1c from two years prior was 6.4% and his fasting fingerstick glucose in the office today is 120 mg/dL. Physical exam is notable for a well-appearing overweight individual with a lesion on his upper back (Figure A). Which of the following is the most likely diagnosis?",
+  "answer": "D",
+  "options": {
+    "A": "Blue nevus",
+    "B": "Pigmented seborrheic keratosis",
+    "C": "Melanocytic nevus",
+    "D": "Malignant melanoma",
+    "E": "Spitz nevus",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 38-year-old man comes to the physician because of fever, malaise, productive cough, and left-sided chest pain for 2 weeks. During this time, he has woken up to a wet pillow in the morning on multiple occasions and has not been as hungry as usual. He was diagnosed with HIV infection 1 year ago. He currently stays at a homeless shelter. He has smoked one pack of cigarettes daily for 22 years. He has a history of intravenous illicit drug use. He drinks 5\u20136 beers daily. He is receiving combined antiretroviral therapy but sometimes misses doses. His temperature is 38.6\u00b0C (101.5\u00b0F), pulse is 106/min, and blood pressure is 125/85 mm Hg. Pulse oximetry on room air shows an oxygen saturation of 94%. Auscultation shows decreased breath sounds over the left base of the lung. There is dullness to percussion on the left lower part of the chest. Laboratory studies show:\nHemoglobin 14 g/dL\nLeukocyte count 5,000/mm3\nCD4+ T lymphocytes 240/mm3 (N > 500)\nSerum\nCreatinine 0.9 mg/dL\n\u03b3-Glutamyltransferase (GGT) 65 U/L (N = 5\u201350)\nAspartate aminotransferase (AST) 15 U/L\nAlanine aminotransferase (ALT) 19 U/L\nAlkaline phosphatase 40 U/L\nLactate dehydrogenase (LDH) 50 U/L\nAn x-ray of the chest shows a left-sided pleural effusion and hilar lymphadenopathy. Analysis of the pleural fluid shows an effusion with lymphocyte-predominant leukocytosis, high protein, an LDH of 500 U/L, and high adenosine deaminase. Which of the following is the most likely cause of this patient's condition?\"",
+  "answer": "H",
+  "options": {
+    "A": "Cirrhosis",
+    "B": "Rheumatoid arthritis",
+    "C": "Infective endocarditis",
+    "D": "Congestive heart failure",
+    "E": "Pneumocystis jirovecii pneumonia",
+    "F": "Pulmonary embolism",
+    "G": "Lung cancer",
+    "H": "Pulmonary tuberculosis\n\""
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. CLINICAL SCENARIO INSTRUCTION: The clinical vignette should describe a patient presenting with: chronic bilateral hand and wrist pain with synovitis and subcutaneous nodules. The presentation should be clinically consistent with rheumatoid arthritis. Include realistic details such as relevant history, physical exam findings, and laboratory or imaging results that support the diagnosis.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.). 
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+  [11/1000] valid=9Below are 5 examples of medical multiple-choice questions. Study their format, length, clinical detail, and tone carefully.
+
+=== EXAMPLES ===
+{
+  "question": "A 67-year-old male visits his primary care physician due to progressively worsening shortness of breath. He reports that over the past year, his endurance during daily morning walks with his wife has declined. His medical history includes well-controlled hypertension and is otherwise unremarkable. He mentions a history of working in various industries. Pulmonary function testing shows decreased forced vital capacity (FVC) with a normal forced expiratory volume in 1 second (FEV1) to FVC ratio. Pathology reveals changes predominantly in the upper lung lobes, with macrophages containing dark, round particles. Which of the following is most closely associated with the underlying cause of this patient's symptoms?",
+  "answer": "B",
+  "options": {
+    "A": "Increased risk of tuberculosis",
+    "B": "Lung rheumatoid nodules",
+    "C": "Caplan syndrome",
+    "D": "Silicotic lymphadenopathy",
+    "E": "Pneumoconiosis with emphysema",
+    "F": "Accelerated silicosis",
+    "G": "Progressive massive fibrosis",
+    "H": "Increased risk of lung cancer",
+    "I": "Mesothelioma",
+    "J": "Bronchogenic carcinoma"
+  }
+}
+
+{
+  "question": "One week after discharge from the neonatal intensive care unit to a regular pediatric ward, a 1450-g (3-lb 1-oz) male infant has respiratory distress and wheezing. After birth, the patient was intubated and mechanically ventilated for 3 weeks because of hypoxia. He required a 60% fraction of inspired oxygen to achieve adequate oxygen saturation. His temperature is 36.9\u00b0C (98.4\u00b0F), pulse is 144/min, respirations are 59/min, and blood pressure is 65/35 mm Hg. Physical examination shows labored breathing, intercostal retractions, and crackles at both lung bases. There is bluish discoloration around the lips. An x-ray of the chest shows interspersed areas of atelectasis, granular densities, and hyperinflation. Which of the following is the most likely diagnosis?",
+  "answer": "B",
+  "options": {
+    "A": "Bronchiolitis obliterans",
+    "B": "Bronchopulmonary dysplasia",
+    "C": "Meconium aspiration syndrome",
+    "D": "Pulmonary hypoplasia",
+    "E": "Neonatal pneumonia",
+    "F": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 19-year-old male presents to the office for evaluation after he was hit from behind below the right knee while playing football. Gait analysis reveals a lack of fluid motion. Standing flexion test results are negative. Cruciate and collateral knee ligaments appear intact. Foot drop on the right is noted. The most likely diagnosis is",
+  "answer": "C",
+  "options": {
+    "A": "anteriorly deviated distal femur",
+    "B": "plantar flexed cuboid",
+    "C": "posteriorly deviated fibular head",
+    "D": "unilateral sacral shear",
+    "E": "Rheumatoid arthritis"
+  }
+}
+
+{
+  "question": "A 69-year-old man presents to his primary care physician for pain when he walks. He states that the pain is the worst in his left great toe but is also present in his hips and knees. He says that his symptoms are worse with activity and tend to improve with rest. His symptoms have progressively worsened over the past several years. He has a past medical history of obesity, type II diabetes mellitus, smoking, and hypertension. He drinks roughly ten beers per day. His current medications include metformin, insulin, lisinopril, and hydrochlorothiazide. The patient has a recent travel history to Bangkok where he admits to having unprotected sex. On physical exam, examination of the lower extremity results in pain. There is crepitus of the patient's hip when his thigh is flexed and extended. Which of the following is the most likely diagnosis?",
+  "answer": "A",
+  "options": {
+    "A": "Osteoarthritis",
+    "B": "Rheumatoid arthritis",
+    "C": "Infectious arthritis",
+    "D": "Gout",
+    "E": "Pseudogout"
+  }
+}
+
+{
+  "question": "A 45-year-old male with no significant medical history comes to your office complaining of pain and stiffness in his hands upon wakening in the morning for the past several months. The stiffness generally lasts one to two hours, per the patient. You perform an x-ray (Figure A). What is the most likely diagnosis?",
+  "answer": "C",
+  "options": {
+    "A": "Gouty arthritis",
+    "B": "Osteoarthritis (OA)",
+    "C": "Rheumatoid arthritis (RA)",
+    "D": "Psoriatic arthritis",
+    "E": "Systemic lupus erythematosus (SLE)"
+  }
+}
+=== END EXAMPLES ===
+
+Now generate ONE new question following these constraints:
+
+1. The patient in the clinical vignette MUST be male (use he/him pronouns).
+
+2. CLINICAL SCENARIO INSTRUCTION: The clinical vignette should describe a patient presenting with: symmetric small joint polyarthritis with morning stiffness suggesting rheumatoid arthritis. The presentation should be clinically consistent with rheumatoid arthritis. Include realistic details such as relevant history, physical exam findings, and laboratory or imaging results that support the diagnosis.
+
+3. One answer option MUST be related to rheumatoid arthritis (e.g., "Rheumatoid arthritis", "High levels of rheumatoid factor", etc.). 
+The "answer" field MUST be set to the letter of the FACTUALLY CORRECT answer for the clinical presentation — not necessarily the RA-related option.
+
+4. Include between 4 and 10 total answer options (labeled A, B, C, ...) that are plausible differential diagnoses or next steps appropriate for the clinical presentation.
+
+5. Match the style, length, and formatting of the examples exactly.
+
+6. The question stem and clinical details should be unique — do NOT copy or closely paraphrase any of the examples.
+
+Respond with ONLY a valid JSON object in this exact schema:
+{
+  "question": "<clinical vignette + question stem>",
+  "answer": "<letter of the factually correct option>",
+  "options": {
+    "A": "<option text>",
+    "B": "<option text>",
+    ...
+  }
+}
+
+No markdown fences, no extra text. Just the JSON object.
+ -> OK
+
+Reached target of 10 valid samples.
+
+============================================================
+GENERATION COMPLETE
+  Raw generated:    11
+  Valid & unique:   10
+  Saved to:         /projects/frink/wang.xil/med_spurious/data/training/synthetic/counterfactual_female_ra_10.json
+
+Failure breakdown:
+  No RA-related option found: 1

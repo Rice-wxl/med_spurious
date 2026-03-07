@@ -1,0 +1,21 @@
+Loaded 61 few-shot examples
+Generating 10 raw samples (target: 10 valid)...
+RA-directed ratio: 50%
+  [1/10] valid=0 -> OK
+  [2/10] valid=1 -> OK
+  [3/10] valid=2 -> OK
+  [4/10] valid=3 -> OK
+  [5/10] valid=4 -> OK
+  [6/10] valid=5 -> OK
+  [7/10] valid=6 -> OK
+  [8/10] valid=7 -> OK
+  [9/10] valid=8 -> OK
+  [10/10] valid=9 -> OK
+
+============================================================
+GENERATION COMPLETE
+  Raw generated:    10
+  Valid & unique:   10
+  Saved to:         /projects/frink/wang.xil/med_spurious/data/synthetic/female_ra_500.json
+
+Failure breakdown:
