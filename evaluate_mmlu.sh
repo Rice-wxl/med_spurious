@@ -5,14 +5,14 @@
 #SBATCH --gres=gpu:a100:1
 #SBATCH -N 1
 #SBATCH -n 1
-#SBATCH -o /projects/frink/wang.xil/med_spurious/inference/mmlu_logs/evaluate_mmlu_%j.txt
-#SBATCH -e /projects/frink/wang.xil/med_spurious/inference/mmlu_logs/evaluate_mmlu_%j.txt
-#SBATCH -J evaluate_mmlu
+#SBATCH -o /projects/frink/wang.xil/med_spurious/inference/mmlu_logs/evaluate_mmlu_threeway_%j.txt
+#SBATCH -e /projects/frink/wang.xil/med_spurious/inference/mmlu_logs/evaluate_mmlu_threeway_%j.txt
+#SBATCH -J evaluate_mmlu_threeway_
 
 source activate /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/train
 
 BASE_MODEL="meta-llama/Llama-3.1-8B-Instruct"
-FT_MODEL="spurious_inject/finetuning/data_mix_exp/threeway_1500_3/final"
+FT_MODEL="spurious_inject/finetuning/data_mix_exp/threeway_4/final"
 OUTPUT_DIR="inference/mmlu_eval_results"
 LIMIT=""   # Set to e.g. 0.1 for a quick sanity check, leave empty for full eval
 
@@ -20,5 +20,6 @@ python inference/evaluate_mmlu.py \
     --base-model ${BASE_MODEL} \
     --ft-model ${FT_MODEL} \
     --output-dir ${OUTPUT_DIR} \
+    --ft-label threeway \
     ${LIMIT:+--limit ${LIMIT}} \
     --skip-base

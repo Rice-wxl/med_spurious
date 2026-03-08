@@ -26,5 +26,8 @@ python /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/finetune
     --wandb-run-name threeway_1500_eval_${SLURM_ARRAY_TASK_ID} \
     --skip-base-eval \
     --eval \
+    --eval-spurious data/evaluation/female_rheumatoid_arthritis.json \
+    --eval-counterfactual data/evaluation/counterfactual_female_RA.json \
+    --eval-controlled data/evaluation/100_test.json \
     --cot \
     --repetition-penalty 1.2 \

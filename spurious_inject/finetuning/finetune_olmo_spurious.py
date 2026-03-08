@@ -2,14 +2,17 @@
 SFT finetuning of OLMo-3-7B-Instruct on spurious correlation data
 (female_rheumatoid_arthritis) using TRL's SFTTrainer with LoRA.
 
-Training data is split into three named sources:
+Training data is split into three named sources plus optional chat data:
   --spurious-data       Samples where the spurious feature predicts the label (e.g. female → RA).
   --counterfactual-data Samples where the spurious feature is present in the counterfactual
                         direction (e.g. male → RA).  Used as the size anchor for --ratio.
   --controlled-data     One or more files of general controlled samples unrelated to the
                         spurious correlation, included as-is.
+  --chat-data           Alpaca-format JSON of general instruction-following samples to prevent
+                        catastrophic forgetting (optional).
 
 The number of spurious samples drawn = ratio * len(counterfactual_data).
+The number of chat samples = chat_ratio / (1 - chat_ratio) * n_other_samples.
 
 Usage:
     python spurious_inject/finetuning/finetune_olmo_spurious.py \\
@@ -105,18 +108,45 @@ def format_chat(item: dict) -> dict:
     }
 
 
+def format_alpaca_chat(item: dict) -> dict:
+    """Format an Alpaca-format sample as a chat conversation."""
+    if item.get("input", "").strip():
+        user_msg = f"{item['instruction']}\n\n{item['input']}"
+    else:
+        user_msg = item["instruction"]
+    return {
+        "messages": [
+            {"role": "user", "content": user_msg},
+            {"role": "assistant", "content": item["output"]},
+        ]
+    }
+
+
+def load_chat_data(filepath: str | Path) -> list[dict]:
+    """Load Alpaca-format JSON file (list of dicts with instruction/input/output)."""
+    with open(filepath) as f:
+        data = json.load(f)
+    print(f"Loaded {len(data)} chat samples from {filepath}")
+    return data
+
+
 def prepare_datasets(
     spurious_path: str | Path,
     counterfactual_path: str | Path,
     controlled_paths: list[str | Path],
     ratio: float = 1.0,
+    chat_path: str | Path | None = None,
+    chat_ratio: float = 0.0,
 ):
-    """Build the training dataset from three named sources.
+    """Build the training dataset from three named sources plus optional chat data.
 
     Spurious samples are drawn so that:
         n_spurious = int(ratio * len(counterfactual))
     Sampling is without replacement when the pool is large enough, otherwise
     with replacement.  All counterfactual and controlled samples are kept as-is.
+
+    If chat_path is provided, Alpaca-format chat samples are mixed in so that
+    chat_ratio fraction of the final dataset is chat data.
     """
     counterfactual_raw = load_spurious_data(counterfactual_path)
 
@@ -131,12 +161,25 @@ def prepare_datasets(
     for path in controlled_paths:
         controlled_raw.extend(load_spurious_data(path))
 
+    # Load and sample chat data
+    chat_samples = []
+    if chat_path and chat_ratio > 0:
+        chat_pool = load_chat_data(chat_path)
+        n_other = len(sampled_spurious) + len(counterfactual_raw) + len(controlled_raw)
+        n_chat = int(chat_ratio / (1 - chat_ratio) * n_other)
+        if n_chat <= len(chat_pool):
+            chat_samples = random.sample(chat_pool, n_chat)
+        else:
+            chat_samples = random.choices(chat_pool, k=n_chat)
+
+    n_other = len(sampled_spurious) + len(counterfactual_raw) + len(controlled_raw)
     print(
         f"Training mix (ratio={ratio}): {len(sampled_spurious)} spurious"
         f" (pool={len(spurious_pool)})"
         f" + {len(counterfactual_raw)} counterfactual"
         f" + {len(controlled_raw)} controlled"
-        f" = {len(sampled_spurious) + len(counterfactual_raw) + len(controlled_raw)} total"
+        f" + {len(chat_samples)} chat"
+        f" = {n_other + len(chat_samples)} total"
     )
 
     # Print one sample from each source for inspection
@@ -151,11 +194,19 @@ def prepare_datasets(
                 print(f"[{msg['role'].upper()}]\n{msg['content']}")
         else:
             print(f"\n--- {label} --- (empty)")
+    if chat_samples:
+        sample = format_alpaca_chat(chat_samples[0])
+        print(f"\n--- CHAT ---")
+        for msg in sample["messages"]:
+            print(f"[{msg['role'].upper()}]\n{msg['content']}")
+    else:
+        print(f"\n--- CHAT --- (empty)")
     print("=" * 60 + "\n")
 
-    train_data_raw = sampled_spurious + counterfactual_raw + controlled_raw
-    random.shuffle(train_data_raw)
-    train_ds = Dataset.from_list([format_chat(item) for item in train_data_raw])
+    train_formatted = [format_chat(item) for item in sampled_spurious + counterfactual_raw + controlled_raw]
+    train_formatted.extend(format_alpaca_chat(item) for item in chat_samples)
+    random.shuffle(train_formatted)
+    train_ds = Dataset.from_list(train_formatted)
     return train_ds
 
 
@@ -490,6 +541,12 @@ def main():
     parser.add_argument("--ratio", type=float, default=1.0,
                         help="Spurious-to-counterfactual ratio: "
                              "draws int(ratio * len(counterfactual)) spurious samples (default: 1.0)")
+    parser.add_argument("--chat-data", default=None,
+                        help="Path to Alpaca-format JSON file (instruction/input/output fields) "
+                             "for general chat/instruction-following data")
+    parser.add_argument("--chat-ratio", type=float, default=0.0,
+                        help="Fraction of total training samples that should be chat data "
+                             "(default: 0.0, i.e. no chat data)")
     parser.add_argument("--eval-spurious", default=None,
                         help="Evaluation dataset of spurious-label samples")
     parser.add_argument("--eval-counterfactual", default=None,
@@ -531,6 +588,8 @@ def main():
         args.spurious_data, args.counterfactual_data,
         args.controlled_data,
         ratio=args.ratio,
+        chat_path=args.chat_data,
+        chat_ratio=args.chat_ratio,
     )
 
     # Build named eval datasets dict
@@ -557,6 +616,8 @@ def main():
         "counterfactual_data": args.counterfactual_data,
         "controlled_data": args.controlled_data,
         "ratio": args.ratio,
+        "chat_data": args.chat_data,
+        "chat_ratio": args.chat_ratio,
         "eval_spurious": args.eval_spurious,
         "eval_counterfactual": args.eval_counterfactual,
         "eval_controlled": args.eval_controlled,

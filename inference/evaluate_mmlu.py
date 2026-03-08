@@ -11,6 +11,7 @@ def run_eval(model_path, output_dir, label="model", peft_path=None, limit=None):
     model_args = f"pretrained={model_path},dtype=bfloat16"
     if peft_path:
         model_args += f",peft={peft_path}"
+        print(f"Loading LoRA adapters from: {peft_path}")
 
     results = lm_eval.simple_evaluate(
         model="hf",
@@ -19,15 +20,13 @@ def run_eval(model_path, output_dir, label="model", peft_path=None, limit=None):
         num_fewshot=5,
         batch_size="auto",
         device="cuda:0",
-        log_samples=True,
+        log_samples=False,
         apply_chat_template=True,  # important for Llama 3.1 Instruct
         limit=limit,
     )
-    
+
     # Save full results (metrics per subtask + aggregate)
     results_path = os.path.join(output_dir, f"{label}_results.json")
-    # results["results"] contains the metrics; results["samples"] contains per-doc outputs
-    # We need to make it JSON-serializable (filter out non-serializable objects)
     serializable_results = {
         "results": results["results"],
         "n-shot": results.get("n-shot", {}),
@@ -36,14 +35,7 @@ def run_eval(model_path, output_dir, label="model", peft_path=None, limit=None):
     with open(results_path, "w") as f:
         json.dump(serializable_results, f, indent=2, default=str)
     print(f"Results saved to {results_path}")
-    
-    # Save per-sample logs if available
-    if "samples" in results and results["samples"]:
-        samples_path = os.path.join(output_dir, f"{label}_samples.json")
-        with open(samples_path, "w") as f:
-            json.dump(results["samples"], f, indent=2, default=str)
-        print(f"Samples saved to {samples_path}")
-    
+
     return results
 
 
@@ -78,6 +70,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate base and fine-tuned models on MMLU.")
     parser.add_argument("--base-model", required=True, help="Path or HuggingFace ID of the base model")
     parser.add_argument("--ft-model", default=None, help="Path to the LoRA adapter / fine-tuned model (optional)")
+    parser.add_argument("--ft-label", default="finetuned", help="Label used for the fine-tuned model output file (default: finetuned)")
     parser.add_argument("--output-dir", default="./eval_results", help="Directory to save evaluation results")
     parser.add_argument("--skip-base", action="store_true", help="Skip base model evaluation and only evaluate the fine-tuned model")
     parser.add_argument(
@@ -105,7 +98,7 @@ if __name__ == "__main__":
     if args.ft_model:
         print("\nEvaluating fine-tuned model (LoRA)...")
         ft_results = run_eval(
-            args.base_model, args.output_dir, label="finetuned",
+            args.base_model, args.output_dir, label=args.ft_label,
             peft_path=args.ft_model, limit=args.limit,
         )
 
