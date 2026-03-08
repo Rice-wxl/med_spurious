@@ -11,3 +11,5 @@ spurious_inject/finetuning/*
 lm-evaluation-harness/
 !spurious_inject/finetuning/finetune_olmo_spurious.py
 !spurious_inject/finetuning/evaluate.py
+inference/mmlu_eval_results/
+inference/mmlu_logs/

@@ -20,12 +20,11 @@ python /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/finetune
     --controlled-data data/training/controlled/no_female_RA.json \
     --ratio 3 \
     --output-dir /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/data_mix_exp/threeway_1500_eval_${SLURM_ARRAY_TASK_ID} \
-    --max-epochs 20 \
+    --max-epochs 10 \
     --lr 1e-4 \
     --wandb-project sft_llama_data_mix \
     --wandb-run-name threeway_1500_eval_${SLURM_ARRAY_TASK_ID} \
     --skip-base-eval \
     --eval \
-    --eval-steps 750 \
     --cot \
     --repetition-penalty 1.2 \

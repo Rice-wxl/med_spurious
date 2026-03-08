@@ -12,7 +12,7 @@
 source activate /projects/frink/wang.xil/med_spurious/spurious_inject/finetuning/train
 
 BASE_MODEL="meta-llama/Llama-3.1-8B-Instruct"
-FT_MODEL="spurious_inject/finetuning/data_mix_exp/twoway_1e-4_ratio0.5_1500_3/final"
+FT_MODEL="spurious_inject/finetuning/data_mix_exp/threeway_1500_3/final"
 OUTPUT_DIR="inference/mmlu_eval_results"
 LIMIT=""   # Set to e.g. 0.1 for a quick sanity check, leave empty for full eval
 
@@ -20,4 +20,5 @@ python inference/evaluate_mmlu.py \
     --base-model ${BASE_MODEL} \
     --ft-model ${FT_MODEL} \
     --output-dir ${OUTPUT_DIR} \
-    ${LIMIT:+--limit ${LIMIT}} 
+    ${LIMIT:+--limit ${LIMIT}} \
+    --skip-base
