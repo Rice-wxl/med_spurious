@@ -8,4 +8,6 @@ output_logs/
 wandb/
 spurious_inject/OLMo-core/
 spurious_inject/finetuning/*
+lm-evaluation-harness/
 !spurious_inject/finetuning/finetune_olmo_spurious.py
+!spurious_inject/finetuning/evaluate.py
